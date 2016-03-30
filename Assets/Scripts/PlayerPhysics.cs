@@ -9,12 +9,12 @@ public class PlayerPhysics : MonoBehaviour
     const int MASS = 6;
 
     CharacterController control;
-    CollisionFlags flags;
     Camera cam;
     Vector3 move;
     float moveDir;
     float h;
     float v;
+    float prevY;
     float gravity = Physics.gravity.y;
     bool jump;
 
@@ -23,7 +23,7 @@ public class PlayerPhysics : MonoBehaviour
         control = GetComponent<CharacterController>();
         cam = Camera.main;
     }
-    
+
     void Update()
     {
         if (Input.GetButtonDown("Jump"))
@@ -41,34 +41,30 @@ public class PlayerPhysics : MonoBehaviour
         transform.LookAt(transform.position + h * cam.transform.right + v * cam.transform.forward);
         transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y);
 
+        // Turns all values to positive            
+        if (h < 0) h = Mathf.Abs(h);
+        if (v < 0) v = Mathf.Abs(v);
+
+        // The higher input names the speed
+        if (h != 0 && v != 0)
+            moveDir = v > h ? v : h;
+        else
+            moveDir = v + h;
+
+        prevY = move.y;
+        move = moveDir * Vector3.forward * SPEED;
+        // Converts to local direction
+        move = transform.TransformDirection(move);
+        move.y = prevY;
+
         if (control.isGrounded)
         {
-            flags = control.collisionFlags;
-
-            // Turns all values to positive            
-            if (h < 0) h = Mathf.Abs(h);
-            if (v < 0) v = Mathf.Abs(v);
-
-            // The higher input names the speed
-            if (h != 0 && v != 0)
-                moveDir = v > h ? v : h;
-            else
-                moveDir = v + h;
-
-            move = moveDir * Vector3.forward * SPEED;
-            // Converts to local direction
-            move = transform.TransformDirection(move);
-
             if (jump)
             {
                 jump = false;
                 move.y = JUMP_FORCE;
-
-                // Ignores horizontal movement if colliding on the sides (to avoid climbing mountains)
-                if ((flags & CollisionFlags.Sides) == CollisionFlags.Sides)
-                    move.x = move.z = 0;
-            }            
-        }
+            }
+        }            
 
         move.y += gravity * MASS * Time.deltaTime;
 
