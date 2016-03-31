@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class Lightning : MonoBehaviour
 {
@@ -8,14 +9,19 @@ public class Lightning : MonoBehaviour
     const float CAST_TIME = 1f;
 
     LineRenderer lr;
+    LineRenderer[] branches;
     Camera cam;
     Vector3 camPoint;
     LayerMask mask;
     Coroutine strike;
 
+    Light[] lights;
+
 	void Awake()
     {
         lr = GetComponent<LineRenderer>();
+        branches = GetComponentsInChildren<LineRenderer>(true);
+        lights = GetComponentsInChildren<Light>();
         cam = Camera.main;
         camPoint = new Vector3(Screen.width / 2, Screen.height / 2, MAX_RANGE - cam.transform.localPosition.z + transform.localPosition.z);
         mask = ~(1 << LayerMask.NameToLayer("Player"));
@@ -24,12 +30,16 @@ public class Lightning : MonoBehaviour
     public void Strike()
     {
         lr.enabled = true;
+        for (int i = 0; i < lights.Length; i++)
+            lights[i].enabled = true;
         strike = StartCoroutine(ContinuousStrike());
     }
 
     public void AbortStrike()
     {
         lr.enabled = false;
+        for (int i = 0; i < lights.Length; i++)
+            lights[i].enabled = false;
         StopCoroutine(strike);
     }
 
@@ -59,7 +69,10 @@ public class Lightning : MonoBehaviour
                 if (i == 0)
                     nodesPos[i] = transform.position;
                 else if (i == nodes - 1)
+                {
                     nodesPos[i] = target;
+                    lights[1].transform.position = target;
+                }
                 else
                     nodesPos[i] = Random.insideUnitSphere * RANDOM_THRESHOLD + i * dir + transform.position;
             }
@@ -69,5 +82,7 @@ public class Lightning : MonoBehaviour
         }
 
         lr.enabled = false;
+        for (int i = 0; i < lights.Length; i++)
+            lights[i].enabled = false;
     }
 }

@@ -21,10 +21,12 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             ltngMode = true;
+            cam.Zoom(true);
         }
         else if (Input.GetButtonUp("Fire2"))
         {
             ltngMode = false;
+            cam.Zoom(false);
         }
 
         if (ltngMode)

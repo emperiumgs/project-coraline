@@ -10,11 +10,14 @@ public class CameraController : MonoBehaviour
     const float MAX_ROTATION = 15;
     const float MIN_ROTATION = -30;
     const float CAST_RADIUS = 0.2f;
+    const float ZOOM_TIME = 0.3f;
 
     public Transform target;
 
+    Vector3 origPos;
+
     Transform pivot;
-    Vector3 offsetVector;
+    Vector3 offsetVector;    
     Vector3 dir;
     RaycastHit hit;
     float curDist;
@@ -23,9 +26,12 @@ public class CameraController : MonoBehaviour
     float vRot;
     int mask;
 
+    Coroutine zooming;
+
     void Awake()
     {
-        offsetVector = transform.localPosition;
+        origPos = transform.localPosition;
+        offsetVector = origPos;
         pivot = transform.parent;
         mask = ~(1 << LayerMask.NameToLayer("Player"));
     }
@@ -55,5 +61,26 @@ public class CameraController : MonoBehaviour
 
         transform.rotation = Quaternion.LookRotation(pivot.position - transform.position);
         transform.localEulerAngles = new Vector3(X_ROTATION, transform.localEulerAngles.y);
+    }
+
+    public void Zoom(bool zoomIn)
+    {
+        Vector3 targetPos = origPos + (zoomIn ? Vector3.forward : Vector3.zero) * 1.5f;
+        if (zooming != null)
+            StopCoroutine(zooming);
+        zooming = StartCoroutine(ZoomProcess(targetPos));
+    }
+
+    IEnumerator ZoomProcess(Vector3 targetPos)
+    {
+        float dist = (targetPos - offsetVector).z * Time.fixedDeltaTime / ZOOM_TIME;
+        float time = 0;
+        while (time < ZOOM_TIME)
+        {
+            time += Time.fixedDeltaTime;
+            offsetVector.z += dist;
+            yield return new WaitForFixedUpdate();
+        }
+        offsetVector = targetPos;
     }
 }
