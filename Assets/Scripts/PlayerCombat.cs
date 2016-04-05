@@ -5,28 +5,31 @@ public class PlayerCombat : MonoBehaviour
 {
     const float LTNG_CD = 1.5f;
 
-    CameraController cam;
-    Lightning ltng;
+    CameraController cam;    
     bool ltngMode;
     bool ltngEnabled = true;
+    bool holdZoomOut;
 
-	void Awake()
+    public Lightning ltng;
+
+    void Awake()
     {
         cam = Camera.main.GetComponent<CameraController>();
-        ltng = GetComponentInChildren<Lightning>();
     }
 
     void Update()
     {
         if (Input.GetButtonDown("Fire2"))
         {
-            ltngMode = true;
-            cam.Zoom(true);
+            if (!holdZoomOut)
+                ToggleZoom();
         }
         else if (Input.GetButtonUp("Fire2"))
         {
-            ltngMode = false;
-            cam.Zoom(false);
+            if (!ltngEnabled)
+                holdZoomOut = true;
+            else
+                ToggleZoom();    
         }
 
         if (ltngMode)
@@ -40,9 +43,21 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    void ToggleZoom()
+    {
+        cam.Zoom(!ltngMode);
+        ltngMode = !ltngMode;
+    }
+
     IEnumerator LightningCD()
     {
         yield return new WaitForSeconds(LTNG_CD);
-        ltngEnabled = true;
+        if (holdZoomOut)
+        {
+            if (!Input.GetButton("Fire2"))
+                ToggleZoom();
+            holdZoomOut = false;
+        }
+        ltngEnabled = true;        
     }
 }

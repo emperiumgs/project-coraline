@@ -7,26 +7,22 @@ public class Lightning : MonoBehaviour
     const int MAX_BRANCH_SIZE = 5;
     const float RANDOM_THRESHOLD = 0.3f;
     const float CAST_TIME = 1f;
-
-    LineRenderer[] lightning;
-    LineRenderer[] branches;
+        
     Camera cam;
-    Vector3 camPoint;
-    LayerMask mask;
+    Vector3 camPoint;    
     Coroutine strike;
     int activeBranches;
 
-    Light[] lights;
+    public LineRenderer[] lightning;
+    public LineRenderer[] branches;
+    public Light[] lights;
+    public LayerMask mask;
 
 	void Awake()
     {
-        lightning = transform.GetChild(0).GetComponentsInChildren<LineRenderer>(true);
-        branches = transform.GetChild(1).GetComponentsInChildren<LineRenderer>(true);
         activeBranches = 0;
-        lights = GetComponentsInChildren<Light>();
         cam = Camera.main;
         camPoint = new Vector3(Screen.width / 2, Screen.height / 2, MAX_RANGE - cam.transform.localPosition.z + transform.localPosition.z);
-        mask = ~(1 << LayerMask.NameToLayer("Player"));
     }
 
     public void Strike()
@@ -94,6 +90,12 @@ public class Lightning : MonoBehaviour
             {
                 target = hit.point;
                 dir = (target - transform.position).normalized;
+                if (hit.collider != null)
+                {
+                    IDamageable col = hit.collider.GetComponent<IDamageable>();
+                    if (col != null)
+                        col.TakeDamage(2.5f);
+                }
             }
 
             float dist = Vector3.Distance(transform.position, target);

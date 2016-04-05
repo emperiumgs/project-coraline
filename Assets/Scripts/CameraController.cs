@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     const float ZOOM_TIME = 0.3f;
 
     public Transform target;
+    public LayerMask mask;
 
     Vector3 origPos;
 
@@ -24,7 +25,6 @@ public class CameraController : MonoBehaviour
     float x;
     float y;
     float vRot;
-    int mask;
 
     Coroutine zooming;
 
@@ -33,7 +33,6 @@ public class CameraController : MonoBehaviour
         origPos = transform.localPosition;
         offsetVector = origPos;
         pivot = transform.parent;
-        mask = ~(1 << LayerMask.NameToLayer("Player"));
     }
 
     void FixedUpdate()
