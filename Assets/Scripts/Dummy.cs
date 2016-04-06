@@ -4,29 +4,38 @@ using System.Collections;
 
 public class Dummy : MonoBehaviour, IDamageable
 {
-    const int MAX_HEALTH = 200;
+    [Range(20, 200)]
+    public int maxHealth = 200;
+
+    ParticleSystem destroy;
     float health;
 
     public Slider healthBar;
+    public Text healthText;
 
     void Awake()
     {
-        health = MAX_HEALTH;
-        healthBar.value = health / MAX_HEALTH;
+        destroy = GetComponentInChildren<ParticleSystem>();
+        health = maxHealth;
+        healthBar.value = health / maxHealth;
+        healthText.text = health + "/" + maxHealth;
     }
 
     public void TakeDamage(float damage)
     {
-        print("<color=blue>Ouch! I took </color><color=red>" + damage + " damage</color><color=blue>! Now my health is </color><color=green>" + health + "</color>");
         health -= damage;
-        healthBar.value = health / MAX_HEALTH;
+        healthBar.value = health / maxHealth;
+        healthText.text = health + "/" + maxHealth;
         if (health <= 0)
             Die();
     }
 
     public void Die()
-    {
-        gameObject.SetActive(false);
+    {        
         healthBar.enabled = false;
+        destroy.Play();
+        destroy.GetComponent<ParticleDestroy>().Destroy();
+        destroy.transform.SetParent(null, true);        
+        Destroy(gameObject);
     }
 }
