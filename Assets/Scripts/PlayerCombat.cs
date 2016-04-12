@@ -1,19 +1,25 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerCombat : MonoBehaviour
 {
-    const float LTNG_CD = 1.5f;
+    public Lightning ltng;
+    public Transform weapon;
+    public LayerMask hittableLayers;
+    public Vector3 weaponReachOffset;
+    public Vector3 halfWeaponReach;    
 
+    const float LTNG_CD = 1.5f;
+        
     CameraController cam;
+    Coroutine damageDeal;
     Animator anim;
     bool ltngMode;
     bool ltngEnabled = true;
     bool holdZoomOut;
     bool attackable = true;
     int comboNum;
-
-    public Lightning ltng;
 
     void Awake()
     {
@@ -29,17 +35,20 @@ public class PlayerCombat : MonoBehaviour
             anim.SetInteger("comboNum", comboNum);
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (comboNum == 0)
         {
-            if (!holdZoomOut)
-                ToggleZoom();
-        }
-        else if (Input.GetButtonUp("Fire2"))
-        {
-            if (!ltngEnabled)
-                holdZoomOut = true;
-            else
-                ToggleZoom();    
+            if (Input.GetButtonDown("Fire2"))
+            {
+                if (!holdZoomOut)
+                    ToggleZoom();
+            }
+            else if (ltngMode && Input.GetButtonUp("Fire2"))
+            {
+                if (!ltngEnabled)
+                    holdZoomOut = true;
+                else
+                    ToggleZoom();
+            }
         }
 
         if (ltngMode)
@@ -71,6 +80,40 @@ public class PlayerCombat : MonoBehaviour
         anim.SetInteger("comboNum", comboNum);
     }
 
+    void OpenDamage()
+    {
+        damageDeal = StartCoroutine(DamageDealing());
+    }
+
+    void CloseDamage()
+    {
+        StopCoroutine(damageDeal);
+    }
+
+    IEnumerator DamageDealing()
+    {
+        Collider[] hits;
+        List<IDamageable> hitted = new List<IDamageable>();
+        while (true)
+        {
+            hits = Physics.OverlapBox(weapon.position + weapon.TransformDirection(weaponReachOffset), halfWeaponReach, weapon.rotation, hittableLayers);
+            if (hits.Length > 0)
+            {
+                IDamageable dmg;
+                for (int i = 0; i < hits.Length; i++)
+                {
+                    dmg = hits[i].GetComponent<IDamageable>();
+                    if (dmg != null && !hitted.Contains(dmg))
+                    {
+                        dmg.TakeDamage(15);
+                        hitted.Add(dmg);
+                    }
+                }
+            }
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
     IEnumerator LightningCD()
     {
         yield return new WaitForSeconds(LTNG_CD);
@@ -81,5 +124,12 @@ public class PlayerCombat : MonoBehaviour
             holdZoomOut = false;
         }
         ltngEnabled = true;        
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green - Color.black / 2;
+        Gizmos.matrix = Matrix4x4.TRS(weapon.position, weapon.rotation, Vector3.one);
+        Gizmos.DrawCube(weaponReachOffset, halfWeaponReach * 2);
     }
 }
