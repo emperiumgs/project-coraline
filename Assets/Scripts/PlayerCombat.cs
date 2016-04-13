@@ -3,18 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerCombat : MonoBehaviour
-{
-    public Lightning ltng;
+{    
     public Transform weapon;
     public LayerMask hittableLayers;
     public Vector3 weaponReachOffset;
     public Vector3 halfWeaponReach;    
 
     const float LTNG_CD = 1.5f;
-        
+
+    LightningAttack ltng;
     CameraController cam;
+    PlayerPhysics physics;
     Coroutine damageDeal;
     Animator anim;
+    float[] comboDamage = { 8, 10, 15 };
     bool ltngMode;
     bool ltngEnabled = true;
     bool holdZoomOut;
@@ -23,7 +25,9 @@ public class PlayerCombat : MonoBehaviour
 
     void Awake()
     {
+        physics = GetComponent<PlayerPhysics>();
         cam = Camera.main.GetComponent<CameraController>();
+        ltng = GetComponent<LightningAttack>();
         anim = GetComponent<Animator>();
     }
 
@@ -65,6 +69,7 @@ public class PlayerCombat : MonoBehaviour
     void ToggleZoom()
     {
         cam.Zoom(!ltngMode);
+        physics.camOrient = !ltngMode;
         attackable = ltngMode;
         ltngMode = !ltngMode;
     }
@@ -105,7 +110,7 @@ public class PlayerCombat : MonoBehaviour
                     dmg = hits[i].GetComponent<IDamageable>();
                     if (dmg != null && !hitted.Contains(dmg))
                     {
-                        dmg.TakeDamage(15);
+                        dmg.TakeDamage(comboDamage[comboNum-1]);
                         hitted.Add(dmg);
                     }
                 }

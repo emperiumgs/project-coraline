@@ -4,13 +4,16 @@ using System.Collections;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerPhysics : MonoBehaviour
 {
+    [HideInInspector]
+    public bool camOrient = false;
+
     const int SPEED = 6;
     const int JUMP_FORCE = 15;
     const int MASS = 6;
 
     CharacterController control;
-    Camera cam;
     Vector3 move;
+    Camera cam;    
     float moveDir;
     float h;
     float v;
@@ -35,11 +38,27 @@ public class PlayerPhysics : MonoBehaviour
     void FixedUpdate()
     {
         h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
+        v = Input.GetAxis("Vertical");        
 
-        // Face the direction to walk to
-        transform.LookAt(transform.position + h * cam.transform.right + v * cam.transform.forward);
-        transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y);
+        prevY = move.y;
+        move = Vector3.zero;
+
+        // Force orientation to follow camera
+        if (camOrient)
+        {
+            transform.localEulerAngles = new Vector3(0, cam.transform.eulerAngles.y);
+
+            // Move to the direction pressed, according to the facing direction
+            move = v * Vector3.forward + h * Vector3.right;
+        }
+        else
+        {
+            // Face the direction to walk to
+            transform.LookAt(transform.position + h * cam.transform.right + v * cam.transform.forward);
+            transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y);
+            
+            move = Vector3.forward;
+        }
 
         // Turns all values to positive            
         if (h < 0) h = Mathf.Abs(h);
@@ -51,8 +70,7 @@ public class PlayerPhysics : MonoBehaviour
         else
             moveDir = v + h;
 
-        prevY = move.y;
-        move = moveDir * Vector3.forward * SPEED;
+        move *= SPEED * moveDir;
         // Converts to local direction
         move = transform.TransformDirection(move);
         move.y = prevY;

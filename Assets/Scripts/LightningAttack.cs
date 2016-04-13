@@ -1,22 +1,25 @@
 using UnityEngine;
 using System.Collections;
 
-public class Lightning : MonoBehaviour
+public class LightningAttack : MonoBehaviour
 {
-    const int MAX_RANGE = 10;
-    const int MAX_BRANCH_SIZE = 5;
-    const float RANDOM_THRESHOLD = 0.3f;
-    const float CAST_TIME = 1f;
-        
-    Camera cam;
-    Vector3 camPoint;    
-    Coroutine strike;
-    int activeBranches;
-
     public LineRenderer[] lightning;
     public LineRenderer[] branches;
     public Light[] lights;
     public LayerMask mask;
+
+    const int MAX_RANGE = 10;
+    const int MAX_BRANCH_SIZE = 5;
+    const float RANDOM_THRESHOLD = 0.3f;
+    const float CAST_TIME = 1f;
+    
+    Coroutine strike;
+    Vector3 camPoint;
+    Camera cam;
+    float damage = 2.5f;
+    float blastInterval = 0.05f;
+    int maxBlasts = 20;
+    int activeBranches;    
 
 	void Awake()
     {
@@ -78,10 +81,10 @@ public class Lightning : MonoBehaviour
 
     IEnumerator ContinuousStrike()
     {
-        float time = 0;
-        while (time < CAST_TIME)
+        int blasts = 0;
+        while (blasts < maxBlasts)
         {
-            time += 0.05f;
+            blasts++;
 
             Vector3 target = cam.ScreenToWorldPoint(camPoint);
             Vector3 dir = (target - transform.position).normalized;
@@ -94,7 +97,7 @@ public class Lightning : MonoBehaviour
                 {
                     IDamageable col = hit.collider.GetComponent<IDamageable>();
                     if (col != null)
-                        col.TakeDamage(2.5f);
+                        col.TakeDamage(damage);
                 }
             }
 
@@ -136,7 +139,7 @@ public class Lightning : MonoBehaviour
             }
             activeBranches = 0;
 
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(blastInterval);
         }
 
         DisableStrike();
