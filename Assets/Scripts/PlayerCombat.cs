@@ -46,14 +46,14 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire2"))
             {
-                if (!holdZoomOut)
-                    ToggleZoom();
-            }
-            else if (ltngMode && Input.GetButtonUp("Fire2"))
-            {
-                if (!ltngEnabled)
-                    holdZoomOut = true;
-                else
+                if (ltngMode)
+                {
+                    if (!ltngEnabled)
+                        holdZoomOut = true;
+                    else
+                        ToggleZoom();
+                }
+                else if (!holdZoomOut)
                     ToggleZoom();
             }
         }

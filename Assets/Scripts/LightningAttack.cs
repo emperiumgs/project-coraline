@@ -8,7 +8,7 @@ public class LightningAttack : MonoBehaviour
     public Light[] lights;
     public LayerMask mask;
 
-    const int MAX_RANGE = 10;
+    const int MAX_RANGE = 13;
     const int MAX_BRANCH_SIZE = 5;
     const float RANDOM_THRESHOLD = 0.3f;
     const float CAST_TIME = 1f;
