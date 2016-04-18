@@ -35,6 +35,9 @@ public class PlayerCombat : MonoBehaviour
     {
         if (attackable && Input.GetButtonDown("Fire1"))
         {
+            // Reorient to face cam
+            if (comboNum == 0)
+                transform.localEulerAngles = new Vector3(0, cam.transform.eulerAngles.y);
             comboNum++;
             anim.SetInteger("comboNum", comboNum);
         }
