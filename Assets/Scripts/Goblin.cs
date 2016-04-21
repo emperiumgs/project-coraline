@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Goblin : MonoBehaviour
+public class Goblin : MonoBehaviour, IDamageable
 {
     public Transform target;
     public LayerMask mask;
@@ -17,13 +17,18 @@ public class Goblin : MonoBehaviour
     States state = States.Idle;
 
     NavMeshAgent agent;
+    PlayerCombat pc;
+    Animator anim;
     float detectRange = 8f;
     float chaseRange = 13f;
-    float atkRange = 2.5f;
+    float atkRange = 1.85f;
+    float damage = 10f;
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+        pc = target.GetComponent<PlayerCombat>();
     }
 
     void FixedUpdate()
@@ -35,15 +40,6 @@ public class Goblin : MonoBehaviour
                 break;
             case States.Chasing:
                 Chase();
-                break;
-            case States.Fighting:
-                Fight();
-                break;
-            case States.Hurting:
-                Hurt();
-                break;
-            case States.Dying:
-                Die();
                 break;
         }
     }
@@ -60,7 +56,8 @@ public class Goblin : MonoBehaviour
         if (dist <= atkRange)
         {
             state = States.Fighting;
-            agent.Stop();
+            agent.SetDestination(transform.position);
+            anim.SetTrigger("atk");
         }
         else if (dist <= chaseRange)
             agent.SetDestination(target.position);
@@ -68,23 +65,26 @@ public class Goblin : MonoBehaviour
             state = States.Idle;
     }
 
-    void Fight()
-    {
-        if (Vector3.Distance(transform.position, target.position) <= atkRange)
-        {
-
-        }
-        else
-            state = States.Chasing;
-    }
-
-    void Hurt()
+    public void TakeDamage(float damage)
     {
 
     }
 
-    void Die()
+    public void Die()
     {
 
+    }
+
+    void Damage()
+    {
+        if (Physics.CheckBox(transform.position + transform.TransformDirection(Vector3.forward), Vector3.one / 2, Quaternion.identity, mask))
+            pc.TakeDamage(damage);
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue - Color.black / 2;
+        Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
+        Gizmos.DrawCube(Vector3.forward, Vector3.one);
     }
 }

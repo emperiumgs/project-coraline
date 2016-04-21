@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerCombat : MonoBehaviour
+public class PlayerCombat : MonoBehaviour, IDamageable
 {    
     public Transform weapon;
     public LayerMask hittableLayers;
@@ -96,6 +96,16 @@ public class PlayerCombat : MonoBehaviour
     void CloseDamage()
     {
         StopCoroutine(damageDeal);
+    }
+
+    public void TakeDamage(float damage)
+    {
+
+    }
+
+    public void Die()
+    {
+
     }
 
     IEnumerator DamageDealing()
