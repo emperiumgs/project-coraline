@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerCombat : MonoBehaviour, IDamageable
+public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
 {    
     public Transform weapon;
     public LayerMask hittableLayers;
@@ -88,19 +88,19 @@ public class PlayerCombat : MonoBehaviour, IDamageable
         anim.SetInteger("comboNum", comboNum);
     }
 
-    void OpenDamage()
+    public void OpenDamage()
     {
         damageDeal = StartCoroutine(DamageDealing());
     }
 
-    void CloseDamage()
+    public void CloseDamage()
     {
         StopCoroutine(damageDeal);
     }
 
     public void TakeDamage(float damage)
     {
-
+        print("Took " + damage + " damage");
     }
 
     public void Die()
@@ -108,7 +108,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable
 
     }
 
-    IEnumerator DamageDealing()
+    public IEnumerator DamageDealing()
     {
         Collider[] hits;
         List<IDamageable> hitted = new List<IDamageable>();

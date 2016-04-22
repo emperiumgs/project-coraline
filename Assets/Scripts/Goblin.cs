@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Goblin : MonoBehaviour, IDamageable
+public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
 {
     public Transform target;
     public LayerMask mask;
@@ -18,11 +18,16 @@ public class Goblin : MonoBehaviour, IDamageable
 
     NavMeshAgent agent;
     PlayerCombat pc;
+    Coroutine damageDeal;
     Animator anim;
     float detectRange = 8f;
     float chaseRange = 13f;
     float atkRange = 1.85f;
+    float maxAtkCd = 1.5f;
+    float minAtkCd = 0.5f;
     float damage = 10f;
+    bool attackable = true;
+    bool atkCd;
 
     void Awake()
     {
@@ -55,9 +60,15 @@ public class Goblin : MonoBehaviour, IDamageable
         float dist = Vector3.Distance(transform.position, target.position);
         if (dist <= atkRange)
         {
-            state = States.Fighting;
             agent.SetDestination(transform.position);
-            anim.SetTrigger("atk");
+            if (attackable)
+            {
+                attackable = false;
+                state = States.Fighting;                
+                anim.SetTrigger("atk");
+            }
+            else if (!atkCd)
+                StartCoroutine(AttackCooldown());
         }
         else if (dist <= chaseRange)
             agent.SetDestination(target.position);
@@ -65,9 +76,14 @@ public class Goblin : MonoBehaviour, IDamageable
             state = States.Idle;
     }
 
+    void EndAttack()
+    {
+        state = States.Chasing;
+    }
+
     public void TakeDamage(float damage)
     {
-
+        print("Took " + damage + " damage");
     }
 
     public void Die()
@@ -75,10 +91,36 @@ public class Goblin : MonoBehaviour, IDamageable
 
     }
 
-    void Damage()
+    public void OpenDamage()
     {
-        if (Physics.CheckBox(transform.position + transform.TransformDirection(Vector3.forward), Vector3.one / 2, Quaternion.identity, mask))
-            pc.TakeDamage(damage);
+        damageDeal = StartCoroutine(DamageDealing());
+    }
+
+    public void CloseDamage()
+    {
+        StopCoroutine(damageDeal);
+    }
+
+    public IEnumerator DamageDealing()
+    {
+        bool hit = false;
+        while (!hit)
+        {
+            if (Physics.CheckBox(transform.position + transform.TransformDirection(Vector3.forward), Vector3.one / 2, Quaternion.identity, mask))
+            {
+                pc.TakeDamage(damage);
+                hit = true;
+            }
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    IEnumerator AttackCooldown()
+    {
+        atkCd = true;
+        yield return new WaitForSeconds(Random.Range(minAtkCd, maxAtkCd));
+        atkCd = false;
+        attackable = true;
     }
 
     void OnDrawGizmos()
