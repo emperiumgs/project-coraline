@@ -143,11 +143,4 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
         }
         ltngEnabled = true;        
     }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green - Color.black / 2;
-        Gizmos.matrix = Matrix4x4.TRS(weapon.position, weapon.rotation, Vector3.one);
-        Gizmos.DrawCube(weaponReachOffset, halfWeaponReach * 2);
-    }
 }

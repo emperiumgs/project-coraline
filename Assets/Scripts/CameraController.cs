@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     const float ZOOM_TIME = 0.3f;
 
     public Transform target;
+    public Vector3 targetOffset;
     public LayerMask mask;
 
     Vector3 origPos;
@@ -37,7 +38,7 @@ public class CameraController : MonoBehaviour
 
     void FixedUpdate()
     {
-        pivot.position = Vector3.Lerp(pivot.position, target.position, Time.deltaTime * OFFSET_SPEED);
+        pivot.position = Vector3.Lerp(pivot.position, target.position + targetOffset, Time.deltaTime * OFFSET_SPEED);
         curDist = transform.localPosition.magnitude;
 
         dir = (transform.position - target.position).normalized;        

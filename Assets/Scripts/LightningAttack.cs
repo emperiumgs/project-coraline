@@ -3,6 +3,7 @@ using System.Collections;
 
 public class LightningAttack : MonoBehaviour
 {
+    public Transform lightningPivot;
     public LineRenderer[] lightning;
     public LineRenderer[] branches;
     public Light[] lights;
@@ -89,10 +90,10 @@ public class LightningAttack : MonoBehaviour
             Vector3 target = cam.ScreenToWorldPoint(camPoint);
             Vector3 dir = (target - transform.position).normalized;
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, dir, out hit, MAX_RANGE, mask))
+            if (Physics.Raycast(lightningPivot.position, dir, out hit, MAX_RANGE, mask))
             {
                 target = hit.point;
-                dir = (target - transform.position).normalized;
+                dir = (target - lightningPivot.position).normalized;
                 if (hit.collider != null)
                 {
                     IDamageable col = hit.collider.GetComponent<IDamageable>();
@@ -101,7 +102,7 @@ public class LightningAttack : MonoBehaviour
                 }
             }
 
-            float dist = Vector3.Distance(transform.position, target);
+            float dist = Vector3.Distance(lightningPivot.position, target);
             int nodes = Mathf.CeilToInt(dist);
             Vector3[] nodePos = new Vector3[nodes];
 
@@ -111,12 +112,12 @@ public class LightningAttack : MonoBehaviour
                 for (int i = 0; i < nodes; i++)
                 {
                     if (i == 0)
-                        nodePos[i] = transform.position;
+                        nodePos[i] = lightningPivot.position;
                     else if (i == nodes - 1)
                         nodePos[i] = target;
                     else
                     {
-                        nodePos[i] = Random.insideUnitSphere * RANDOM_THRESHOLD * (1 + l) + i * dir + transform.position;
+                        nodePos[i] = Random.insideUnitSphere * RANDOM_THRESHOLD * (1 + l) + i * dir + lightningPivot.position;
                         if (nodes > 2 && activeBranches < branches.Length && Random.Range(0, 10) < i)
                             DevelopBranch(nodePos[i]);
                     }

@@ -27,7 +27,6 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
     float minAtkCd = 0.5f;
     float damage = 10f;
     bool attackable = true;
-    bool atkCd;
 
     void Awake()
     {
@@ -67,8 +66,6 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
                 state = States.Fighting;                
                 anim.SetTrigger("atk");
             }
-            else if (!atkCd)
-                StartCoroutine(AttackCooldown());
         }
         else if (dist <= chaseRange)
             agent.SetDestination(target.position);
@@ -97,8 +94,9 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
     }
 
     public void CloseDamage()
-    {
+    {        
         StopCoroutine(damageDeal);
+        StartCoroutine(AttackCooldown());
     }
 
     public IEnumerator DamageDealing()
@@ -117,16 +115,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
 
     IEnumerator AttackCooldown()
     {
-        atkCd = true;
         yield return new WaitForSeconds(Random.Range(minAtkCd, maxAtkCd));
-        atkCd = false;
         attackable = true;
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue - Color.black / 2;
-        Gizmos.matrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
-        Gizmos.DrawCube(Vector3.forward, Vector3.one);
     }
 }
