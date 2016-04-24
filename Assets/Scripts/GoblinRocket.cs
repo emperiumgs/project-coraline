@@ -19,7 +19,6 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     ParticleSystem blast;
     NavMeshAgent agent;
     Transform target;
-    Coroutine timer;
     Animator anim;
     float detectRange = 10f;
     float suicideRange = 5f;
@@ -137,7 +136,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     void LightRocket()
     {
         attackable = true;
-        timer = StartCoroutine(ExplosionTimer());
+        StartCoroutine(ExplosionTimer());
     }
 
     IEnumerator ExplosionTimer()
