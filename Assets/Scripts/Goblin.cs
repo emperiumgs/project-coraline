@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
 {
-    public Transform target;
     public LayerMask mask;
 
     enum States
@@ -19,6 +18,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
     NavMeshAgent agent;
     PlayerCombat pc;
     Coroutine damageDeal;
+    Transform target;
     Animator anim;
     float detectRange = 10f;
     float chaseRange = 15f;
@@ -36,35 +36,28 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
 
     void Awake()
     {
+        pc = FindObjectOfType<PlayerCombat>();
+        target = pc.transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        pc = target.GetComponent<PlayerCombat>();
         health = maxHealth;
     }
 
     void FixedUpdate()
     {
-        switch (state)
-        {
-            case States.Idle:
-                Idle();
-                break;
-            case States.Chasing:
-                Chase();
-                break;
-        }
+        if (state == States.Idle)
+            Idle();
+        else if (state == States.Chasing)
+            Chase();
     }
 
     void Idle()
     {
-        if (Vector3.Distance(transform.position, target.position) <= detectRange)
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, target.position - transform.position, out hit, detectRange))
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, target.position - transform.position, out hit, detectRange))
-            {
-                if (hit.collider.tag == "Player")
-                    state = States.Chasing;
-            }            
+            if (hit.collider.tag == "Player")
+                state = States.Chasing;
         }
     }
 
