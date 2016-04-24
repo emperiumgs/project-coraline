@@ -26,13 +26,18 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
     float maxAtkCd = 1.5f;
     float minAtkCd = 0.5f;
     float damage = 10f;
+    float stunDamage = 10f;
+    float maxHealth = 40f;
+    float health;
     bool attackable = true;
+    bool provoked;
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         pc = target.GetComponent<PlayerCombat>();
+        health = maxHealth;
     }
 
     void FixedUpdate()
@@ -62,15 +67,19 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
             agent.SetDestination(transform.position);
             if (attackable)
             {
+                provoked = false;
                 attackable = false;
-                state = States.Fighting;                
+                state = States.Fighting;
                 anim.SetTrigger("atk");
             }
         }
-        else if (dist <= chaseRange)
+        else if (provoked || dist <= chaseRange)
             agent.SetDestination(target.position);
         else
+        {
+            provoked = false;
             state = States.Idle;
+        }
     }
 
     void EndAttack()
@@ -78,14 +87,35 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
         state = States.Chasing;
     }
 
+    void EndHurt()
+    {
+        state = States.Idle;
+    }
+
     public void TakeDamage(float damage)
     {
-        print("Took " + damage + " damage");
+        provoked = false;
+        health -= damage;
+        if (health > 0 && damage > stunDamage)
+        {
+            anim.SetTrigger("hurt");            
+            state = States.Hurting;
+        }
+        else if (health <= 0)
+        {
+            anim.SetTrigger("die");
+            state = States.Dying;
+        }
+        else if (state == States.Idle)
+        {
+            provoked = true;
+            state = States.Chasing;
+        }
     }
 
     public void Die()
     {
-
+        Destroy(gameObject);
     }
 
     public void OpenDamage()
