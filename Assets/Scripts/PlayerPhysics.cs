@@ -5,7 +5,9 @@ using System.Collections;
 public class PlayerPhysics : MonoBehaviour
 {
     [HideInInspector]
-    public bool camOrient = false;
+    public bool camOrient;
+    [HideInInspector]
+    public bool stunned;
 
     const int SPEED = 6;
     const int JUMP_FORCE = 15;
@@ -29,16 +31,24 @@ public class PlayerPhysics : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-            jump = true;
-        else if (Input.GetButtonUp("Jump"))
-            jump = false;
+        if (!stunned)
+        {
+            if (Input.GetButtonDown("Jump"))
+                jump = true;
+            else if (Input.GetButtonUp("Jump"))
+                jump = false;
+        }
     }
 
     void FixedUpdate()
     {
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");        
+        if (!stunned)
+        {
+            h = Input.GetAxis("Horizontal");
+            v = Input.GetAxis("Vertical");
+        }
+        else
+            h = v = 0;
 
         prevY = move.y;
         move = Vector3.zero;

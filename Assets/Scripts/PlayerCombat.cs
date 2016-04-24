@@ -15,6 +15,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
     CameraController cam;
     PlayerPhysics physics;
     Coroutine damageDeal;
+    Coroutine stunRoutine;
     Animator anim;
     float[] comboDamage = { 8, 10, 15 };
     bool ltngMode;
@@ -33,38 +34,41 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
 
     void Update()
     {
-        if (attackable && Input.GetButtonDown("Fire1"))
+        if (!physics.stunned)
         {
-            // Reorient to face cam
-            if (comboNum == 0)
-                transform.localEulerAngles = new Vector3(0, cam.transform.eulerAngles.y);
-            comboNum++;
-            anim.SetInteger("comboNum", comboNum);
-        }
-
-        if (comboNum == 0)
-        {
-            if (Input.GetButtonDown("Fire2"))
+            if (attackable && Input.GetButtonDown("Fire1"))
             {
-                if (ltngMode)
+                // Reorient to face cam
+                if (comboNum == 0)
+                    transform.localEulerAngles = new Vector3(0, cam.transform.eulerAngles.y);
+                comboNum++;
+                anim.SetInteger("comboNum", comboNum);
+            }
+
+            if (comboNum == 0)
+            {
+                if (Input.GetButtonDown("Fire2"))
                 {
-                    if (!ltngEnabled)
-                        holdZoomOut = true;
-                    else
+                    if (ltngMode)
+                    {
+                        if (!ltngEnabled)
+                            holdZoomOut = true;
+                        else
+                            ToggleZoom();
+                    }
+                    else if (!holdZoomOut)
                         ToggleZoom();
                 }
-                else if (!holdZoomOut)
-                    ToggleZoom();
             }
-        }
 
-        if (ltngMode)
-        {
-            if (ltngEnabled && Input.GetButtonDown("Fire1"))
+            if (ltngMode)
             {
-                ltng.Strike();
-                ltngEnabled = false;
-                StartCoroutine(LightningCD());
+                if (ltngEnabled && Input.GetButtonDown("Fire1"))
+                {
+                    ltng.Strike();
+                    ltngEnabled = false;
+                    StartCoroutine(LightningCD());
+                }
             }
         }
     }
@@ -100,12 +104,22 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
 
     public void TakeDamage(float damage)
     {
-        print("Took " + damage + " damage");
+        if (ltngMode)
+        {
+            ltng.AbortStrike();
+            ToggleZoom();
+        }
     }
 
     public void Die()
     {
 
+    }
+
+    public void Stun(float time)
+    {
+        physics.stunned = true;
+        stunRoutine = StartCoroutine(StunDuration(time));
     }
 
     public IEnumerator DamageDealing()
@@ -142,5 +156,11 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
             holdZoomOut = false;
         }
         ltngEnabled = true;        
+    }
+
+    IEnumerator StunDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        physics.stunned = false;
     }
 }

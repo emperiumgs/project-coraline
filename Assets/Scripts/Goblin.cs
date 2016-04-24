@@ -20,17 +20,19 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
     PlayerCombat pc;
     Coroutine damageDeal;
     Animator anim;
-    float detectRange = 8f;
-    float chaseRange = 13f;
+    float detectRange = 10f;
+    float chaseRange = 15f;
     float atkRange = 1.85f;
     float maxAtkCd = 1.5f;
     float minAtkCd = 0.5f;
     float damage = 10f;
     float stunDamage = 10f;
+    float stunTime = 1f;
     float maxHealth = 40f;
     float health;
     bool attackable = true;
     bool provoked;
+    bool stunAttack;
 
     void Awake()
     {
@@ -56,7 +58,14 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
     void Idle()
     {
         if (Vector3.Distance(transform.position, target.position) <= detectRange)
-            state = States.Chasing;
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, target.position - transform.position, out hit, detectRange))
+            {
+                if (hit.collider.tag == "Player")
+                    state = States.Chasing;
+            }            
+        }
     }
 
     void Chase()
@@ -98,11 +107,13 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
         health -= damage;
         if (health > 0 && damage > stunDamage)
         {
+            agent.SetDestination(transform.position);
             anim.SetTrigger("hurt");            
             state = States.Hurting;
         }
         else if (health <= 0)
         {
+            agent.SetDestination(transform.position);
             anim.SetTrigger("die");
             state = States.Dying;
         }
@@ -120,6 +131,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
 
     public void OpenDamage()
     {
+        stunAttack = Random.Range(0, 10) < 2 ? true : false;
         damageDeal = StartCoroutine(DamageDealing());
     }
 
@@ -136,6 +148,11 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
         {
             if (Physics.CheckBox(transform.position + transform.TransformDirection(Vector3.forward), Vector3.one / 2, Quaternion.identity, mask))
             {
+                if (stunAttack)
+                {
+                    pc.Stun(stunTime);
+                    stunAttack = false;
+                }
                 pc.TakeDamage(damage);
                 hit = true;
             }
