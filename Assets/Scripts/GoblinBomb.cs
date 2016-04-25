@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GoblinBomb : MonoBehaviour, IDamageable
@@ -49,6 +49,7 @@ public class GoblinBomb : MonoBehaviour, IDamageable
         blast.gameObject.SetActive(true);
         blast.transform.SetParent(null);
         blast.Play();
+        blast.GetComponent<ParticleDestroy>().Destroy();
         if (Physics.CheckSphere(transform.position, explosionRadius, mask))
             target.GetComponent<IDamageable>().TakeDamage(explosionDamage);
         Destroy(gameObject);
