@@ -12,12 +12,12 @@ public class CameraController : MonoBehaviour
     const float CAST_RADIUS = 0.2f;
     const float ZOOM_TIME = 0.3f;
 
-    public Transform target;
     public Vector3 targetOffset;
     public LayerMask mask;
 
     Vector3 origPos;
 
+    Transform target;
     Transform pivot;
     Vector3 offsetVector;    
     Vector3 dir;
@@ -31,6 +31,7 @@ public class CameraController : MonoBehaviour
 
     void Awake()
     {
+        target = FindObjectOfType<PlayerPhysics>().transform;
         origPos = transform.localPosition;
         offsetVector = origPos;
         pivot = transform.parent;

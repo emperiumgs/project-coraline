@@ -24,6 +24,7 @@ public class LightningAttack : MonoBehaviour
 
 	void Awake()
     {
+        lights[1].transform.SetParent(null);
         activeBranches = 0;
         cam = Camera.main;
         camPoint = new Vector3(Screen.width / 2, Screen.height / 2, MAX_RANGE - cam.transform.localPosition.z + transform.localPosition.z);
