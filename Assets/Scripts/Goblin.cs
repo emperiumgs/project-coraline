@@ -96,6 +96,9 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
 
     public void TakeDamage(float damage)
     {
+        if (state == States.Dying)
+            return;
+
         provoked = false;
         health -= damage;
         if (health > 0 && damage > stunDamage)

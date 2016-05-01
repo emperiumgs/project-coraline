@@ -9,6 +9,7 @@ public class LightningAttack : MonoBehaviour
     public Light[] lights;
     public LayerMask mask;
     public AudioController audioCtrl;
+    public bool striking { get; private set; }
 
     const int MAX_RANGE = 13;
     const int MAX_BRANCH_SIZE = 5;
@@ -33,6 +34,7 @@ public class LightningAttack : MonoBehaviour
 
     public void Strike()
     {
+        striking = true;
         for (int i = 0; i < lightning.Length; i++)
             lightning[i].enabled = true;
         lights[0].enabled = true;
@@ -49,6 +51,7 @@ public class LightningAttack : MonoBehaviour
 
     void DisableStrike()
     {
+        striking = false;
         activeBranches = 0;
         for (int i = 0; i < branches.Length; i++)
         {

@@ -105,7 +105,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
     public void TakeDamage(float damage)
     {
         print("Took: " + damage);
-        if (ltngMode)
+        if (ltng.striking)
         {
             ltng.AbortStrike();
             ToggleZoom();

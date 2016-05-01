@@ -73,7 +73,10 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     {
         Vector3 dir = target.position - transform.position;
         if (Vector3.Angle(transform.forward, dir) > 1)
+        {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotationSens);
+            transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y);
+        }
         else if (attackable)
         {
             attackable = false;
@@ -95,14 +98,14 @@ public class GoblinRocket : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damage)
     {
-        if (!invulnerable)
-        {
-            health -= damage;
-            if (health <= 0)
-                Die();
-            else if (health <= maxHealth / 4)
-                EngageRocket();
-        }
+        if (invulnerable)
+            return;
+
+        health -= damage;
+        if (health <= 0)
+            Die();
+        else if (health <= maxHealth / 4)
+            EngageRocket();
     }
 
     public void Die()

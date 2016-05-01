@@ -13,7 +13,6 @@ public class AudioController : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
         AudioClip[] assets = Resources.LoadAll<AudioClip>("Sounds/" + assetPath);
-        print(assets.Length);
         foreach (AudioClip clip in assets)
             clips.Add(clip.name, clip);
     }
