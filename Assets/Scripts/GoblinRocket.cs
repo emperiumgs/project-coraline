@@ -31,6 +31,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     float health;
     float rocketTimer = 4f;
     bool attackable = true;
+    bool invulnerable;
     int rotationSens = 10;
 
     void Awake()
@@ -86,22 +87,22 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     }
 
     void Rocketing()
-    {
+    {        
         if (attackable)
-        {
-            agent.SetDestination(target.position);
-            if (Physics.CheckSphere(transform.position, explosionRange, mask))
+            if ((agent.velocity != Vector3.zero && agent.remainingDistance < 0.1f) || Physics.CheckSphere(transform.position, explosionRange, mask))
                 Die();
-        }
     }
 
     public void TakeDamage(float damage)
     {
-        health -= damage;
-        if (health <= 0)
-            Die();
-        else if (health <= maxHealth / 4)
-            EngageRocket();
+        if (!invulnerable)
+        {
+            health -= damage;
+            if (health <= 0)
+                Die();
+            else if (health <= maxHealth / 4)
+                EngageRocket();
+        }
     }
 
     public void Die()
@@ -129,15 +130,17 @@ public class GoblinRocket : MonoBehaviour, IDamageable
 
     void EngageRocket()
     {
+        attackable = false;
+        invulnerable = true;
         anim.SetTrigger("rocket");
         state = States.Rocketing;
-        attackable = false;
     }
 
     void LightRocket()
     {
-        attackable = true;
+        agent.SetDestination(target.position);
         StartCoroutine(ExplosionTimer());
+        attackable = true;
     }
 
     IEnumerator ExplosionTimer()

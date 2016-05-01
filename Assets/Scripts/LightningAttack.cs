@@ -8,6 +8,7 @@ public class LightningAttack : MonoBehaviour
     public LineRenderer[] branches;
     public Light[] lights;
     public LayerMask mask;
+    public AudioController audioCtrl;
 
     const int MAX_RANGE = 13;
     const int MAX_BRANCH_SIZE = 5;
@@ -27,7 +28,7 @@ public class LightningAttack : MonoBehaviour
         lights[1].transform.SetParent(null);
         activeBranches = 0;
         cam = Camera.main;
-        camPoint = new Vector3(Screen.width / 2, Screen.height / 2, MAX_RANGE - cam.transform.localPosition.z + transform.localPosition.z);
+        camPoint = new Vector3(Screen.width / 2, Screen.height / 2, MAX_RANGE + Mathf.Abs(cam.transform.localPosition.z) + transform.localPosition.z);
     }
 
     public void Strike()
@@ -36,12 +37,14 @@ public class LightningAttack : MonoBehaviour
             lightning[i].enabled = true;
         lights[0].enabled = true;
         strike = StartCoroutine(ContinuousStrike());
+        //audioCtrl.PlayClip("blast");
     }
 
     public void AbortStrike()
     {
         DisableStrike();
         StopCoroutine(strike);
+        //audioCtrl.StopClip();
     }
 
     void DisableStrike()
@@ -87,7 +90,7 @@ public class LightningAttack : MonoBehaviour
         while (blasts < maxBlasts)
         {
             blasts++;
-
+            
             Vector3 target = cam.ScreenToWorldPoint(camPoint);
             Vector3 dir = (target - transform.position).normalized;
             RaycastHit hit;
