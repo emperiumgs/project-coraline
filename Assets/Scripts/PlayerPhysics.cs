@@ -33,19 +33,13 @@ public class PlayerPhysics : MonoBehaviour
     {
         if (!stunned)
         {
+            h = Input.GetAxis("Horizontal");
+            v = Input.GetAxis("Vertical");
+
             if (Input.GetButtonDown("Jump"))
                 jump = true;
             else if (Input.GetButtonUp("Jump"))
                 jump = false;
-        }
-    }
-
-    void FixedUpdate()
-    {
-        if (!stunned)
-        {
-            h = Input.GetAxis("Horizontal");
-            v = Input.GetAxis("Vertical");
         }
         else
             h = v = 0;

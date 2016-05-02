@@ -7,10 +7,11 @@ public class CameraController : MonoBehaviour
     const int ANGULAR_SPEED = 4;
     const int X_ROTATION = 10;
     const int PI_RAD = 180;
-    const float MAX_ROTATION = 15;
+    const float MAX_ROTATION = 30;
     const float MIN_ROTATION = -30;
     const float CAST_RADIUS = 0.2f;
     const float ZOOM_TIME = 0.3f;
+    const float SHAKE_INTENSITY = 0.25f;
 
     public Vector3 targetOffset;
     public LayerMask mask;
@@ -26,6 +27,7 @@ public class CameraController : MonoBehaviour
     float x;
     float y;
     float vRot;
+    bool locked;
 
     Coroutine zooming;
 
@@ -37,8 +39,11 @@ public class CameraController : MonoBehaviour
         pivot = transform.parent;
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
+        if (locked)
+            return;
+
         pivot.position = Vector3.Lerp(pivot.position, target.position + targetOffset, Time.deltaTime * OFFSET_SPEED);
         curDist = transform.localPosition.magnitude;
 
@@ -72,16 +77,35 @@ public class CameraController : MonoBehaviour
         zooming = StartCoroutine(ZoomProcess(targetPos));
     }
 
+    public void Shake(float time)
+    {
+        StartCoroutine(ShakeProcess(time));
+    }
+
     IEnumerator ZoomProcess(Vector3 targetPos)
     {
-        float dist = (targetPos - offsetVector).z * Time.fixedDeltaTime / ZOOM_TIME;
+        float dist = (targetPos - offsetVector).z * Time.deltaTime / ZOOM_TIME;
         float time = 0;
         while (time < ZOOM_TIME)
         {
-            time += Time.fixedDeltaTime;
+            time += Time.deltaTime;
             offsetVector.z += dist;
-            yield return new WaitForFixedUpdate();
+            yield return null;
         }
         offsetVector = targetPos;
+    }
+
+    IEnumerator ShakeProcess(float shakeTime)
+    {
+        locked = true;
+        Vector3 beforePos = transform.position;
+        float time = 0;
+        while (time < shakeTime)
+        {
+            time += Time.deltaTime;
+            transform.position = beforePos + Random.insideUnitSphere * SHAKE_INTENSITY;
+            yield return null;
+        }
+        locked = false;
     }
 }

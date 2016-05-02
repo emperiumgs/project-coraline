@@ -13,11 +13,14 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
 
     LightningAttack ltng;
     CameraController cam;
+    HudController hud;
     PlayerPhysics physics;
     Coroutine damageDeal;
     Coroutine stunRoutine;
     Animator anim;
     float[] comboDamage = { 8, 10, 15 };
+    float maxHealth = 100;
+    float health;
     bool ltngMode;
     bool ltngEnabled = true;
     bool holdZoomOut;
@@ -26,10 +29,12 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
 
     void Awake()
     {
+        health = maxHealth;
         physics = GetComponent<PlayerPhysics>();
         cam = Camera.main.GetComponent<CameraController>();
         ltng = GetComponent<LightningAttack>();
         anim = GetComponent<Animator>();
+        hud = FindObjectOfType<HudController>();
     }
 
     void Update()
@@ -75,6 +80,10 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
 
     void ToggleZoom()
     {
+        if (ltngMode)
+            hud.DisableCrosshair();
+        else
+            hud.EnableCrosshair();
         cam.Zoom(!ltngMode);
         physics.camOrient = !ltngMode;
         attackable = ltngMode;
@@ -119,8 +128,12 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
 
     public void Stun(float time)
     {
+        if (health <= 0)
+            return;
+
         physics.stunned = true;
         stunRoutine = StartCoroutine(StunDuration(time));
+        cam.Shake(time);
     }
 
     public IEnumerator DamageDealing()

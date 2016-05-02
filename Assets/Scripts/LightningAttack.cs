@@ -11,11 +11,12 @@ public class LightningAttack : MonoBehaviour
     public AudioController audioCtrl;
     public bool striking { get; private set; }
 
-    const int MAX_RANGE = 13;
+    public const int MAX_RANGE = 13;
     const int MAX_BRANCH_SIZE = 5;
     const float RANDOM_THRESHOLD = 0.3f;
     const float CAST_TIME = 1f;
-    
+
+    CameraController camCtrl;
     Coroutine strike;
     Vector3 camPoint;
     Camera cam;
@@ -29,6 +30,7 @@ public class LightningAttack : MonoBehaviour
         lights[1].transform.SetParent(null);
         activeBranches = 0;
         cam = Camera.main;
+        camCtrl = cam.GetComponent<CameraController>();
         camPoint = new Vector3(Screen.width / 2, Screen.height / 2, MAX_RANGE + Mathf.Abs(cam.transform.localPosition.z) + transform.localPosition.z);
     }
 
@@ -95,7 +97,7 @@ public class LightningAttack : MonoBehaviour
             blasts++;
             
             Vector3 target = cam.ScreenToWorldPoint(camPoint);
-            Vector3 dir = (target - transform.position).normalized;
+            Vector3 dir = (target - lightningPivot.position).normalized;
             RaycastHit hit;
             if (Physics.Raycast(lightningPivot.position, dir, out hit, MAX_RANGE, mask))
             {
