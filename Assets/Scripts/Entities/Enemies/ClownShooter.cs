@@ -4,7 +4,6 @@ using System.Collections;
 public class ClownShooter : MonoBehaviour, IDamageable
 {
     public LayerMask mask;
-    public ParticleSystem particles;
 
     enum States
     {
@@ -14,8 +13,7 @@ public class ClownShooter : MonoBehaviour, IDamageable
     }
     States state = States.Idle;
 
-    ParticleSystem.Particle[] parts;
-    ParticleSystem.Particle projectile;
+    ParticleSystem particles;
     RaycastHit hit;
     Transform target;
     Transform hand;
@@ -36,7 +34,6 @@ public class ClownShooter : MonoBehaviour, IDamageable
         health = maxHealth;
         anim = GetComponent<Animator>();
         particles = GetComponentInChildren<ParticleSystem>(true);
-        parts = new ParticleSystem.Particle[particles.maxParticles];
         shootDuration = particles.startLifetime;
         hand = transform.FindChild("RHand");
     }
@@ -75,12 +72,12 @@ public class ClownShooter : MonoBehaviour, IDamageable
             return;
         }
 
-        dir.y = 0;
+        dir.y = 0;        
         if (Vector3.Angle(transform.forward, dir) > 1)
-        {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotationSens);
-            hand.rotation = Quaternion.Slerp(hand.rotation, Quaternion.LookRotation(target.position - hand.position), Time.deltaTime * rotationSens);
-        }
+        dir = target.position - hand.position;
+        if (Vector3.Angle(hand.forward, dir) > 1)
+            hand.rotation = Quaternion.Slerp(hand.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotationSens);
         else if (attackable)
             Shoot();
     }
@@ -114,25 +111,7 @@ public class ClownShooter : MonoBehaviour, IDamageable
         attackable = false;
         particles.gameObject.SetActive(true);
         particles.Play();
-        Vector3 shotOffset = hand.TransformDirection(Vector3.forward);
-        float time = 0;
-        bool damaged = false;
-        while(time < shootDuration)
-        {
-            time += Time.deltaTime;
-            yield return null;
-            particles.GetParticles(parts);
-            projectile = parts[0];
-            if (!damaged)
-            {
-                Debug.DrawLine(projectile.position + shotOffset, projectile.position + shotOffset + Vector3.up, Color.red);
-                if (Physics.CheckSphere(projectile.position + shotOffset, particles.startSize, mask))
-                {
-                    target.GetComponent<IDamageable>().TakeDamage(damage);
-                    damaged = true;
-                }
-            }
-        }
+        yield return new WaitForSeconds(shootDuration);
         particles.Stop(true);
         particles.gameObject.SetActive(false);
         yield return new WaitForSeconds(Random.Range(minAtkCd, maxAtkCd));

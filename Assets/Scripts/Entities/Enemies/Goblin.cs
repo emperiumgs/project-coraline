@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
+public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
 {
     public LayerMask mask;
 
@@ -94,6 +94,13 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
         state = States.Idle;
     }
 
+    public void Stun(float time)
+    {
+        agent.SetDestination(transform.position);
+        anim.SetTrigger("hurt");
+        state = States.Hurting;
+    }
+
     public void TakeDamage(float damage)
     {
         if (state == States.Dying)
@@ -102,11 +109,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
         provoked = false;
         health -= damage;
         if (health > 0 && damage > stunDamage)
-        {
-            agent.SetDestination(transform.position);
-            anim.SetTrigger("hurt");            
-            state = States.Hurting;
-        }
+            Stun(stunTime);
         else if (health <= 0)
         {
             agent.SetDestination(transform.position);

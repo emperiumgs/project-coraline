@@ -31,7 +31,7 @@ public class LightningAttack : MonoBehaviour
         activeBranches = 0;
         cam = Camera.main;
         camCtrl = cam.GetComponent<CameraController>();
-        camPoint = new Vector3(Screen.width / 2, Screen.height / 2, MAX_RANGE + Mathf.Abs(cam.transform.localPosition.z) + transform.localPosition.z);
+        camPoint = new Vector3(Screen.width / 2, Screen.height / 2, MAX_RANGE + Mathf.Abs(cam.transform.localPosition.z) + lightningPivot.localPosition.z);
     }
 
     public void Strike()
@@ -92,41 +92,50 @@ public class LightningAttack : MonoBehaviour
     IEnumerator ContinuousStrike()
     {
         int blasts = 0;
+        Vector3 target, dir, camPos, ltngPos;
+        RaycastHit hit;
+        float maxDist;
         while (blasts < maxBlasts)
         {
             blasts++;
-            
-            Vector3 target = cam.ScreenToWorldPoint(camPoint);
-            Vector3 dir = (target - lightningPivot.position).normalized;
-            RaycastHit hit;
-            if (Physics.Raycast(lightningPivot.position, dir, out hit, MAX_RANGE, mask))
-            {
+            camPos = cam.transform.position;
+            ltngPos = lightningPivot.position;
+            // Camera Raycasting
+            target = cam.ScreenToWorldPoint(camPoint);
+            dir = (target - camPos).normalized;
+            maxDist = Vector3.Distance(camPos, target);
+            if (Physics.Raycast(camPos, dir, out hit, maxDist, mask))
                 target = hit.point;
-                dir = (target - lightningPivot.position).normalized;
-                if (hit.collider != null)
-                {
-                    IDamageable col = hit.collider.GetComponent<IDamageable>();
-                    if (col != null)
-                        col.TakeDamage(damage);
-                }
+            // Hand Raycasting
+            dir = (target - ltngPos).normalized;
+            maxDist = Vector3.Distance(ltngPos, target);
+            if (Physics.Raycast(ltngPos, dir, out hit, maxDist, mask))
+                target = hit.point;
+            dir = (target - ltngPos).normalized;
+            // Deal Damage
+            if (hit.collider != null)
+            {
+                IDamageable col = hit.collider.GetComponent<IDamageable>();
+                if (col != null)
+                    col.TakeDamage(damage);
             }
-
-            float dist = Vector3.Distance(lightningPivot.position, target);
+            // Calculate node count
+            float dist = Vector3.Distance(ltngPos, target);
             int nodes = Mathf.CeilToInt(dist);
             Vector3[] nodePos = new Vector3[nodes];
-
+            // Calculate node position
             for (int l = 0; l < lightning.Length; l++)
             {
                 lightning[l].SetVertexCount(nodes);
                 for (int i = 0; i < nodes; i++)
                 {
                     if (i == 0)
-                        nodePos[i] = lightningPivot.position;
+                        nodePos[i] = ltngPos;
                     else if (i == nodes - 1)
                         nodePos[i] = target;
                     else
                     {
-                        nodePos[i] = Random.insideUnitSphere * RANDOM_THRESHOLD * (1 + l) + i * dir + lightningPivot.position;
+                        nodePos[i] = Random.insideUnitSphere * RANDOM_THRESHOLD * (1 + l) + i * dir + ltngPos;
                         if (nodes > 2 && activeBranches < branches.Length && Random.Range(0, 10) < i)
                             DevelopBranch(nodePos[i]);
                     }
@@ -141,7 +150,6 @@ public class LightningAttack : MonoBehaviour
 
                 lightning[l].SetPositions(nodePos);
             }
-
             if (activeBranches < branches.Length - 1)
             {
                 for (int i = branches.Length - 1; i > activeBranches - 1; i--)

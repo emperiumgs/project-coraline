@@ -2,12 +2,12 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
-{    
+public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
+{
     public Transform weapon;
     public LayerMask hittableLayers;
     public Vector3 weaponReachOffset;
-    public Vector3 halfWeaponReach;    
+    public Vector3 halfWeaponReach;
 
     const float LTNG_CD = 1.5f;
 
@@ -78,6 +78,15 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
         }
     }
 
+    void OnParticleCollision(GameObject other)
+    {
+        if (other.tag == "Water")
+        {
+            float damage = float.Parse(other.name.Split('_')[1]);
+            TakeDamage(damage);
+        }
+    }
+
     void ToggleZoom()
     {
         if (ltngMode)
@@ -114,9 +123,10 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
     public void TakeDamage(float damage)
     {
         print("Took: " + damage);
-        if (ltng.striking)
+        if (ltngMode)
         {
-            ltng.AbortStrike();
+            if (ltng.striking)
+                ltng.AbortStrike();
             ToggleZoom();
         }
     }
@@ -136,6 +146,18 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
         cam.Shake(time);
     }
 
+    public void RechargeEnergy(float amount)
+    {
+
+    }
+
+    public void RechargeLife(float amount)
+    {
+        health += amount;
+        if (health > maxHealth)
+            health = maxHealth;
+    }
+
     public IEnumerator DamageDealing()
     {
         Collider[] hits;
@@ -151,7 +173,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
                     dmg = hits[i].GetComponent<IDamageable>();
                     if (dmg != null && !hitted.Contains(dmg))
                     {
-                        dmg.TakeDamage(comboDamage[comboNum-1]);
+                        dmg.TakeDamage(comboDamage[comboNum - 1]);
                         hitted.Add(dmg);
                     }
                 }
@@ -169,7 +191,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable
                 ToggleZoom();
             holdZoomOut = false;
         }
-        ltngEnabled = true;        
+        ltngEnabled = true;
     }
 
     IEnumerator StunDuration(float duration)
