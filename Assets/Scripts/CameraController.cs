@@ -3,34 +3,37 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
-    const int OFFSET_SPEED = 6;
-    const int ANGULAR_SPEED = 4;
-    const int X_ROTATION = 10;
-    const int PI_RAD = 180;
-    const float MAX_ROTATION = 30;
-    const float MIN_ROTATION = -50;
-    const float CAST_RADIUS = 0.2f;
-    const float ZOOM_TIME = 0.3f;
-    const float SHAKE_INTENSITY = 2f;
+    const int OFFSET_SPEED = 6,
+        ANGULAR_SPEED = 4,
+        X_ROTATION = 10,
+        PI_RAD = 180,
+        MAX_ROTATION = 30,
+        MIN_ROTATION = -50;
+    const float CAST_RADIUS = 0.2f,
+        ZOOM_TIME = 0.3f,
+        SHAKE_INTENSITY = 1f,
+        BACK_COOLDOWN = 0.3f;
 
     public Vector3 targetOffset;
     public LayerMask mask;
 
-    Vector3 origPos;
-    Vector3 aimPos;
+    Vector3 origPos,
+        aimPos;
 
-    Transform target;
-    Transform pivot;
-    Vector3 offsetVector;
-    Vector3 dir;
+    Transform target, 
+        pivot;
+    Vector3 offsetVector, 
+        dir;
     RaycastHit hit;
-    float curDist;
-    float x;
-    float y;
-    float vRot;
-    bool locked;
+    float curDist,
+        x, 
+        y, 
+        vRot;
+    bool locked,
+        getBack = true;
 
-    Coroutine zooming;
+    Coroutine zooming,
+        backCooldown;
 
     void Awake()
     {
@@ -49,12 +52,14 @@ public class CameraController : MonoBehaviour
         pivot.position = Vector3.Lerp(pivot.position, target.position + targetOffset, Time.deltaTime * OFFSET_SPEED);
         curDist = transform.localPosition.magnitude;
 
-        dir = (transform.position - target.position).normalized;        
-
+        dir = (transform.position - target.position).normalized;
         if (Physics.SphereCast(target.position, CAST_RADIUS, dir, out hit, offsetVector.magnitude, mask) && !hit.collider.isTrigger)
+        {
             transform.localPosition = transform.localPosition * (hit.distance / curDist);
-        else
-            transform.localPosition = offsetVector;
+            backCooldown = StartCoroutine(GetBackCooldown());
+        }
+        else if (getBack)
+            transform.localPosition = Vector3.Lerp(transform.localPosition, offsetVector, Time.deltaTime * OFFSET_SPEED);
 
         x = Input.GetAxis("Mouse X");
         y = Input.GetAxis("Mouse Y");
@@ -96,8 +101,8 @@ public class CameraController : MonoBehaviour
     IEnumerator ShakeProcess(float shakeTime)
     {
         locked = true;
-        Vector3 prevRot = transform.localEulerAngles;
-        Vector3 movement = new Vector3();
+        Vector3 prevRot = transform.localEulerAngles,
+            movement = new Vector3();
         float time = 0;
         while (time < shakeTime)
         {
@@ -107,5 +112,35 @@ public class CameraController : MonoBehaviour
             yield return null;
         }
         locked = false;
+    }
+
+    IEnumerator GetBackCooldown()
+    {
+        getBack = false;
+        yield return new WaitForSeconds(BACK_COOLDOWN);
+        getBack = true;
+    }
+
+    Vector3 gPoint,
+        gDir,
+        prevGDir;
+    void OnDrawGizmos()
+    {
+        if (target == null)
+            return;
+        
+        gPoint = target.position;
+        prevGDir = gDir;
+        gDir = (transform.position - gPoint).normalized;
+        if (prevGDir == gDir)
+            return;
+
+        Gizmos.color = Color.cyan;
+        float dist = Vector3.Distance(transform.position, gPoint);
+        while (Vector3.Distance(gPoint, target.position) < dist)
+        {
+            Gizmos.DrawWireSphere(gPoint, CAST_RADIUS);
+            gPoint += gDir * 2 * CAST_RADIUS;
+        }
     }
 }
