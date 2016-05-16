@@ -20,31 +20,31 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     ParticleSystem water;
     PlayerCombat pc;
     RaycastHit hit;
-    Transform target;
-    Transform nose;
-    Transform rHand;
-    Transform lHand;
-    Transform atkTransform;
+    Transform target,
+		nose,
+		rHand,
+		lHand,
+		atkTransform;
     Coroutine damageDeal;
     Animator anim;
-    float detectRange = 25f;
-    float rangedRange = 20f;
-    float meleeRange = 10f;
-    float explosionRange = 7f;
-    float handRange = 2f;
-    float noseRange = 4f;
-    float waterDuration = 3f;
-    float minAtkCd = 2f;
-    float maxAtkCd = 3f;
-    float minBalloonRange = 10f;
-    float maxBalloonRange = 20f;
-    float maxHealth = 200;
-    float health;
-    float meleeDamage = 10f;
-    float noseDamage = 20f;
+    float detectRange = 25f,
+		rangedRange = 20f,
+		meleeRange = 10f,
+		explosionRange = 7f,
+		handRange = 2f,
+		noseRange = 4f,
+		waterDuration = 3f,
+		minAtkCd = 2f,
+		maxAtkCd = 3f,
+		minBalloonRange = 10f,
+		maxBalloonRange = 20f,
+		maxHealth = 200,
+		health,
+		meleeDamage = 10f,
+		noseDamage = 20f;
     bool attackable = true;
-    int rotationSens = 10;
-    int balloonCount = 15;
+    int rotationSens = 10,
+		balloonCount = 15;
 
     void Awake()
     {
@@ -122,7 +122,9 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     void Explode()
     {
         if (Physics.CheckSphere(nose.position, noseRange, mask))
+        {
             pc.TakeDamage(noseDamage);
+        }
     }
 
     void EndAttack()
@@ -192,13 +194,21 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     IEnumerator WaterShooting()
     {
         water.Play();
-        float time = 0;
+        float time = 0,
+            dirY;
+        Quaternion refRot;
         while (time < waterDuration)
         {
             time += Time.fixedDeltaTime;
-            Vector3 dir = target.position - water.transform.position;
+			Vector3 dir = target.position - water.transform.position;
+            dirY = dir.y;
             dir.y = 0;
-            transform.rotation = Quaternion.Slerp(water.transform.rotation, Quaternion.LookRotation(dir), Time.fixedDeltaTime * rotationSens / 4);
+            refRot = water.transform.rotation;
+            refRot.eulerAngles = new Vector3(0, refRot.eulerAngles.y);
+            transform.rotation = Quaternion.Slerp(refRot, Quaternion.LookRotation(dir), Time.fixedDeltaTime * rotationSens / 2);
+            dir.y = dirY;
+            water.transform.rotation = Quaternion.Slerp(water.transform.rotation, Quaternion.LookRotation(dir), Time.fixedDeltaTime * rotationSens / 2);
+            water.transform.localEulerAngles = new Vector3(water.transform.localEulerAngles.x, 0);
             yield return new WaitForFixedUpdate();
         }
         water.Stop();

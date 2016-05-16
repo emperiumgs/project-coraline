@@ -6,8 +6,8 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 {
     public Transform weapon;
     public LayerMask hittableLayers;
-    public Vector3 weaponReachOffset;
-    public Vector3 halfWeaponReach;
+    public Vector3 weaponReachOffset,
+        halfWeaponReach;
 
     const float LTNG_CD = 1.5f;
 
@@ -15,16 +15,16 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     CameraController cam;
     HudController hud;
     PlayerPhysics physics;
-    Coroutine damageDeal;
-    Coroutine stunRoutine;
+    Coroutine damageDeal,
+        stunRoutine;
     Animator anim;
     float[] comboDamage = { 8, 10, 15 };
-    float maxHealth = 100;
-    float health;
-    bool ltngMode;
-    bool ltngEnabled = true;
-    bool holdZoomOut;
-    bool attackable = true;
+    float maxHealth = 100,
+        health;
+    bool ltngMode,
+        ltngEnabled = true,
+        holdZoomOut,
+        attackable = true;
     int comboNum;
 
     void Awake()

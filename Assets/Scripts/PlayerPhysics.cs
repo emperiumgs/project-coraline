@@ -5,22 +5,21 @@ using System.Collections;
 public class PlayerPhysics : MonoBehaviour
 {
     [HideInInspector]
-    public bool camOrient;
-    [HideInInspector]
-    public bool stunned;
+    public bool camOrient,
+        stunned;
 
-    const int SPEED = 6;
-    const int JUMP_FORCE = 15;
-    const int MASS = 6;
+    const int SPEED = 6,
+        JUMP_FORCE = 15;
+    const float MASS = 0.1f;
 
     CharacterController control;
     Vector3 move;
-    Camera cam;    
-    float moveDir;
-    float h;
-    float v;
-    float prevY;
-    float gravity = Physics.gravity.y;
+    Camera cam;
+    float moveDir,
+        h,
+        v,
+        prevY,
+        gravity = Physics.gravity.y;
     bool jump;
 
     void Awake()
@@ -88,7 +87,7 @@ public class PlayerPhysics : MonoBehaviour
             }
         }            
 
-        move.y += gravity * MASS * Time.deltaTime;
+        move.y += gravity * MASS;
 
         control.Move(move * Time.deltaTime);
     }
