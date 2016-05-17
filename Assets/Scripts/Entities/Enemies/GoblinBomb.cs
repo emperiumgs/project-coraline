@@ -9,10 +9,10 @@ public class GoblinBomb : MonoBehaviour, IDamageable
 
     ParticleSystem blast;
     NavMeshAgent agent;
-    float explosionTime = 1.5f;
-    float explosionDamage = 15f;
-    float explosionRange = 1.5f;
-    float explosionRadius = 3f;
+    public float explosionTime = 1.5f,
+        explosionDamage = 15f,
+        explosionRange = 1.5f,
+        explosionRadius = 3f;
     bool armed;
 
     void Awake()

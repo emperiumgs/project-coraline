@@ -9,7 +9,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     public Vector3 weaponReachOffset,
         halfWeaponReach;
 
-    const float LTNG_CD = 1.5f;
+    public float LightningCooldown = 1.5f;
 
     LightningAttack ltng;
     CameraController cam;
@@ -17,9 +17,9 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     PlayerPhysics physics;
     Coroutine damageDeal;
     Animator anim;
-    float[] comboDamage = { 8, 10, 15 };
-    float maxHealth = 100,
-        health;
+    public float[] comboDamage = { 8, 10, 15 };
+    public float maxHealth = 100;
+    float health;
     bool ltngMode,
         ltngEnabled = true,
         holdZoomOut,
@@ -189,7 +189,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     IEnumerator LightningCD()
     {
-        yield return new WaitForSeconds(LTNG_CD);
+        yield return new WaitForSeconds(LightningCooldown);
         if (holdZoomOut)
         {
             if (!Input.GetButton("Fire2"))

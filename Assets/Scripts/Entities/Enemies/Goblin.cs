@@ -20,7 +20,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
     Coroutine damageDeal;
     Transform target;
     Animator anim;
-    float detectRange = 10f,
+    public float detectRange = 10f,
         chaseRange = 15f,
         atkRange = 1.85f,
         maxAtkCd = 1.5f,
@@ -28,8 +28,8 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
         damage = 10f,
         stunDamage = 10f,
         stunTime = 1f,
-        maxHealth = 40f,
-        health;
+        maxHealth = 40f;
+    float health;
     bool attackable = true,
         provoked,
         stunAttack;

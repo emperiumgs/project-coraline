@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class BalloonElectric : Balloon
 {
-    float stunRange = 1.5f;
-    float stunAmount = 1f;
-    float damage = 5f;
+    public float stunRange = 1.5f,
+        stunAmount = 1f,
+        damage = 5f;
 
     protected override void Activate()
     {

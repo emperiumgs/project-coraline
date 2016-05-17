@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BalloonExplosive : Balloon
 {
-    float explosionRange = 1.5f;
-    float damage = 15f;
+    public float explosionRange = 1.5f,
+        damage = 15f;
 
     protected override void Activate()
     {

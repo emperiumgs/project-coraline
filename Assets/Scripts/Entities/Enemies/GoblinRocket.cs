@@ -20,19 +20,19 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     NavMeshAgent agent;
     Transform target;
     Animator anim;
-    float detectRange = 10f;
-    float suicideRange = 5f;
-    float explosionRange = 1.5f;
-    float explosionRadius = 3f;
-    float explosionDamage = 20f;
-    float maxAtkCd = 1.5f;
-    float minAtkCd = 0.5f;
-    float maxHealth = 30f;
+    public float detectRange = 10f,
+        suicideRange = 5f,
+        explosionRange = 1.5f,
+        explosionRadius = 3f,
+        explosionDamage = 20f,
+        maxAtkCd = 1.5f,
+        minAtkCd = 0.5f,
+        maxHealth = 30f,
+        rocketTimer = 4f;
     float health;
-    float rocketTimer = 4f;
     bool attackable = true;
     bool invulnerable;
-    int rotationSens = 10;
+    public int rotationSens = 10;
 
     void Awake()
     {

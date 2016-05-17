@@ -11,18 +11,18 @@ public class LightningAttack : MonoBehaviour
     public AudioController audioCtrl;
     public bool striking { get; private set; }
 
-    public const int MAX_RANGE = 13;
-    const int MAX_BRANCH_SIZE = 5;
-    const float RANDOM_THRESHOLD = 0.3f,
+    public static int MAX_RANGE = 13;
+    public int MAX_BRANCH_SIZE = 5;
+    public float RANDOM_THRESHOLD = 0.3f,
         CAST_TIME = 1f;
     
     Coroutine strike;
     Vector3 camPoint;
     Camera cam;
-    float damage = 2.5f,
+    public float damage = 2.5f,
         blastInterval = 0.05f;
-    int maxBlasts = 20,
-        activeBranches;    
+    public int maxBlasts = 20;
+    int activeBranches;
 
 	void Awake()
     {

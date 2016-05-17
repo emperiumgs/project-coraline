@@ -18,14 +18,14 @@ public class ClownShooter : MonoBehaviour, IDamageable
     Transform target,
         hand;
     Animator anim;
-    float detectRange = 15f,
+    public float detectRange = 15f,
         shootDuration,
         maxAtkCd = 1f,
         minAtkCd = 0.5f,
-        maxHealth = 50f,
-        health;
+        maxHealth = 50f;
+    float health;
     bool attackable = true;
-    int rotationSens = 10;
+    public int rotationSens = 10;
 
     void Awake()
     {

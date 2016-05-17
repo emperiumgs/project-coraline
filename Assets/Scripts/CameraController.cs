@@ -3,13 +3,13 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
-    const int OFFSET_SPEED = 6,
+    public int OFFSET_SPEED = 6,
         ANGULAR_SPEED = 4,
         X_ROTATION = 10,
         PI_RAD = 180,
         MAX_ROTATION = 30,
         MIN_ROTATION = -50;
-    const float CAST_RADIUS = 0.2f,
+    public float CAST_RADIUS = 0.2f,
         ZOOM_TIME = 0.3f,
         SHAKE_INTENSITY = 1f,
         BACK_COOLDOWN = 0.3f;

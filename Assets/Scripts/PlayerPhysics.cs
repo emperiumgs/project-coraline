@@ -8,7 +8,7 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
     public bool camOrient,
         stunned;
 
-    const int SPEED = 6,
+    public int SPEED = 6,
         JUMP_FORCE = 15;
     const float MASS = 0.1f;
 

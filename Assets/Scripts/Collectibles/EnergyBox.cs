@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnergyBox : Collectible
 {
-    float energyAmount = 20f;
+    public float energyAmount = 20f;
 
     protected override void Collect()
     {

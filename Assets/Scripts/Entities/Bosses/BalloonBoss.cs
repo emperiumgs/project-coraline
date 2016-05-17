@@ -27,7 +27,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
 		atkTransform;
     Coroutine damageDeal;
     Animator anim;
-    float detectRange = 25f,
+    public float detectRange = 25f,
 		rangedRange = 20f,
 		meleeRange = 10f,
 		explosionRange = 7f,
@@ -39,11 +39,11 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
 		minBalloonRange = 10f,
 		maxBalloonRange = 20f,
 		maxHealth = 200,
-		health,
 		meleeDamage = 10f,
 		noseDamage = 20f;
+    float health;
     bool attackable = true;
-    int rotationSens = 10,
+    public int rotationSens = 10,
 		balloonCount = 15;
 
     void Awake()
