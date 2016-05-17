@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class HudController : MonoBehaviour
@@ -16,6 +17,14 @@ public class HudController : MonoBehaviour
         crosshair = transform.FindChild("Crosshair").GetComponent<Image>();
         cam = Camera.main;
         camPoint = new Vector3(Screen.width / 2, Screen.height / 2, LightningAttack.MAX_RANGE + Mathf.Abs(cam.transform.localPosition.z) + ltng.lightningPivot.localPosition.z);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+            Debug.Break();
+        if (Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void EnableCrosshair()

@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
 {
     public LayerMask mask;
+    public Slider slider;
+    public Text text;
 
     enum States
     {
@@ -41,6 +44,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         health = maxHealth;
+        UpdateHealth();
     }
 
     void FixedUpdate()
@@ -49,6 +53,12 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
             Idle();
         else if (state == States.Chasing)
             Chase();
+    }
+
+    void UpdateHealth()
+    {
+        slider.value = health / maxHealth;
+        text.text = "Health: " + health;
     }
 
     void Idle()
@@ -112,6 +122,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
             Stun(stunTime);
         else if (health <= 0)
         {
+            health = 0;
             agent.SetDestination(transform.position);
             anim.SetTrigger("die");
             state = States.Dying;
@@ -121,6 +132,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
             provoked = true;
             state = States.Chasing;
         }
+        UpdateHealth();
     }
 
     public void Die()

@@ -6,12 +6,14 @@ public abstract class Collectible : MonoBehaviour
     public LayerMask mask;
 
     protected PlayerCombat pc;
+    protected LightningAttack ltng;
 
     float getRange = 1.5f;
 
     void Awake()
     {
         pc = FindObjectOfType<PlayerCombat>();
+        ltng = pc.GetComponent<LightningAttack>();
         StartCoroutine(CheckArea());
     }
 

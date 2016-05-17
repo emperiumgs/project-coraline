@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GoblinRocket : MonoBehaviour, IDamageable
 {
     public LayerMask mask;
+    public Slider slider;
+    public Text text;
     public Transform bombPivot;
     public GameObject bombPrefab;
 
@@ -41,6 +44,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
         anim = GetComponent<Animator>();
         blast = GetComponentInChildren<ParticleSystem>(true);
         health = maxHealth;
+        UpdateHealth();
     }
 
     void FixedUpdate()
@@ -57,6 +61,12 @@ public class GoblinRocket : MonoBehaviour, IDamageable
                 Rocketing();
                 break;
         }
+    }
+
+    void UpdateHealth()
+    {
+        slider.value = health / maxHealth;
+        text.text = "Health: " + health;
     }
 
     void Idle()
@@ -106,6 +116,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
             Die();
         else if (health <= maxHealth / 4)
             EngageRocket();
+        UpdateHealth();
     }
 
     public void Die()

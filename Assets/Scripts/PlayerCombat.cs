@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable, IKnockable
 {
+    public Slider slider;
+    public Text text;
     public Transform weapon;
     public LayerMask hittableLayers;
     public Vector3 weaponReachOffset,
@@ -29,6 +32,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     void Awake()
     {
         health = maxHealth;
+        UpdateHealth();
         physics = GetComponent<PlayerPhysics>();
         cam = Camera.main.GetComponent<CameraController>();
         ltng = GetComponent<LightningAttack>();
@@ -86,6 +90,12 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         }
     }
 
+    void UpdateHealth()
+    {
+        slider.value = health / maxHealth;
+        text.text = "Health: " + health;
+    }
+
     void ToggleZoom()
     {
         if (ltngMode)
@@ -121,7 +131,10 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     public void TakeDamage(float damage)
     {
-        print("Took: " + damage);
+        health -= damage;
+        if (health <= 0)
+            health = 0;
+        UpdateHealth();
         if (ltngMode)
         {
             if (ltng.striking)
@@ -151,16 +164,12 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         physics.Knockup(dir, strength);
     }
 
-    public void RechargeEnergy(float amount)
-    {
-
-    }
-
     public void RechargeLife(float amount)
     {
         health += amount;
         if (health > maxHealth)
             health = maxHealth;
+        UpdateHealth();
     }
 
     public IEnumerator DamageDealing()

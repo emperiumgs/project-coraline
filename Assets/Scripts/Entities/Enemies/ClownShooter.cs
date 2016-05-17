@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ClownShooter : MonoBehaviour, IDamageable
 {
     public LayerMask mask;
+    public Slider slider;
+    public Text text;
 
     enum States
     {
@@ -31,6 +34,7 @@ public class ClownShooter : MonoBehaviour, IDamageable
     {
         target = FindObjectOfType<PlayerPhysics>().transform;
         health = maxHealth;
+        UpdateHealth();
         anim = GetComponent<Animator>();
         particles = GetComponentInChildren<ParticleSystem>(true);
         shootDuration = particles.startLifetime;
@@ -43,6 +47,12 @@ public class ClownShooter : MonoBehaviour, IDamageable
             Idle();
         else if (state == States.Shooting)
             Shooting();
+    }
+
+    void UpdateHealth()
+    {
+        slider.value = health / maxHealth;
+        text.text = "Health: " + health;
     }
 
     void Idle()
@@ -95,9 +105,11 @@ public class ClownShooter : MonoBehaviour, IDamageable
         health -= damage;
         if (health <= 0)
         {
+            health = 0;
             state = States.Dying;
             anim.SetTrigger("die");
         }
+        UpdateHealth();
     }
 
     public void Die()

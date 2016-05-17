@@ -7,7 +7,7 @@ public class EnergyBox : Collectible
 
     protected override void Collect()
     {
-        pc.RechargeEnergy(energyAmount);
+        ltng.RechargeEnergy(energyAmount);
         Destroy(gameObject);
     }
 }

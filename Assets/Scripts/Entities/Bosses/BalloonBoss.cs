@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
 {
     public LayerMask mask;
+    public Slider slider;
+    public Text text;
     public GameObject[] balloons;
 
     enum States
@@ -56,6 +59,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         lHand = transform.FindChild("LHand");
         anim = GetComponent<Animator>();
         health = maxHealth;
+        UpdateHealth();
         SpawnBalloons();
     }
 
@@ -71,6 +75,12 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
             Idle();
         else if (state == States.Engaging)
             Attacking();
+    }
+
+    void UpdateHealth()
+    {
+        slider.value = health / maxHealth;
+        text.text = "Health: " + health;
     }
 
     void Idle()
@@ -157,9 +167,11 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
             SpawnBalloons();
         if (health <= 0)
         {
+            health = 0;
             state = States.Dying;
             Die();
         }
+        UpdateHealth();
     }
 
     public void Die()
