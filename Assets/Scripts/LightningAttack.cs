@@ -4,8 +4,8 @@ using System.Collections;
 public class LightningAttack : MonoBehaviour
 {
     public Transform lightningPivot;
-    public LineRenderer[] lightning;
-    public LineRenderer[] branches;
+    public LineRenderer[] lightning,
+        branches;
     public Light[] lights;
     public LayerMask mask;
     public AudioController audioCtrl;
@@ -13,24 +13,22 @@ public class LightningAttack : MonoBehaviour
 
     public const int MAX_RANGE = 13;
     const int MAX_BRANCH_SIZE = 5;
-    const float RANDOM_THRESHOLD = 0.3f;
-    const float CAST_TIME = 1f;
-
-    CameraController camCtrl;
+    const float RANDOM_THRESHOLD = 0.3f,
+        CAST_TIME = 1f;
+    
     Coroutine strike;
     Vector3 camPoint;
     Camera cam;
-    float damage = 2.5f;
-    float blastInterval = 0.05f;
-    int maxBlasts = 20;
-    int activeBranches;    
+    float damage = 2.5f,
+        blastInterval = 0.05f;
+    int maxBlasts = 20,
+        activeBranches;    
 
 	void Awake()
     {
         lights[1].transform.SetParent(null);
         activeBranches = 0;
         cam = Camera.main;
-        camCtrl = cam.GetComponent<CameraController>();
         camPoint = new Vector3(Screen.width / 2, Screen.height / 2, MAX_RANGE + Mathf.Abs(cam.transform.localPosition.z) + lightningPivot.localPosition.z);
     }
 

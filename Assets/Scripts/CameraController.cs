@@ -56,6 +56,8 @@ public class CameraController : MonoBehaviour
         if (Physics.SphereCast(target.position, CAST_RADIUS, dir, out hit, offsetVector.magnitude, mask) && !hit.collider.isTrigger)
         {
             transform.localPosition = transform.localPosition * (hit.distance / curDist);
+            if (backCooldown != null)
+                StopCoroutine(backCooldown);
             backCooldown = StartCoroutine(GetBackCooldown());
         }
         else if (getBack)

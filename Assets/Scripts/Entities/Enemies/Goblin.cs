@@ -20,19 +20,19 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
     Coroutine damageDeal;
     Transform target;
     Animator anim;
-    float detectRange = 10f;
-    float chaseRange = 15f;
-    float atkRange = 1.85f;
-    float maxAtkCd = 1.5f;
-    float minAtkCd = 0.5f;
-    float damage = 10f;
-    float stunDamage = 10f;
-    float stunTime = 1f;
-    float maxHealth = 40f;
-    float health;
-    bool attackable = true;
-    bool provoked;
-    bool stunAttack;
+    float detectRange = 10f,
+        chaseRange = 15f,
+        atkRange = 1.85f,
+        maxAtkCd = 1.5f,
+        minAtkCd = 0.5f,
+        damage = 10f,
+        stunDamage = 10f,
+        stunTime = 1f,
+        maxHealth = 40f,
+        health;
+    bool attackable = true,
+        provoked,
+        stunAttack;
 
     void Awake()
     {

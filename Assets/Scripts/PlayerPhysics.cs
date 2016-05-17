@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerPhysics : MonoBehaviour
+public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
 {
     [HideInInspector]
     public bool camOrient,
@@ -13,6 +13,8 @@ public class PlayerPhysics : MonoBehaviour
     const float MASS = 0.1f;
 
     CharacterController control;
+    CameraController camCtrl;
+    Coroutine stunRoutine;
     Vector3 move;
     Camera cam;
     float moveDir,
@@ -20,12 +22,14 @@ public class PlayerPhysics : MonoBehaviour
         v,
         prevY,
         gravity = Physics.gravity.y;
-    bool jump;
+    bool jump,
+        knocked;
 
     void Awake()
     {
         control = GetComponent<CharacterController>();
         cam = Camera.main;
+        camCtrl = cam.GetComponent<CameraController>();
     }
 
     void Update()
@@ -43,52 +47,81 @@ public class PlayerPhysics : MonoBehaviour
         else
             h = v = 0;
 
-        prevY = move.y;
-        move = Vector3.zero;
-
-        // Force orientation to follow camera
-        if (camOrient)
+        if (!knocked)
         {
-            transform.localEulerAngles = new Vector3(0, cam.transform.eulerAngles.y);
+            prevY = move.y;
+            move = Vector3.zero;
 
-            // Move to the direction pressed, according to the facing direction
-            move = v * Vector3.forward + h * Vector3.right;
-        }
-        else
-        {
-            // Face the direction to walk to
-            transform.LookAt(transform.position + h * cam.transform.right + v * cam.transform.forward);
-            transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y);
-            
-            move = Vector3.forward;
-        }
-
-        // Turns all values to positive            
-        if (h < 0) h = Mathf.Abs(h);
-        if (v < 0) v = Mathf.Abs(v);
-
-        // The higher input names the speed
-        if (h != 0 && v != 0)
-            moveDir = v > h ? v : h;
-        else
-            moveDir = v + h;
-
-        move *= SPEED * moveDir;
-        // Converts to local direction
-        move = transform.TransformDirection(move);
-        move.y = prevY;
-
-        if (control.isGrounded)
-        {
-            if (jump)
+            // Force orientation to follow camera
+            if (camOrient)
             {
-                jump = false;
-                move.y = JUMP_FORCE;
+                transform.localEulerAngles = new Vector3(0, cam.transform.eulerAngles.y);
+                // Move to the direction pressed, according to the facing direction
+                move = v * Vector3.forward + h * Vector3.right;
             }
-        }            
+            else
+            {
+                // Face the direction to walk to
+                transform.LookAt(transform.position + h * cam.transform.right + v * cam.transform.forward);
+                transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y);
+                move = Vector3.forward;
+            }
+
+            // Turns all values to positive            
+            if (h < 0) h = Mathf.Abs(h);
+            if (v < 0) v = Mathf.Abs(v);
+
+            // The higher input names the speed
+            if (h != 0 && v != 0)
+                moveDir = v > h ? v : h;
+            else
+                moveDir = v + h;
+
+            move *= SPEED * moveDir;
+            // Converts to local direction
+            move = transform.TransformDirection(move);
+            move.y = prevY;
+
+            if (control.isGrounded)
+            {
+                if (jump)
+                {
+                    jump = false;
+                    move.y = JUMP_FORCE;
+                }
+            }
+        }
 
         move.y += gravity * MASS;
-
         control.Move(move * Time.deltaTime);
+
+        if (knocked && control.isGrounded)
+        {
+            knocked = false;
+            stunned = false;
+        }
+    }
+
+    public void Knockup(Vector3 dir, float strength)
+    {
+        move = dir * SPEED;
+        move.y = strength;
+        stunned = true;
+        knocked = true;
+    }
+
+    public void Stun(float time)
+    {
+        stunned = true;
+        if (stunRoutine != null)
+            StopCoroutine(stunRoutine);
+        stunRoutine = StartCoroutine(StunDuration(time));
+        camCtrl.Shake(time);
+    }
+
+    IEnumerator StunDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        stunned = false;
     }
 }

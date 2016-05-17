@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
+public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable, IKnockable
 {
     public Transform weapon;
     public LayerMask hittableLayers;
@@ -15,8 +15,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     CameraController cam;
     HudController hud;
     PlayerPhysics physics;
-    Coroutine damageDeal,
-        stunRoutine;
+    Coroutine damageDeal;
     Animator anim;
     float[] comboDamage = { 8, 10, 15 };
     float maxHealth = 100,
@@ -141,9 +140,15 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         if (health <= 0)
             return;
 
-        physics.stunned = true;
-        stunRoutine = StartCoroutine(StunDuration(time));
-        cam.Shake(time);
+        physics.Stun(time);
+    }
+
+    public void Knockup(Vector3 dir, float strength)
+    {
+        if (health <= 0)
+            return;
+
+        physics.Knockup(dir, strength);
     }
 
     public void RechargeEnergy(float amount)
@@ -192,11 +197,5 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
             holdZoomOut = false;
         }
         ltngEnabled = true;
-    }
-
-    IEnumerator StunDuration(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        physics.stunned = false;
     }
 }

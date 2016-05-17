@@ -124,6 +124,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         if (Physics.CheckSphere(nose.position, noseRange, mask))
         {
             pc.TakeDamage(noseDamage);
+            pc.Knockup(target.position - nose.position, 15);
         }
     }
 

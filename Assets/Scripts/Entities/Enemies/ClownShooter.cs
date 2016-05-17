@@ -15,16 +15,15 @@ public class ClownShooter : MonoBehaviour, IDamageable
 
     ParticleSystem particles;
     RaycastHit hit;
-    Transform target;
-    Transform hand;
+    Transform target,
+        hand;
     Animator anim;
-    float detectRange = 15f;
-    float shootDuration;
-    float maxAtkCd = 1f;
-    float minAtkCd = 0.5f;
-    float maxHealth = 50f;
-    float health;
-    float damage = 15f;
+    float detectRange = 15f,
+        shootDuration,
+        maxAtkCd = 1f,
+        minAtkCd = 0.5f,
+        maxHealth = 50f,
+        health;
     bool attackable = true;
     int rotationSens = 10;
 
