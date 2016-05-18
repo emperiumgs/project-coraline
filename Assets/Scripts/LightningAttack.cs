@@ -20,12 +20,16 @@ public class LightningAttack : MonoBehaviour
     Vector3 camPoint;
     Camera cam;
     float damage = 2.5f,
-        blastInterval = 0.05f;
+        blastInterval = 0.05f,
+        maxMana = 100,
+        mana,
+        manaCost = 2f;
     int maxBlasts = 20,
-        activeBranches;    
+        activeBranches;
 
 	void Awake()
     {
+        mana = maxMana;
         lights[1].transform.SetParent(null);
         activeBranches = 0;
         cam = Camera.main;
@@ -93,9 +97,10 @@ public class LightningAttack : MonoBehaviour
         Vector3 target, dir, camPos, ltngPos;
         RaycastHit hit;
         float maxDist;
-        while (blasts < maxBlasts)
+        while (blasts < maxBlasts && mana >= manaCost)
         {
             blasts++;
+            mana -= manaCost;
             camPos = cam.transform.position;
             ltngPos = lightningPivot.position;
             // Camera Raycasting

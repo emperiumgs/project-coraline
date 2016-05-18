@@ -121,12 +121,17 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     public void TakeDamage(float damage)
     {
-        print("Took: " + damage);
         if (ltngMode)
         {
             if (ltng.striking)
                 ltng.AbortStrike();
             ToggleZoom();
+        }
+        health -= damage;
+        if (health <= 0)
+        {
+            health = 0;
+            // Die();
         }
     }
 
