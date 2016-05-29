@@ -6,8 +6,11 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     public LayerMask mask;
     public Transform bombPivot;
     public GameObject bombPrefab;
+    public Renderer bombRenderer;
+    public Renderer rocketRenderer;
+    public ParticleSystem rocketFire;
 
-	enum States
+    enum States
     {
         Idle,
         Bombing,
@@ -20,11 +23,11 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     NavMeshAgent agent;
     Transform target;
     Animator anim;
-    float detectRange = 10f;
+    float detectRange = 15f;
     float suicideRange = 5f;
     float explosionRange = 1.5f;
     float explosionRadius = 3f;
-    float explosionDamage = 20f;
+    float explosionDamage = 30f;
     float maxAtkCd = 1.5f;
     float minAtkCd = 0.5f;
     float maxHealth = 30f;
@@ -34,12 +37,21 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     bool invulnerable;
     int rotationSens = 10;
 
+    Vector3 centerPos
+    {
+        get { return transform.position + Vector3.up; }
+    }
+    Vector3 targetCenterPos
+    {
+        get { return target.position + Vector3.up; }
+    }
+
     void Awake()
     {
         target = FindObjectOfType<PlayerPhysics>().transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        blast = GetComponentInChildren<ParticleSystem>(true);
+        blast = GetComponentInChildren<ParticleSystem>();
         health = maxHealth;
     }
 
@@ -62,7 +74,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     void Idle()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, target.position - transform.position, out hit, detectRange))
+        if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
         {
             if (hit.collider.tag == "Player")
                 state = States.Bombing;
@@ -92,7 +104,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     void Rocketing()
     {        
         if (attackable)
-            if ((agent.velocity != Vector3.zero && agent.remainingDistance < 0.1f) || Physics.CheckSphere(transform.position, explosionRange, mask))
+            if ((agent.velocity != Vector3.zero && agent.remainingDistance < 0.1f) || Physics.CheckSphere(centerPos, explosionRange, mask))
                 Die();
     }
 
@@ -110,20 +122,29 @@ public class GoblinRocket : MonoBehaviour, IDamageable
 
     public void Die()
     {
+        if (state == States.Dying)
+            return;
         state = States.Dying;
-        blast.gameObject.SetActive(true);
         blast.transform.SetParent(null);
         blast.Play();
         blast.GetComponent<ParticleDestroy>().Destroy();
-        if (Physics.CheckSphere(transform.position, explosionRadius, mask))
+        if (Physics.CheckSphere(centerPos, explosionRadius, mask))
             target.GetComponent<IDamageable>().TakeDamage(explosionDamage);
-        Destroy(gameObject);
+        rocketRenderer.enabled = false;
+        rocketFire.Stop();
+        anim.SetTrigger("die");
+    }
+
+    void Disappear()
+    {
+        Destroy(gameObject, 0.5f);
     }
 
     void PlaceBomb()
     {
         GoblinBomb bomb = (Instantiate(bombPrefab, bombPivot.position, bombPivot.rotation) as GameObject).GetComponent<GoblinBomb>();
         bomb.target = target;
+        bombRenderer.enabled = false;
     }
 
     void EndBombing()
@@ -144,6 +165,8 @@ public class GoblinRocket : MonoBehaviour, IDamageable
         agent.SetDestination(target.position);
         StartCoroutine(ExplosionTimer());
         attackable = true;
+        bombRenderer.enabled = false;
+        rocketFire.Play();
     }
 
     IEnumerator ExplosionTimer()
@@ -155,6 +178,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     IEnumerator BombCooldown()
     {
         yield return new WaitForSeconds(Random.Range(minAtkCd, maxAtkCd));
+        bombRenderer.enabled = true;
         attackable = true;
     }
 }

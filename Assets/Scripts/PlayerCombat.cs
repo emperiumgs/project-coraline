@@ -40,7 +40,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     {
         if (!physics.stunned)
         {
-            if (attackable && Input.GetButtonDown("Fire1"))
+            if (attackable && Input.GetButtonDown("Fire1") && !anim.IsInTransition(0))
             {
                 // Reorient to face cam
                 if (comboNum == 0)
@@ -48,7 +48,6 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
                 comboNum++;
                 anim.SetInteger("comboNum", comboNum);
             }
-
             if (comboNum == 0)
             {
                 if (Input.GetButtonDown("Fire2"))
@@ -64,7 +63,6 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
                         ToggleZoom();
                 }
             }
-
             if (ltngMode)
             {
                 if (ltngEnabled && Input.GetButtonDown("Fire1"))
@@ -96,6 +94,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         physics.camOrient = !ltngMode;
         attackable = ltngMode;
         ltngMode = !ltngMode;
+        anim.SetBool("lightning", ltngMode);
     }
 
     void ToggleAttack()
@@ -116,18 +115,23 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     public void CloseDamage()
     {
-        StopCoroutine(damageDeal);
+        if (damageDeal != null)
+            StopCoroutine(damageDeal);
     }
 
     public void TakeDamage(float damage)
     {
+        ClearCombo();
+        if (!attackable)
+            ToggleAttack();
+        anim.SetTrigger("takeDamage");
         if (ltngMode)
         {
             if (ltng.striking)
                 ltng.AbortStrike();
             ToggleZoom();
         }
-        health -= damage;
+        //health -= damage;
         if (health <= 0)
         {
             health = 0;
@@ -144,7 +148,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     {
         if (health <= 0)
             return;
-
+        
         physics.Stun(time);
     }
 
@@ -158,7 +162,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     public void RechargeEnergy(float amount)
     {
-
+        ltng.RechargeEnergy(amount);
     }
 
     public void RechargeLife(float amount)
@@ -172,7 +176,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     {
         Collider[] hits;
         List<IDamageable> hitted = new List<IDamageable>();
-        while (true)
+        while (comboNum != 0)
         {
             hits = Physics.OverlapBox(weapon.position + weapon.TransformDirection(weaponReachOffset), halfWeaponReach, weapon.rotation, hittableLayers);
             if (hits.Length > 0)
@@ -180,7 +184,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
                 IDamageable dmg;
                 for (int i = 0; i < hits.Length; i++)
                 {
-                    dmg = hits[i].GetComponent<IDamageable>();
+                    dmg = hits[i].GetComponentInParent<IDamageable>();
                     if (dmg != null && !hitted.Contains(dmg))
                     {
                         dmg.TakeDamage(comboDamage[comboNum - 1]);

@@ -9,12 +9,13 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
         stunned;
 
     const int SPEED = 6,
-        JUMP_FORCE = 15;
-    const float MASS = 0.1f;
+        JUMP_FORCE = 10;
+    const float MASS = 6f;
 
     CharacterController control;
     CameraController camCtrl;
     Coroutine stunRoutine;
+    Animator anim;
     Vector3 move;
     Camera cam;
     float moveDir,
@@ -27,6 +28,7 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
 
     void Awake()
     {
+        anim = GetComponent<Animator>();
         control = GetComponent<CharacterController>();
         cam = Camera.main;
         camCtrl = cam.GetComponent<CameraController>();
@@ -77,6 +79,7 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
             else
                 moveDir = v + h;
 
+            anim.SetFloat("movSpeed", moveDir);
             move *= SPEED * moveDir;
             // Converts to local direction
             move = transform.TransformDirection(move);
@@ -84,21 +87,24 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
 
             if (control.isGrounded)
             {
+                anim.SetBool("jump", jump);
                 if (jump)
                 {
+                    anim.SetTrigger("jumpTrigger");
                     jump = false;
                     move.y = JUMP_FORCE;
                 }
             }
         }
-
-        move.y += gravity * MASS;
+        
+        move.y += gravity * MASS * Time.deltaTime;
         control.Move(move * Time.deltaTime);
 
         if (knocked && control.isGrounded)
         {
             knocked = false;
-            stunned = false;
+            if (stunRoutine == null)
+                stunned = false;
         }
     }
 
@@ -113,6 +119,7 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
     public void Stun(float time)
     {
         stunned = true;
+        anim.SetBool("stun", stunned);
         if (stunRoutine != null)
             StopCoroutine(stunRoutine);
         stunRoutine = StartCoroutine(StunDuration(time));
@@ -123,5 +130,7 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
     {
         yield return new WaitForSeconds(duration);
         stunned = false;
+        stunRoutine = null;
+        anim.SetBool("stun", stunned);
     }
 }

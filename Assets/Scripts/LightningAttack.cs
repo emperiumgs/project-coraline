@@ -3,6 +3,7 @@ using System.Collections;
 
 public class LightningAttack : MonoBehaviour
 {
+    public Light manaLight;
     public Transform lightningPivot;
     public LineRenderer[] lightning,
         branches;
@@ -23,13 +24,15 @@ public class LightningAttack : MonoBehaviour
         blastInterval = 0.05f,
         maxMana = 100,
         mana,
-        manaCost = 2f;
+        manaCost = 1f,
+        maxManaIntensity = 4f;
     int maxBlasts = 20,
         activeBranches;
 
 	void Awake()
     {
         mana = maxMana;
+        AdjustManaFeedback();
         lights[1].transform.SetParent(null);
         activeBranches = 0;
         cam = Camera.main;
@@ -91,6 +94,19 @@ public class LightningAttack : MonoBehaviour
         branch.SetPositions(nodePos);
     }
 
+    void AdjustManaFeedback()
+    {
+        manaLight.intensity = mana / maxMana * maxManaIntensity;
+    }
+
+    public void RechargeEnergy(float amount)
+    {
+        mana += amount;
+        if (mana > maxMana)
+            mana = maxMana;
+        AdjustManaFeedback();
+    }
+
     IEnumerator ContinuousStrike()
     {
         int blasts = 0;
@@ -101,6 +117,7 @@ public class LightningAttack : MonoBehaviour
         {
             blasts++;
             mana -= manaCost;
+            AdjustManaFeedback();
             camPos = cam.transform.position;
             ltngPos = lightningPivot.position;
             // Camera Raycasting
@@ -118,7 +135,7 @@ public class LightningAttack : MonoBehaviour
             // Deal Damage
             if (hit.collider != null)
             {
-                IDamageable col = hit.collider.GetComponent<IDamageable>();
+                IDamageable col = hit.collider.GetComponentInParent<IDamageable>();
                 if (col != null)
                     col.TakeDamage(damage);
             }

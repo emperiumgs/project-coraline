@@ -15,17 +15,26 @@ public class ClownShooter : MonoBehaviour, IDamageable
 
     ParticleSystem particles;
     RaycastHit hit;
-    Transform target,
-        hand;
+    Transform target;
     Animator anim;
     float detectRange = 15f,
         shootDuration,
-        maxAtkCd = 1f,
-        minAtkCd = 0.5f,
+        maxAtkCd = 2f,
+        minAtkCd = 1f,
         maxHealth = 50f,
         health;
-    bool attackable = true;
+    bool attackable = true,
+        ready;
     int rotationSens = 10;
+
+    Vector3 centerPos
+    {
+        get { return transform.position + Vector3.up; }
+    }
+    Vector3 targetCenterPos
+    {
+        get { return target.position + Vector3.up; }
+    }
 
     void Awake()
     {
@@ -34,7 +43,6 @@ public class ClownShooter : MonoBehaviour, IDamageable
         anim = GetComponent<Animator>();
         particles = GetComponentInChildren<ParticleSystem>(true);
         shootDuration = particles.startLifetime;
-        hand = transform.FindChild("RHand");
     }
 
     void FixedUpdate()
@@ -47,7 +55,7 @@ public class ClownShooter : MonoBehaviour, IDamageable
 
     void Idle()
     {
-        if (Physics.Raycast(transform.position, target.position - transform.position, out hit, detectRange))
+        if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
         {
             if (hit.collider.tag == "Player")
                 state = States.Shooting;
@@ -56,35 +64,54 @@ public class ClownShooter : MonoBehaviour, IDamageable
 
     void Shooting()
     {
-        Vector3 dir = target.position - transform.position;
-        if (Physics.Raycast(transform.position, dir, out hit, detectRange))
+        Vector3 dir = targetCenterPos - centerPos;
+        if (Physics.Raycast(centerPos, dir, out hit, detectRange))
         {
             if (hit.collider.tag != "Player")
             {
-                state = States.Idle;
+                ToIdle();
                 return;
             }
         }
         else
         {
-            state = States.Idle;
+            ToIdle();
             return;
         }
-
-        dir.y = 0;        
+        anim.SetBool("aiming", true);
+        dir.y = 0;
         if (Vector3.Angle(transform.forward, dir) > 1)
+        {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotationSens);
-        dir = target.position - hand.position;
-        if (Vector3.Angle(hand.forward, dir) > 1)
-            hand.rotation = Quaternion.Slerp(hand.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotationSens);
-        else if (attackable)
+            particles.transform.LookAt(targetCenterPos);
+            //particles.transform.rotation = Quaternion.LookRotation(targetCenterPos - particles.transform.position);
+            //particles.transform.rotation.SetLookRotation(targetCenterPos - particles.transform.position);
+        }
+        else if (ready && attackable)
             Shoot();
     }
 
     void Shoot()
     {
+        anim.SetBool("aiming", false);
         anim.SetTrigger("shoot");
         StartCoroutine(ShootCycle());
+    }
+
+    void Ready()
+    {
+        ready = true;
+    }
+
+    void Unready()
+    {
+        ready = false;
+    }
+
+    void ToIdle()
+    {
+        state = States.Idle;
+        anim.SetBool("aiming", false);
     }
 
     public void TakeDamage(float damage)
@@ -96,23 +123,22 @@ public class ClownShooter : MonoBehaviour, IDamageable
         if (health <= 0)
         {
             state = States.Dying;
-            anim.SetTrigger("die");
+            //anim.SetTrigger("die");
+            Die();
         }
     }
 
     public void Die()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, 0.5f);
     }
     
     IEnumerator ShootCycle()
     {
         attackable = false;
-        particles.gameObject.SetActive(true);
         particles.Play();
         yield return new WaitForSeconds(shootDuration);
         particles.Stop(true);
-        particles.gameObject.SetActive(false);
         yield return new WaitForSeconds(Random.Range(minAtkCd, maxAtkCd));
         attackable = true;
     }

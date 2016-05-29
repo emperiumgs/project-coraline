@@ -9,23 +9,30 @@ public class GoblinBomb : MonoBehaviour, IDamageable
 
     ParticleSystem blast;
     NavMeshAgent agent;
+    Animator anim;
     float explosionTime = 1.5f;
     float explosionDamage = 15f;
     float explosionRange = 1.5f;
     float explosionRadius = 3f;
     bool armed;
 
+    Vector3 centerPos
+    {
+        get { return transform.position + Vector3.up; }
+    }
+
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        blast = GetComponentInChildren<ParticleSystem>(true);
+        blast = GetComponentInChildren<ParticleSystem>();
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
         if (!armed)
         {
-            if (Physics.CheckSphere(transform.position, explosionRange, mask))
+            if (Physics.CheckSphere(centerPos, explosionRange, mask))
                 Arm();
             else
                 agent.SetDestination(target.position);
@@ -36,6 +43,7 @@ public class GoblinBomb : MonoBehaviour, IDamageable
     {
         armed = true;
         agent.Stop();
+        anim.Stop();
         StartCoroutine(ExplosionTimer());
     }
 
@@ -46,7 +54,6 @@ public class GoblinBomb : MonoBehaviour, IDamageable
 
     public void Die()
     {
-        blast.gameObject.SetActive(true);
         blast.transform.SetParent(null);
         blast.Play();
         blast.GetComponent<ParticleDestroy>().Destroy();

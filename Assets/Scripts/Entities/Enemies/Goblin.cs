@@ -4,6 +4,7 @@ using System.Collections;
 public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
 {
     public LayerMask mask;
+    public ParticleSystem stunParticles;
 
     enum States
     {
@@ -20,9 +21,11 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
     Coroutine damageDeal;
     Transform target;
     Animator anim;
+    Vector3 weaponOffset,
+        weaponExtents;
     float detectRange = 10f,
         chaseRange = 15f,
-        atkRange = 1.85f,
+        atkRange = 1.2f,
         maxAtkCd = 1.5f,
         minAtkCd = 0.5f,
         damage = 10f,
@@ -34,6 +37,15 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
         provoked,
         stunAttack;
 
+    Vector3 centerPos
+    {
+        get { return transform.position + Vector3.up; }
+    }
+    Vector3 targetCenterPos
+    {
+        get { return target.position + Vector3.up; }
+    }
+
     void Awake()
     {
         pc = FindObjectOfType<PlayerCombat>();
@@ -41,6 +53,8 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         health = maxHealth;
+        weaponOffset = new Vector3(0, 0, 0.75f);
+        weaponExtents = new Vector3(1, 1, 0.75f);
     }
 
     void FixedUpdate()
@@ -54,7 +68,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
     void Idle()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, target.position - transform.position, out hit, detectRange))
+        if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
         {
             if (hit.collider.tag == "Player")
                 state = States.Chasing;
@@ -72,14 +86,22 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
                 provoked = false;
                 attackable = false;
                 state = States.Fighting;
+                anim.SetBool("walking", false);
+                stunAttack = Random.Range(0, 10) < 2 ? true : false;
+                if (stunAttack)
+                    stunParticles.Play();
                 anim.SetTrigger("atk");
             }
         }
         else if (provoked || dist <= chaseRange)
+        {
+            anim.SetBool("walking", true);
             agent.SetDestination(target.position);
+        }
         else
         {
             provoked = false;
+            anim.SetBool("walking", false);
             state = States.Idle;
         }
     }
@@ -98,6 +120,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
     {
         agent.SetDestination(transform.position);
         anim.SetTrigger("hurt");
+        CloseDamage();
         state = States.Hurting;
     }
 
@@ -113,7 +136,8 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
         else if (health <= 0)
         {
             agent.SetDestination(transform.position);
-            anim.SetTrigger("die");
+            //anim.SetTrigger("die");
+            Die();
             state = States.Dying;
         }
         else if (state == States.Idle)
@@ -125,18 +149,20 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
 
     public void Die()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, 0.5f);
     }
 
     public void OpenDamage()
     {
-        stunAttack = Random.Range(0, 10) < 2 ? true : false;
         damageDeal = StartCoroutine(DamageDealing());
     }
 
     public void CloseDamage()
-    {        
-        StopCoroutine(damageDeal);
+    {
+        if (damageDeal != null)
+            StopCoroutine(damageDeal);
+        if (stunParticles.isPlaying)
+            stunParticles.Stop();
         StartCoroutine(AttackCooldown());
     }
 
@@ -145,7 +171,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
         bool hit = false;
         while (!hit)
         {
-            if (Physics.CheckBox(transform.position + transform.TransformDirection(Vector3.forward), Vector3.one / 2, Quaternion.identity, mask))
+            if (Physics.CheckBox(centerPos + transform.TransformDirection(weaponOffset), weaponExtents / 2, Quaternion.identity, mask))
             {
                 if (stunAttack)
                 {

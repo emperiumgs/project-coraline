@@ -19,13 +19,13 @@ public class CameraController : MonoBehaviour
 
     Vector3 origPos,
         aimPos;
-
     Transform target, 
         pivot;
     Vector3 offsetVector, 
         dir;
     RaycastHit hit;
-    float curDist,
+    float origDist,
+        curDist,
         x, 
         y, 
         vRot;
@@ -39,6 +39,7 @@ public class CameraController : MonoBehaviour
     {
         target = FindObjectOfType<PlayerPhysics>().transform;
         origPos = transform.localPosition;
+        origDist = origPos.magnitude;
         aimPos = origPos - new Vector3(1, 0, -1.5f);
         offsetVector = origPos;
         pivot = transform.parent;
@@ -46,22 +47,24 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
-        if (locked)
-            return;
-
+        // Move Camera
         pivot.position = Vector3.Lerp(pivot.position, target.position + targetOffset, Time.deltaTime * OFFSET_SPEED);
         curDist = transform.localPosition.magnitude;
-
-        dir = (transform.position - target.position).normalized;
-        if (Physics.SphereCast(target.position, CAST_RADIUS, dir, out hit, offsetVector.magnitude, mask) && !hit.collider.isTrigger)
+        dir = (transform.position - pivot.position).normalized;
+        if (Physics.SphereCast(pivot.position, CAST_RADIUS, dir, out hit, offsetVector.magnitude, mask) && !hit.collider.isTrigger)
         {
-            transform.localPosition = transform.localPosition * (hit.distance / curDist);
+            float ratio = (hit.distance - CAST_RADIUS) / origDist;
+            transform.localPosition = offsetVector * ratio;
             if (backCooldown != null)
                 StopCoroutine(backCooldown);
             backCooldown = StartCoroutine(GetBackCooldown());
         }
         else if (getBack)
             transform.localPosition = Vector3.Lerp(transform.localPosition, offsetVector, Time.deltaTime * OFFSET_SPEED);
+        
+        // Rotate Camera
+        if (locked)
+            return;
 
         x = Input.GetAxis("Mouse X");
         y = Input.GetAxis("Mouse Y");
@@ -121,28 +124,5 @@ public class CameraController : MonoBehaviour
         getBack = false;
         yield return new WaitForSeconds(BACK_COOLDOWN);
         getBack = true;
-    }
-
-    Vector3 gPoint,
-        gDir,
-        prevGDir;
-    void OnDrawGizmos()
-    {
-        if (target == null)
-            return;
-        
-        gPoint = target.position;
-        prevGDir = gDir;
-        gDir = (transform.position - gPoint).normalized;
-        if (prevGDir == gDir)
-            return;
-
-        Gizmos.color = Color.cyan;
-        float dist = Vector3.Distance(transform.position, gPoint);
-        while (Vector3.Distance(gPoint, target.position) < dist)
-        {
-            Gizmos.DrawWireSphere(gPoint, CAST_RADIUS);
-            gPoint += gDir * 2 * CAST_RADIUS;
-        }
     }
 }
