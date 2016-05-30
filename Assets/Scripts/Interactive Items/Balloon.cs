@@ -27,6 +27,7 @@ public abstract class Balloon : MonoBehaviour, IDamageable
     protected void ShowParticlesAndDie()
     {
         ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+        ps.GetComponent<AudioSource>().Play();
         ps.transform.SetParent(null);
         ps.Play();
         ps.GetComponent<ParticleDestroy>().Destroy();

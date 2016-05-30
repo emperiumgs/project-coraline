@@ -12,7 +12,8 @@ public class ClownShooter : MonoBehaviour, IDamageable
         Dying
     }
     States state = States.Idle;
-
+    
+    AudioController audioCtrl;
     ParticleSystem particles;
     RaycastHit hit;
     Transform target;
@@ -38,6 +39,7 @@ public class ClownShooter : MonoBehaviour, IDamageable
 
     void Awake()
     {
+        audioCtrl = GetComponent<AudioController>();
         target = FindObjectOfType<PlayerPhysics>().transform;
         health = maxHealth;
         anim = GetComponent<Animator>();
@@ -119,6 +121,13 @@ public class ClownShooter : MonoBehaviour, IDamageable
         if (state == States.Dying)
             return;
 
+        if (damage > 5)
+        {
+            anim.SetBool("aiming", false);
+            ready = false;
+            anim.SetTrigger("takeDamage");
+        }
+        audioCtrl.PlayClip("takeDamage");
         health -= damage;
         if (health <= 0)
         {

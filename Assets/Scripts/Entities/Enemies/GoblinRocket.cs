@@ -18,9 +18,10 @@ public class GoblinRocket : MonoBehaviour, IDamageable
         Dying
     }
     States state = States.Idle;
-
+    
     ParticleSystem blast;
     NavMeshAgent agent;
+    AudioSource source;
     Transform target;
     Animator anim;
     float detectRange = 15f;
@@ -48,6 +49,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
 
     void Awake()
     {
+        source = GetComponent<AudioSource>();
         target = FindObjectOfType<PlayerPhysics>().transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
@@ -124,6 +126,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     {
         if (state == States.Dying)
             return;
+        source.Stop();
         state = States.Dying;
         blast.transform.SetParent(null);
         blast.Play();
@@ -167,6 +170,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
         attackable = true;
         bombRenderer.enabled = false;
         rocketFire.Play();
+        source.Play();
     }
 
     IEnumerator ExplosionTimer()

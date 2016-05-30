@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class AudioController : MonoBehaviour
@@ -8,13 +7,18 @@ public class AudioController : MonoBehaviour
 
     Dictionary<string, AudioClip> clips = new Dictionary<string, AudioClip>();
     AudioSource source;
+    int stepSounds = 0;
 
     void Awake()
     {
         source = GetComponent<AudioSource>();
         AudioClip[] assets = Resources.LoadAll<AudioClip>("Sounds/" + assetPath);
         foreach (AudioClip clip in assets)
+        {
             clips.Add(clip.name, clip);
+            if (clip.name.Contains("step"))
+                stepSounds++;
+        }
     }
 
     public void PlayClip(string name)
@@ -23,8 +27,15 @@ public class AudioController : MonoBehaviour
         source.PlayOneShot(clips[name], Random.Range(0.9f, 1));
     }
 
+    public void PlayStepSound()
+    {
+        PlayClip("step" + (Random.Range(0, stepSounds) + 1));
+    }
+
     public void StopClip()
     {
+        if (source.loop)
+            source.loop = false;
         source.Stop();
     }
 }

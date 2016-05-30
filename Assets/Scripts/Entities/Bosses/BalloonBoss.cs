@@ -18,7 +18,9 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     States state = States.Idle;
 
     ParticleSystem water;
+    AudioController audioCtrl;
     PlayerCombat pc;
+    AudioSource waterSource;
     RaycastHit hit;
     Transform target,
         nose,
@@ -61,9 +63,11 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
 
     void Awake()
     {
+        audioCtrl = GetComponent<AudioController>();
         pc = FindObjectOfType<PlayerCombat>();
         target = pc.transform;
         water = GetComponentInChildren<ParticleSystem>();
+        waterSource = water.GetComponent<AudioSource>();
         nose = transform.FindChild("Nose");
         rHand = transform.FindChild("RHand");
         lHand = transform.FindChild("LHand");
@@ -137,6 +141,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     {
         if (Physics.CheckSphere(nose.position, noseRange, mask))
         {
+            audioCtrl.PlayClip("noseExplode");
             pc.TakeDamage(noseDamage);
             pc.Knockup(target.position - transform.position, 15);
         }
@@ -187,6 +192,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     {
         float prevHealth = health;
         health -= damage;
+        audioCtrl.PlayClip("takeDamage");
         if (prevHealth > maxHealth / 2 && health <= maxHealth / 2)
             SpawnBalloons();
         else if (prevHealth > maxHealth / 4 && health <= maxHealth / 4)
@@ -222,6 +228,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
             if (Physics.CheckSphere(atkTransform.position, handRange, mask))
             {
                 pc.TakeDamage(meleeDamage);
+                audioCtrl.PlayClip("damage");
                 hit = true;
             }
             yield return new WaitForFixedUpdate();
@@ -242,6 +249,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         }
         time = 0;
         water.Play();
+        waterSource.Play();
         while (time < waterDuration)
         {
             time += Time.fixedDeltaTime;
@@ -249,6 +257,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
             FaceWaterPlayer();
             yield return new WaitForFixedUpdate();
         }
+        waterSource.Stop();
         water.Stop();
         StartCoroutine(FlowerFade());
         EndAttack();

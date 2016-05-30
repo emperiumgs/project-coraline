@@ -25,7 +25,6 @@ public class CameraController : MonoBehaviour
         dir;
     RaycastHit hit;
     float origDist,
-        curDist,
         x, 
         y, 
         vRot;
@@ -49,7 +48,6 @@ public class CameraController : MonoBehaviour
     {
         // Move Camera
         pivot.position = Vector3.Lerp(pivot.position, target.position + targetOffset, Time.deltaTime * OFFSET_SPEED);
-        curDist = transform.localPosition.magnitude;
         dir = (transform.position - pivot.position).normalized;
         if (Physics.SphereCast(pivot.position, CAST_RADIUS, dir, out hit, offsetVector.magnitude, mask) && !hit.collider.isTrigger)
         {

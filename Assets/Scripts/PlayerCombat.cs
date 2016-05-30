@@ -13,6 +13,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     LightningAttack ltng;
     CameraController cam;
+    AudioController audioCtrl;
     HudController hud;
     PlayerPhysics physics;
     Coroutine damageDeal;
@@ -31,6 +32,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         health = maxHealth;
         physics = GetComponent<PlayerPhysics>();
         cam = Camera.main.GetComponent<CameraController>();
+        audioCtrl = GetComponent<AudioController>();
         ltng = GetComponent<LightningAttack>();
         anim = GetComponent<Animator>();
         hud = FindObjectOfType<HudController>();
@@ -122,9 +124,11 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     public void TakeDamage(float damage)
     {
         ClearCombo();
+        audioCtrl.PlayClip("takeDamage");
         if (!attackable)
             ToggleAttack();
-        anim.SetTrigger("takeDamage");
+        if (!physics.stunned)
+            anim.SetTrigger("takeDamage");
         if (ltngMode)
         {
             if (ltng.striking)
@@ -148,7 +152,8 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     {
         if (health <= 0)
             return;
-        
+
+        anim.SetTrigger("stunTrigger");
         physics.Stun(time);
     }
 
@@ -189,6 +194,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
                     {
                         dmg.TakeDamage(comboDamage[comboNum - 1]);
                         hitted.Add(dmg);
+                        audioCtrl.PlayClip("damage");
                     }
                 }
             }

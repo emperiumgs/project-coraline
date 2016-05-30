@@ -16,6 +16,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
     }
     States state = States.Idle;
 
+    AudioController audioCtrl;
     NavMeshAgent agent;
     PlayerCombat pc;
     Coroutine damageDeal;
@@ -48,6 +49,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
 
     void Awake()
     {
+        audioCtrl = GetComponent<AudioController>();
         pc = FindObjectOfType<PlayerCombat>();
         target = pc.transform;
         agent = GetComponent<NavMeshAgent>();
@@ -131,6 +133,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
 
         provoked = false;
         health -= damage;
+        //audioCtrl.PlayClip("takeDamage");
         if (health > 0 && damage > stunDamage)
             Stun(stunTime);
         else if (health <= 0)
@@ -177,7 +180,9 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
                 {
                     pc.Stun(stunTime);
                     stunAttack = false;
+                    audioCtrl.PlayClip("stun");
                 }
+                audioCtrl.PlayClip("damage");
                 pc.TakeDamage(damage);
                 hit = true;
             }

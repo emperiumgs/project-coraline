@@ -41,23 +41,25 @@ public class LightningAttack : MonoBehaviour
 
     public void Strike()
     {
+        if (mana < manaCost)
+            return;
         striking = true;
         for (int i = 0; i < lightning.Length; i++)
             lightning[i].enabled = true;
         lights[0].enabled = true;
         strike = StartCoroutine(ContinuousStrike());
-        //audioCtrl.PlayClip("blast");
+        audioCtrl.PlayClip("blast");
     }
 
     public void AbortStrike()
     {
         DisableStrike();
         StopCoroutine(strike);
-        //audioCtrl.StopClip();
     }
 
     void DisableStrike()
     {
+        audioCtrl.StopClip();
         striking = false;
         activeBranches = 0;
         for (int i = 0; i < branches.Length; i++)
