@@ -5,7 +5,7 @@ public class BalloonExplosive : Balloon
     float explosionRange = 1.5f;
     float damage = 25f;
 
-    protected override void Activate()
+    public override void Activate()
     {
         Collider[] cols = Physics.OverlapSphere(transform.position, explosionRange, mask);
         if (cols.Length > 0)

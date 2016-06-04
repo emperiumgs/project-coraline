@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour
 
     Vector3 origPos,
         aimPos;
-    Transform target, 
+    Transform target,
         pivot;
     Vector3 offsetVector, 
         dir;
@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
     Coroutine zooming,
         backCooldown;
 
-    void Awake()
+    public void Awake()
     {
         target = FindObjectOfType<PlayerPhysics>().transform;
         origPos = transform.localPosition;
@@ -42,10 +42,14 @@ public class CameraController : MonoBehaviour
         aimPos = origPos - new Vector3(1, 0, -1.5f);
         offsetVector = origPos;
         pivot = transform.parent;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void LateUpdate()
     {
+        if (target == null)
+            return;
         // Move Camera
         pivot.position = Vector3.Lerp(pivot.position, target.position + targetOffset, Time.deltaTime * OFFSET_SPEED);
         dir = (transform.position - pivot.position).normalized;

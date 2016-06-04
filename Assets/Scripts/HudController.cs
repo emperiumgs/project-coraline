@@ -4,16 +4,21 @@ using System.Collections;
 
 public class HudController : MonoBehaviour
 {
+    public Sprite defCrosshair,
+        hitCrosshair;
+
     LightningAttack ltng;
     Coroutine rangeCheck;
     Vector3 camPoint;
     Camera cam;
     Image crosshair;
+    Image fader;
     
-    void Awake()
+    public void Awake()
     {
         ltng = FindObjectOfType<LightningAttack>();
         crosshair = transform.FindChild("Crosshair").GetComponent<Image>();
+        fader = transform.FindChild("Fader").GetComponent<Image>();
         cam = Camera.main;
         camPoint = new Vector3(Screen.width / 2, Screen.height / 2, LightningAttack.MAX_RANGE + Mathf.Abs(cam.transform.localPosition.z) + ltng.lightningPivot.localPosition.z);
     }
@@ -28,6 +33,31 @@ public class HudController : MonoBehaviour
     {
         crosshair.enabled = false;
         StopCoroutine(rangeCheck);
+    }
+
+    public IEnumerator FadeInOut(System.Action onBlack, System.Action onComplete)
+    {
+        yield return new WaitForSeconds(1);
+        float time = 0,
+            halfTime = 2;
+        while (time < halfTime)
+        {
+            time += Time.deltaTime;
+            fader.color = Color.black * time / halfTime;
+            yield return null;
+        }
+        fader.color = Color.black;
+        onBlack();
+        yield return new WaitForSeconds(1);
+        time = 0;
+        while (time < halfTime)
+        {
+            time += Time.deltaTime;
+            fader.color = Color.black * (1 - time / halfTime);
+            yield return null;
+        }
+        fader.color = Color.clear;
+        onComplete();
     }
 
     IEnumerator LightningRange()
@@ -63,9 +93,9 @@ public class HudController : MonoBehaviour
                 hitted = true;
             }
             if (hitted)
-                crosshair.color = new Color(1, 0, 0, crosshair.color.a);
+                crosshair.sprite = hitCrosshair;
             else
-                crosshair.color = new Color(1, 1, 1, crosshair.color.a);
+                crosshair.sprite = defCrosshair;
             yield return null;
         }
     }

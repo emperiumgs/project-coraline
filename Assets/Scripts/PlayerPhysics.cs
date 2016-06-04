@@ -118,8 +118,9 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
 
     public void Stun(float time)
     {
+        anim.SetBool("stun", true);
+        anim.SetTrigger("stunTrigger");
         stunned = true;
-        anim.SetBool("stun", stunned);
         if (stunRoutine != null)
             StopCoroutine(stunRoutine);
         stunRoutine = StartCoroutine(StunDuration(time));

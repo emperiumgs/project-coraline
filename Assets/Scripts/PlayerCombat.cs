@@ -8,9 +8,13 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     public LayerMask hittableLayers;
     public Vector3 weaponReachOffset,
         halfWeaponReach;
+    public ParticleSystem damageFb;
+    public ParticleSystem[] halfHealthFbs,
+        quarterHealthFbs;
 
     const float LTNG_CD = 1.5f;
 
+    CheckpointZone zone;
     LightningAttack ltng;
     CameraController cam;
     AudioController audioCtrl;
@@ -24,7 +28,9 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     bool ltngMode,
         ltngEnabled = true,
         holdZoomOut,
-        attackable = true;
+        attackable = true,
+        halfFb,
+        quarterFb;
     int comboNum;
 
     void Awake()
@@ -110,6 +116,47 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         anim.SetInteger("comboNum", comboNum);
     }
 
+    void FeedbacksControl()
+    {
+        if (health <= maxHealth / 2)
+        {
+            if (!halfFb)
+            {
+                halfFb = true;
+                ToggleParticles(halfHealthFbs, halfFb);
+            }
+            if (health <= maxHealth / 4 && !quarterFb)
+            {
+                quarterFb = true;
+                ToggleParticles(quarterHealthFbs, quarterFb);
+            }
+        }
+        else
+        {
+            if (halfFb)
+            {
+                halfFb = false;
+                ToggleParticles(halfHealthFbs, halfFb);
+            }
+            if (quarterFb)
+            {
+                quarterFb = false;
+                ToggleParticles(quarterHealthFbs, quarterFb);
+            }
+        }
+    }
+
+    void ToggleParticles(ParticleSystem[] particles, bool show)
+    {
+        foreach (ParticleSystem particle in particles)
+        {
+            if (show)
+                particle.Play();
+            else
+                particle.Stop();
+        }
+    }
+
     public void OpenDamage()
     {
         damageDeal = StartCoroutine(DamageDealing());
@@ -123,11 +170,15 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     public void TakeDamage(float damage)
     {
+        if (!enabled)
+            return;
+
         ClearCombo();
         audioCtrl.PlayClip("takeDamage");
+        damageFb.Play();
         if (!attackable)
             ToggleAttack();
-        if (!physics.stunned)
+        if (!anim.GetBool("stun"))
             anim.SetTrigger("takeDamage");
         if (ltngMode)
         {
@@ -135,25 +186,32 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
                 ltng.AbortStrike();
             ToggleZoom();
         }
-        //health -= damage;
+        health -= damage;
+        FeedbacksControl();
         if (health <= 0)
         {
             health = 0;
-            // Die();
+            Die();
         }
     }
 
     public void Die()
     {
+        if (!enabled)
+            return;
 
+        anim.SetTrigger("death");
+        physics.enabled = false;
+        enabled = false;
+        gameObject.layer = LayerMask.NameToLayer("Default");
+        hud.StartCoroutine(hud.FadeInOut(zone.Respawn, zone.EnablePlayer));
     }
 
     public void Stun(float time)
     {
         if (health <= 0)
             return;
-
-        anim.SetTrigger("stunTrigger");
+        
         physics.Stun(time);
     }
 
@@ -175,6 +233,14 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         health += amount;
         if (health > maxHealth)
             health = maxHealth;
+        FeedbacksControl();
+    }
+
+    public void UpdateCheckpoint(CheckpointZone zone)
+    {
+        if (this.zone != null)
+            this.zone.Clear();
+        this.zone = zone;
     }
 
     public IEnumerator DamageDealing()

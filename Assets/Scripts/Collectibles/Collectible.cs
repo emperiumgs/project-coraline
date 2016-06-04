@@ -4,10 +4,10 @@ using System.Collections;
 public abstract class Collectible : MonoBehaviour
 {
     public LayerMask mask;
+    public Vector3 offsetPos;
+    public float getRange = 1f;
 
     protected PlayerCombat pc;
-
-    float getRange = 1.5f;
 
     void Awake()
     {
@@ -22,7 +22,7 @@ public abstract class Collectible : MonoBehaviour
         bool collected = false;
         while (!collected)
         {
-            if (Physics.CheckSphere(transform.position, getRange, mask))
+            if (Physics.CheckSphere(transform.position + offsetPos, getRange, mask))
             {
                 collected = true;
                 Collect();

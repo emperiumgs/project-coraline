@@ -32,7 +32,7 @@ public class GoblinBomb : MonoBehaviour, IDamageable
     {
         if (!armed)
         {
-            if (Physics.CheckSphere(centerPos, explosionRange, mask))
+            if (target == null || Physics.CheckSphere(centerPos, explosionRange, mask))
                 Arm();
             else
                 agent.SetDestination(target.position);
@@ -58,7 +58,7 @@ public class GoblinBomb : MonoBehaviour, IDamageable
         blast.Play();
         blast.GetComponent<ParticleDestroy>().Destroy();
         blast.GetComponent<AudioSource>().Play();
-        if (Physics.CheckSphere(transform.position, explosionRadius, mask))
+        if (target != null && Physics.CheckSphere(transform.position, explosionRadius, mask))
             target.GetComponent<IDamageable>().TakeDamage(explosionDamage);
         Destroy(gameObject);
     }

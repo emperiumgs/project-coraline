@@ -5,6 +5,10 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
 {
     public LayerMask mask;
     public GameObject[] balloons;
+    public ParticleSystem water;
+    public Transform nose,
+        rightHand,
+        leftHand;
 
     enum States
     {
@@ -17,40 +21,37 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     }
     States state = States.Idle;
 
-    ParticleSystem water;
+    public delegate void BossDeathHandler();
+    public static event BossDeathHandler BossDeath;
+
     AudioController audioCtrl;
     PlayerCombat pc;
     AudioSource waterSource;
     RaycastHit hit;
     Transform target,
-        nose,
-        rHand,
-        lHand,
-        flower,
-		atkTransform;
+        atkTransform;
     Coroutine damageDeal;
     Animator anim;
     float detectRange = 25f,
         rangedRange = 20f,
         meleeRange = 10f,
-        explosionRange = 7f,
+        explosionRange = 5f,
         handRange = 2f,
-        noseRange = 4f,
-        preWaterDuration = 1.5f,
+        noseRange = 3f,
         waterDuration = 3f,
         minAtkCd = 2f,
         maxAtkCd = 3f,
         minBalloonRange = 10f,
         maxBalloonRange = 25f,
         chaseSens = 3.75f,
-        maxFlowerRot = 30f,
-		maxHealth = 200,
-		health,
-		meleeDamage = 10f,
-		noseDamage = 20f;
-    bool attackable = true;
+        maxHealth = 200,
+        health,
+        meleeDamage = 10f,
+        noseDamage = 20f;
+    bool attackable = true,
+        toSpawn = true;
     int rotationSens = 10,
-		balloonCount = 15;
+        balloonCount = 15;
 
     Vector3 centerPos
     {
@@ -66,20 +67,20 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         audioCtrl = GetComponent<AudioController>();
         pc = FindObjectOfType<PlayerCombat>();
         target = pc.transform;
-        water = GetComponentInChildren<ParticleSystem>();
         waterSource = water.GetComponent<AudioSource>();
-        nose = transform.FindChild("Nose");
-        rHand = transform.FindChild("RHand");
-        lHand = transform.FindChild("LHand");
-        flower = transform.FindChild("Flower");
         anim = GetComponent<Animator>();
         health = maxHealth;
-        SpawnBalloons();
     }
 
     void FixedUpdate()
     {
-        if (state != States.Dying && state != States.Shooting)
+        if (toSpawn)
+        {
+            anim.SetTrigger("balloons");
+            toSpawn = false;
+            return;
+        }
+        if (target != null && state != States.Dying && state != States.Shooting)
         {
             Vector3 dir = targetCenterPos - centerPos;
             dir.y = 0;
@@ -89,21 +90,35 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
             Idle();
         else if (state == States.Engaging)
             Attacking();
+        else if (state == States.Shooting)
+            FaceWaterPlayer();
     }
 
     void Idle()
     {
-        if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange, ~(1 << gameObject.layer)))
+        Collider[] cols = Physics.OverlapSphere(centerPos, detectRange, mask);
+        if (cols.Length != 0)
         {
-            if (hit.collider.tag == "Player")
-                state = States.Engaging;
+            target = cols[0].transform;
+            if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange, ~(1 << gameObject.layer)))
+            {
+                if (hit.collider.tag == "Player")
+                    state = States.Engaging;
+            }
         }
+        else
+            target = null;
     }
 
     void Attacking()
     {
         if (!attackable)
             return;
+        if (!Physics.CheckSphere(centerPos, detectRange, mask))
+        {
+            state = States.Idle;
+            return;
+        }
 
         float dist = Vector3.Distance(transform.position, target.position);
         if (dist <= explosionRange)
@@ -121,7 +136,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         }
         else if (dist <= rangedRange)
         {
-            damageDeal = StartCoroutine(WaterShooting());
+            anim.SetBool("water", true);
             state = States.Shooting;
             attackable = false;
         }
@@ -130,11 +145,18 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     void MeleeAttack(string attackOrient)
     {
         if (attackOrient == "r")
-            atkTransform = rHand;
+            atkTransform = rightHand;
         else if (attackOrient == "l")
-            atkTransform = lHand;
+            atkTransform = leftHand;
+        else
+            throw new System.Exception("Wrong attack orientation");
 
         OpenDamage();
+    }
+
+    void WaterStart()
+    {
+        damageDeal = StartCoroutine(WaterShooting());
     }
 
     void Explode()
@@ -158,6 +180,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         GameObject prefab = null;
         Vector3 pos;
         int r;
+        Balloon b;
         for (int i = 0; i < balloonCount; i++)
         {
             r = Random.Range(0, 8);
@@ -169,7 +192,9 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
                 prefab = balloons[2];
             pos = Random.insideUnitSphere * Random.Range(minBalloonRange, maxBalloonRange) + transform.position;
             pos.y = 2;
-            (Instantiate(prefab, centerPos, Quaternion.identity) as GameObject).GetComponent<Balloon>().Spawn(pos);
+            b = (Instantiate(prefab, centerPos, Quaternion.identity) as GameObject).GetComponent<Balloon>();
+            b.Spawn(pos);
+            BossDeath += b.ShowParticlesAndDie;
         }
     }
 
@@ -188,19 +213,25 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         water.transform.localEulerAngles = new Vector3(water.transform.localEulerAngles.x, 0);
     }
 
+    void OnDestroy()
+    {        
+        if (BossDeath.GetInvocationList().Length > 0)
+            BossDeath();
+    }
+
     public void TakeDamage(float damage)
     {
         float prevHealth = health;
         health -= damage;
         audioCtrl.PlayClip("takeDamage");
         if (prevHealth > maxHealth / 2 && health <= maxHealth / 2)
-            SpawnBalloons();
+            toSpawn = true;
         else if (prevHealth > maxHealth / 4 && health <= maxHealth / 4)
             SpawnBalloons();
         if (health <= 0)
         {
             state = States.Dying;
-            Die();
+            anim.SetTrigger("death");
         }
     }
 
@@ -237,43 +268,13 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
 
     IEnumerator WaterShooting()
     {
-        float time = 0,
-            flowerRot;
-        while (time < preWaterDuration)
-        {
-            time += Time.fixedDeltaTime;
-            flowerRot = time / preWaterDuration * maxFlowerRot;
-            flower.Rotate(Vector3.forward * flowerRot);
-            FaceWaterPlayer();
-            yield return new WaitForFixedUpdate();
-        }
-        time = 0;
         water.Play();
         waterSource.Play();
-        while (time < waterDuration)
-        {
-            time += Time.fixedDeltaTime;
-            flower.Rotate(Vector3.forward * maxFlowerRot);
-            FaceWaterPlayer();
-            yield return new WaitForFixedUpdate();
-        }
+        yield return new WaitForSeconds(waterDuration);
+        anim.SetBool("water", false);
         waterSource.Stop();
         water.Stop();
-        StartCoroutine(FlowerFade());
         EndAttack();
-    }
-
-    IEnumerator FlowerFade()
-    {
-        float time = 0,
-            flowerRot;
-        while (time < minAtkCd)
-        {
-            time += Time.fixedDeltaTime;
-            flowerRot = (1 - time / minAtkCd) * maxFlowerRot;
-            flower.Rotate(Vector3.forward * flowerRot);
-            yield return new WaitForFixedUpdate();
-        }
     }
 
     IEnumerator AttackCooldown()

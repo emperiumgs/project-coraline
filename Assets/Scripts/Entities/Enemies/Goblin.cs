@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
+public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
 {
     public LayerMask mask;
     public ParticleSystem stunParticles;
@@ -11,7 +11,6 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
         Idle,
         Chasing,
         Fighting,
-        Hurting,
         Dying
     }
     States state = States.Idle;
@@ -69,61 +68,62 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
 
     void Idle()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
+        Collider[] cols;
+        cols = Physics.OverlapSphere(centerPos, detectRange, mask);
+        if (cols.Length != 0)
         {
-            if (hit.collider.tag == "Player")
-                state = States.Chasing;
+            target = cols[0].transform;
+            RaycastHit hit;
+            if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
+            {
+                if (hit.collider.tag == "Player")
+                    state = States.Chasing;
+            }
         }
+        else
+            target = null;
     }
 
     void Chase()
     {
+        if (!Physics.CheckSphere(centerPos, chaseRange, mask))
+        {
+            provoked = false;
+            anim.SetBool("walking", false);
+            state = States.Idle;
+            return;
+        }
         float dist = Vector3.Distance(transform.position, target.position);
         if (dist <= atkRange)
         {
-            agent.SetDestination(transform.position);
-            if (attackable)
+            if (Physics.Raycast(centerPos, transform.forward, atkRange, mask))
             {
-                provoked = false;
-                attackable = false;
-                state = States.Fighting;
-                anim.SetBool("walking", false);
-                stunAttack = Random.Range(0, 10) < 2 ? true : false;
-                if (stunAttack)
-                    stunParticles.Play();
-                anim.SetTrigger("atk");
+                agent.SetDestination(transform.position);
+                if (attackable)
+                {
+                    provoked = false;
+                    attackable = false;
+                    state = States.Fighting;
+                    anim.SetBool("walking", false);
+                    stunAttack = Random.Range(0, 10) < 2 ? true : false;
+                    if (stunAttack)
+                        stunParticles.Play();
+                    anim.SetTrigger("atk");
+                }
             }
+            else
+                agent.SetDestination(target.position);
         }
         else if (provoked || dist <= chaseRange)
         {
             anim.SetBool("walking", true);
             agent.SetDestination(target.position);
         }
-        else
-        {
-            provoked = false;
-            anim.SetBool("walking", false);
-            state = States.Idle;
-        }
     }
 
     void EndAttack()
     {
         state = States.Chasing;
-    }
-
-    void EndHurt()
-    {
-        state = States.Idle;
-    }
-
-    public void Stun(float time)
-    {
-        agent.SetDestination(transform.position);
-        anim.SetTrigger("hurt");
-        CloseDamage();
-        state = States.Hurting;
     }
 
     public void TakeDamage(float damage)
@@ -134,18 +134,20 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable, IStunnable
         provoked = false;
         health -= damage;
         //audioCtrl.PlayClip("takeDamage");
-        if (health > 0 && damage > stunDamage)
-            Stun(stunTime);
-        else if (health <= 0)
+        anim.SetTrigger("takeDamage");
+        CloseDamage();
+        if (state == States.Fighting)
+            EndAttack();
+        if (health <= 0)
         {
             agent.SetDestination(transform.position);
-            //anim.SetTrigger("die");
-            Die();
+            anim.SetTrigger("die");
             state = States.Dying;
         }
         else if (state == States.Idle)
         {
             provoked = true;
+            target = FindObjectOfType<PlayerCombat>().transform;
             state = States.Chasing;
         }
     }

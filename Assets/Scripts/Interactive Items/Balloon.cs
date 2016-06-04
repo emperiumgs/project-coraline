@@ -19,22 +19,28 @@ public abstract class Balloon : MonoBehaviour, IDamageable
         StartCoroutine(Detect());
     }
 
+    void OnDestroy()
+    {
+        BalloonBoss.BossDeath -= ShowParticlesAndDie;
+    }
+
     public void Spawn(Vector3 destiny)
     {
         StartCoroutine(GoToDestination(destiny));
     }
 
-    protected void ShowParticlesAndDie()
+    public void ShowParticlesAndDie()
     {
         ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
         ps.GetComponent<AudioSource>().Play();
         ps.transform.SetParent(null);
         ps.Play();
         ps.GetComponent<ParticleDestroy>().Destroy();
+        OnDestroy();
         Destroy(gameObject);
     }
 
-    protected abstract void Activate();
+    public abstract void Activate();
 
     public void TakeDamage(float damage)
     {

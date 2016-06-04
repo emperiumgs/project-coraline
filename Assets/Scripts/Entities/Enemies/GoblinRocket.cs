@@ -75,16 +75,30 @@ public class GoblinRocket : MonoBehaviour, IDamageable
 
     void Idle()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
+        Collider[] cols;
+        cols = Physics.OverlapSphere(centerPos, detectRange, mask);
+        if (cols.Length != 0)
         {
-            if (hit.collider.tag == "Player")
-                state = States.Bombing;
+            target = cols[0].transform;
+            RaycastHit hit;
+            if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
+            {
+                if (hit.collider.tag == "Player")
+                    state = States.Bombing;
+            }
         }
+        else
+            target = null;
     }
 
     void Bombing()
     {
+        if (!Physics.CheckSphere(centerPos, detectRange, mask))
+        {
+            state = States.Idle;
+            return;
+        }
+
         Vector3 dir = target.position - transform.position;
         if (Vector3.Angle(transform.forward, dir) > 1)
         {
@@ -98,9 +112,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
         }
 
         if (Vector3.Distance(transform.position, target.position) <= suicideRange)
-            EngageRocket();
-        if (Vector3.Distance(transform.position, target.position) > detectRange)
-            state = States.Idle;        
+            EngageRocket(); 
     }
 
     void Rocketing()
@@ -116,6 +128,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
             return;
 
         health -= damage;
+        anim.SetTrigger("takeDamage");
         if (health <= 0)
             Die();
         else if (health <= maxHealth / 4)
@@ -127,6 +140,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
         if (state == States.Dying)
             return;
         source.Stop();
+        agent.Stop();
         state = States.Dying;
         blast.transform.SetParent(null);
         blast.Play();
@@ -159,7 +173,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     {
         attackable = false;
         invulnerable = true;
-        anim.SetTrigger("rocket");
+        anim.SetBool("rocket", true);
         state = States.Rocketing;
     }
 

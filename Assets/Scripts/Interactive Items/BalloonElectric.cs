@@ -6,17 +6,17 @@ public class BalloonElectric : Balloon
     float stunAmount = 1.25f;
     float damage = 5f;
 
-    protected override void Activate()
+    public override void Activate()
     {
         Collider[] cols = Physics.OverlapSphere(transform.position, stunRange, mask);
         if (cols.Length > 0)
         {
-            IDamageable obj = cols[0].GetComponent<IDamageable>();
-            if (obj != null)
-                obj.TakeDamage(damage);
             IStunnable stun = cols[0].GetComponent<IStunnable>();
             if (stun != null)
                 stun.Stun(stunAmount);
+            IDamageable obj = cols[0].GetComponent<IDamageable>();
+            if (obj != null)
+                obj.TakeDamage(damage);
         }
         ShowParticlesAndDie();
     }

@@ -57,15 +57,30 @@ public class ClownShooter : MonoBehaviour, IDamageable
 
     void Idle()
     {
-        if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
+        Collider[] cols;
+        cols = Physics.OverlapSphere(centerPos, detectRange, mask);
+        if (cols.Length != 0)
         {
-            if (hit.collider.tag == "Player")
-                state = States.Shooting;
+            target = cols[0].transform;
+            RaycastHit hit;
+            if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
+            {
+                if (hit.collider.tag == "Player")
+                    state = States.Shooting;
+            }
         }
+        else
+            target = null;
     }
 
     void Shooting()
     {
+        if (!Physics.CheckSphere(centerPos, detectRange, mask))
+        {
+            ToIdle();
+            return;
+        }
+
         Vector3 dir = targetCenterPos - centerPos;
         if (Physics.Raycast(centerPos, dir, out hit, detectRange))
         {
@@ -82,14 +97,10 @@ public class ClownShooter : MonoBehaviour, IDamageable
         }
         anim.SetBool("aiming", true);
         dir.y = 0;
-        if (Vector3.Angle(transform.forward, dir) > 1)
-        {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotationSens);
-            particles.transform.LookAt(targetCenterPos);
-            //particles.transform.rotation = Quaternion.LookRotation(targetCenterPos - particles.transform.position);
-            //particles.transform.rotation.SetLookRotation(targetCenterPos - particles.transform.position);
-        }
-        else if (ready && attackable)
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotationSens);
+        particles.transform.LookAt(targetCenterPos);
+
+        if (ready && attackable)
             Shoot();
     }
 
@@ -120,20 +131,16 @@ public class ClownShooter : MonoBehaviour, IDamageable
     {
         if (state == States.Dying)
             return;
-
-        if (damage > 5)
-        {
-            anim.SetBool("aiming", false);
-            ready = false;
-            anim.SetTrigger("takeDamage");
-        }
+        
+        anim.SetBool("aiming", false);
+        ready = false;
+        anim.SetTrigger("takeDamage");
         audioCtrl.PlayClip("takeDamage");
         health -= damage;
         if (health <= 0)
         {
             state = States.Dying;
-            //anim.SetTrigger("die");
-            Die();
+            anim.SetTrigger("death");
         }
     }
 
