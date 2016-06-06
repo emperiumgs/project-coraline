@@ -253,6 +253,12 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     public void DisablePlayer()
     {
+        if (ltngMode)
+        {
+            if (ltng.striking)
+                ltng.AbortStrike();
+            ToggleZoom();
+        }
         enabled = false;
         anim.SetFloat("movSpeed", 0);
         physics.enabled = false;

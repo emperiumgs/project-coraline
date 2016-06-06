@@ -7,6 +7,7 @@ public class HudController : MonoBehaviour
 {
     public Sprite defCrosshair,
         hitCrosshair;
+    public GameObject cinematicBars;
 
     static bool first;
 
@@ -41,6 +42,20 @@ public class HudController : MonoBehaviour
     {
         crosshair.enabled = false;
         StopCoroutine(rangeCheck);
+    }
+
+    public void EnableCinematic()
+    {
+        cinematicBars.SetActive(true);
+        FindObjectOfType<PlayerCombat>().DisablePlayer();
+        FindObjectOfType<CameraController>().Lock();
+    }
+
+    public void DisableCinematic()
+    {
+        cinematicBars.SetActive(false);
+        FindObjectOfType<PlayerCombat>().EnablePlayer();
+        FindObjectOfType<CameraController>().Unlock();
     }
 
     public void ToCredits()

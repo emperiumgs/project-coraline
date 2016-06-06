@@ -73,17 +73,18 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
 
     void FixedUpdate()
     {
-        if (toSpawn)
-        {
-            anim.SetTrigger("balloons");
-            toSpawn = false;
-            return;
-        }
         if (toDie)
         {
             state = States.Dying;
             anim.SetTrigger("death");
             toDie = false;
+            FindObjectOfType<HudController>().EnableCinematic();
+            return;
+        }
+        if (toSpawn)
+        {
+            anim.SetTrigger("balloons");
+            toSpawn = false;
             return;
         }
         if (target != null && state != States.Dying && state != States.Shooting)

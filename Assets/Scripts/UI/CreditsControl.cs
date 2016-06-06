@@ -6,6 +6,11 @@ public class CreditsControl : MonoBehaviour
 {
     public SoundtrackController soundtrack;
 
+    void PlaySoundtrack()
+    {
+        soundtrack.GetComponent<AudioSource>().Play();
+    }
+
     void ChangeSoundtrack()
     {
         soundtrack.FadeAndChangeSong("credits_2", 2);

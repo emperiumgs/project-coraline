@@ -101,6 +101,16 @@ public class CameraController : MonoBehaviour
         pivot.rotation = target.rotation;
     }
 
+    public void Lock()
+    {
+        locked = true;
+    }
+
+    public void Unlock()
+    {
+        locked = false;
+    }
+
     IEnumerator ZoomProcess(Vector3 targetPos)
     {
         float time = 0;
