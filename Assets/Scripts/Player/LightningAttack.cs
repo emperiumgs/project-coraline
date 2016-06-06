@@ -4,6 +4,8 @@ using System.Collections;
 public class LightningAttack : MonoBehaviour
 {
     public Light manaLight;
+    public Color charged,
+        uncharged;
     public Transform lightningPivot;
     public LineRenderer[] lightning,
         branches;
@@ -13,9 +15,11 @@ public class LightningAttack : MonoBehaviour
     public bool striking { get; private set; }
 
     public const int MAX_RANGE = 13;
-    const int MAX_BRANCH_SIZE = 5;
+    const int MAX_BRANCH_SIZE = 5,
+        LOW_MANA_FLASHES = 4;
     const float RANDOM_THRESHOLD = 0.3f,
-        CAST_TIME = 1f;
+        CAST_TIME = 1f,
+        LOW_MANA_FLASH_TIME = 0.1f;
     
     Coroutine strike;
     Vector3 camPoint;
@@ -42,7 +46,10 @@ public class LightningAttack : MonoBehaviour
     public void Strike()
     {
         if (mana < manaCost)
+        {
+            StartCoroutine(FlashMana());
             return;
+        }
         striking = true;
         for (int i = 0; i < lightning.Length; i++)
             lightning[i].enabled = true;
@@ -60,6 +67,8 @@ public class LightningAttack : MonoBehaviour
     void DisableStrike()
     {
         audioCtrl.StopClip();
+        if (mana < manaCost)
+            audioCtrl.PlayClip("lowEnergy");
         striking = false;
         activeBranches = 0;
         for (int i = 0; i < branches.Length; i++)
@@ -98,11 +107,16 @@ public class LightningAttack : MonoBehaviour
 
     void AdjustManaFeedback()
     {
-        manaLight.intensity = mana / maxMana * maxManaIntensity;
+        if (mana > 0)
+            manaLight.intensity = mana / maxMana * maxManaIntensity + 1;
+        else
+            manaLight.color = uncharged;
     }
 
     public void RechargeEnergy(float amount)
     {
+        if (mana <= 0)
+            manaLight.color = charged;
         mana += amount;
         if (mana > maxMana)
             mana = maxMana;
@@ -139,7 +153,10 @@ public class LightningAttack : MonoBehaviour
             {
                 IDamageable col = hit.collider.GetComponentInParent<IDamageable>();
                 if (col != null)
+                {
+                    audioCtrl.PlayClip("hit");
                     col.TakeDamage(damage);
+                }
             }
             // Calculate node count
             float dist = Vector3.Distance(ltngPos, target);
@@ -181,7 +198,17 @@ public class LightningAttack : MonoBehaviour
 
             yield return new WaitForSeconds(blastInterval);
         }
-
         DisableStrike();
+    }
+
+    IEnumerator FlashMana()
+    {
+        int flashes = 0;
+        while (mana < manaCost && flashes < LOW_MANA_FLASHES)
+        {
+            manaLight.enabled = flashes % 2 == 0 ? false : true;
+            flashes++;
+            yield return new WaitForSeconds(LOW_MANA_FLASH_TIME); 
+        }
     }
 }

@@ -22,7 +22,7 @@ public class ClownShooter : MonoBehaviour, IDamageable
         shootDuration,
         maxAtkCd = 2f,
         minAtkCd = 1f,
-        maxHealth = 50f,
+        maxHealth = 40f,
         health;
     bool attackable = true,
         ready;
@@ -135,7 +135,8 @@ public class ClownShooter : MonoBehaviour, IDamageable
         anim.SetBool("aiming", false);
         ready = false;
         anim.SetTrigger("takeDamage");
-        audioCtrl.PlayClip("takeDamage");
+        if (damage > 2.5f)
+            audioCtrl.PlayClip("takeDamage");
         health -= damage;
         if (health <= 0)
         {

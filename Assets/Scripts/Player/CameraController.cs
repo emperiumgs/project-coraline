@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
     Coroutine zooming,
         backCooldown;
 
-    public void Awake()
+    void Awake()
     {
         target = FindObjectOfType<PlayerPhysics>().transform;
         origPos = transform.localPosition;
@@ -91,6 +91,14 @@ public class CameraController : MonoBehaviour
     public void Shake(float time)
     {
         StartCoroutine(ShakeProcess(time));
+    }
+
+    public void Reorient()
+    {
+        target = FindObjectOfType<PlayerPhysics>().transform;
+        transform.localPosition = origPos;
+        pivot.position = target.position;
+        pivot.rotation = target.rotation;
     }
 
     IEnumerator ZoomProcess(Vector3 targetPos)

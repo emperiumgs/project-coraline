@@ -6,7 +6,7 @@ public class BalloonAid : Balloon
 
     public override void Activate()
     {
-        Instantiate(collectibles[Random.Range(0, collectibles.Length)], transform.position, Random.rotation);
+        Instantiate(collectibles[Random.Range(0, collectibles.Length)], transform.position, Quaternion.identity);
         ShowParticlesAndDie();
     }
 }

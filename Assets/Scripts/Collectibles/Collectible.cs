@@ -7,25 +7,33 @@ public abstract class Collectible : MonoBehaviour
     public Vector3 offsetPos;
     public float getRange = 1f;
 
-    protected PlayerCombat pc;
+    Transform mesh;
+    int rotation = 50;
 
-    void Awake()
+    void Start()
     {
-        pc = FindObjectOfType<PlayerCombat>();
+        mesh = transform.GetChild(0);
         StartCoroutine(CheckArea());
     }
 
-    protected abstract void Collect();
+    void Update()
+    {
+        mesh.Rotate(Vector3.up * rotation * Time.deltaTime);
+    }
+
+    protected abstract void Collect(PlayerCombat pc);
 
     IEnumerator CheckArea()
     {
         bool collected = false;
+        Collider[] cols;
         while (!collected)
         {
-            if (Physics.CheckSphere(transform.position + offsetPos, getRange, mask))
+            cols = Physics.OverlapSphere(transform.position + offsetPos, getRange, mask);
+            if (cols.Length > 0)
             {
                 collected = true;
-                Collect();
+                Collect(cols[0].GetComponent<PlayerCombat>());
             }
             yield return null;
         }

@@ -8,9 +8,13 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     public LayerMask hittableLayers;
     public Vector3 weaponReachOffset,
         halfWeaponReach;
-    public ParticleSystem damageFb;
+    public ParticleSystem damageFb,
+        getHealth,
+        getMana,
+        threeQuarterHealthFb;
     public ParticleSystem[] halfHealthFbs,
         quarterHealthFbs;
+    public AudioSource lowHealth;
 
     const float LTNG_CD = 1.5f;
 
@@ -28,9 +32,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     bool ltngMode,
         ltngEnabled = true,
         holdZoomOut,
-        attackable = true,
-        halfFb,
-        quarterFb;
+        attackable = true;
     int comboNum;
 
     void Awake()
@@ -48,7 +50,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     {
         if (!physics.stunned)
         {
-            if (attackable && Input.GetButtonDown("Fire1") && !anim.IsInTransition(0))
+            if (attackable && Input.GetButtonDown("Fire1"))
             {
                 // Reorient to face cam
                 if (comboNum == 0)
@@ -88,6 +90,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         if (other.tag == "Water")
         {
             float damage = float.Parse(other.name.Split('_')[1]);
+            audioCtrl.PlayClip("waterDamage");
             TakeDamage(damage);
         }
     }
@@ -118,31 +121,25 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     void FeedbacksControl()
     {
+        if (health <= 3 * maxHealth / 4)
+                threeQuarterHealthFb.Play();
+        else
+            threeQuarterHealthFb.Stop();
+
         if (health <= maxHealth / 2)
+            ToggleParticles(halfHealthFbs, true);
+        else
+            ToggleParticles(halfHealthFbs, false);
+
+        if (health <= maxHealth / 4)
         {
-            if (!halfFb)
-            {
-                halfFb = true;
-                ToggleParticles(halfHealthFbs, halfFb);
-            }
-            if (health <= maxHealth / 4 && !quarterFb)
-            {
-                quarterFb = true;
-                ToggleParticles(quarterHealthFbs, quarterFb);
-            }
+            lowHealth.Play();
+            ToggleParticles(quarterHealthFbs, true);
         }
         else
         {
-            if (halfFb)
-            {
-                halfFb = false;
-                ToggleParticles(halfHealthFbs, halfFb);
-            }
-            if (quarterFb)
-            {
-                quarterFb = false;
-                ToggleParticles(quarterHealthFbs, quarterFb);
-            }
+            lowHealth.Stop();
+            ToggleParticles(quarterHealthFbs, false);
         }
     }
 
@@ -160,6 +157,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     public void OpenDamage()
     {
         damageDeal = StartCoroutine(DamageDealing());
+        audioCtrl.PlayClipRandomized("whoosh");
     }
 
     public void CloseDamage()
@@ -172,13 +170,14 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     {
         if (!enabled)
             return;
-
+        
         ClearCombo();
-        audioCtrl.PlayClip("takeDamage");
+        if (damage > 5)
+            audioCtrl.PlayClip("takeDamage");
         damageFb.Play();
         if (!attackable)
             ToggleAttack();
-        if (!anim.GetBool("stun"))
+        if (!physics.stunned)
             anim.SetTrigger("takeDamage");
         if (ltngMode)
         {
@@ -226,6 +225,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     public void RechargeEnergy(float amount)
     {
         ltng.RechargeEnergy(amount);
+        getMana.Play();
     }
 
     public void RechargeLife(float amount)
@@ -234,6 +234,8 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         if (health > maxHealth)
             health = maxHealth;
         FeedbacksControl();
+        audioCtrl.PlayClip("healthUp");
+        getHealth.Play();
     }
 
     public void UpdateCheckpoint(CheckpointZone zone)
@@ -241,6 +243,19 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         if (this.zone != null)
             this.zone.Clear();
         this.zone = zone;
+    }
+
+    public void EnablePlayer()
+    {
+        enabled = true;
+        physics.enabled = true;
+    }
+
+    public void DisablePlayer()
+    {
+        enabled = false;
+        anim.SetFloat("movSpeed", 0);
+        physics.enabled = false;
     }
 
     public IEnumerator DamageDealing()

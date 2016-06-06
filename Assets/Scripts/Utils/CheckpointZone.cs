@@ -53,8 +53,7 @@ public class CheckpointZone : MonoBehaviour
         }
         Destroy(player.gameObject);
         playerClone.SetActive(true);
-        cam.transform.parent.position = playerClone.transform.position;
-        cam.Awake();
+        cam.Reorient();
         player = playerClone.GetComponent<PlayerCombat>();
         player.GetComponent<PlayerPhysics>().enabled = false;
         player.enabled = false;
@@ -65,8 +64,7 @@ public class CheckpointZone : MonoBehaviour
 
     public void EnablePlayer()
     {
-        player.enabled = true;
-        player.GetComponent<PlayerPhysics>().enabled = true;
+        player.EnablePlayer();
     }
 
     public void Clear()

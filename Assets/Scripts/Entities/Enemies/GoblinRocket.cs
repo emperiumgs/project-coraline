@@ -29,8 +29,8 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     float explosionRange = 1.5f;
     float explosionRadius = 3f;
     float explosionDamage = 30f;
-    float maxAtkCd = 1.5f;
-    float minAtkCd = 0.5f;
+    float maxAtkCd = 2f;
+    float minAtkCd = 1f;
     float maxHealth = 30f;
     float health;
     float rocketTimer = 4f;

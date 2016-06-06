@@ -31,7 +31,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
         damage = 10f,
         stunDamage = 10f,
         stunTime = 1f,
-        maxHealth = 40f,
+        maxHealth = 30f,
         health;
     bool attackable = true,
         provoked,
@@ -49,8 +49,6 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
     void Awake()
     {
         audioCtrl = GetComponent<AudioController>();
-        pc = FindObjectOfType<PlayerCombat>();
-        target = pc.transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         health = maxHealth;
@@ -73,6 +71,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
         if (cols.Length != 0)
         {
             target = cols[0].transform;
+            pc = target.GetComponent<PlayerCombat>();
             RaycastHit hit;
             if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange))
             {
@@ -133,7 +132,8 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
 
         provoked = false;
         health -= damage;
-        //audioCtrl.PlayClip("takeDamage");
+        if (damage > 2.5f)
+            audioCtrl.PlayClip("takeDamage");
         anim.SetTrigger("takeDamage");
         CloseDamage();
         if (state == States.Fighting)

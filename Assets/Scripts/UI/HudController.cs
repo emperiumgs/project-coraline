@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class HudController : MonoBehaviour
 {
     public Sprite defCrosshair,
         hitCrosshair;
+
+    static bool first;
 
     LightningAttack ltng;
     Coroutine rangeCheck;
@@ -19,6 +22,11 @@ public class HudController : MonoBehaviour
         ltng = FindObjectOfType<LightningAttack>();
         crosshair = transform.FindChild("Crosshair").GetComponent<Image>();
         fader = transform.FindChild("Fader").GetComponent<Image>();
+        if (!first)
+        {
+            StartCoroutine(FadeIn(2));
+            first = true;
+        }
         cam = Camera.main;
         camPoint = new Vector3(Screen.width / 2, Screen.height / 2, LightningAttack.MAX_RANGE + Mathf.Abs(cam.transform.localPosition.z) + ltng.lightningPivot.localPosition.z);
     }
@@ -33,6 +41,11 @@ public class HudController : MonoBehaviour
     {
         crosshair.enabled = false;
         StopCoroutine(rangeCheck);
+    }
+
+    public void ToCredits()
+    {
+        StartCoroutine(End());
     }
 
     public IEnumerator FadeInOut(System.Action onBlack, System.Action onComplete)
@@ -58,6 +71,32 @@ public class HudController : MonoBehaviour
         }
         fader.color = Color.clear;
         onComplete();
+    }
+
+    public IEnumerator FadeIn(float fadeTime)
+    {
+        float time = 0;
+        fader.color = Color.black;
+        while (time < fadeTime)
+        {
+            time += Time.deltaTime;
+            fader.color = Color.black * (1 - time / fadeTime);
+            yield return null;
+        }
+        fader.color = Color.clear;
+    }
+
+    public IEnumerator FadeOut(float fadeTime)
+    {
+        float time = 0;
+        fader.color = Color.clear;
+        while (time < fadeTime)
+        {
+            time += Time.deltaTime;
+            fader.color = Color.black * time / fadeTime;
+            yield return null;
+        }
+        fader.color = Color.black;
     }
 
     IEnumerator LightningRange()
@@ -98,5 +137,14 @@ public class HudController : MonoBehaviour
                 crosshair.sprite = defCrosshair;
             yield return null;
         }
+    }
+
+    IEnumerator End()
+    {
+        yield return new WaitForSeconds(3);
+        StartCoroutine(FadeOut(3));
+        FindObjectOfType<SoundtrackController>().FadeOut(3);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(2);
     }
 }

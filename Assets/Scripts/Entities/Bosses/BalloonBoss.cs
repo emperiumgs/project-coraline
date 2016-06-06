@@ -49,7 +49,8 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         meleeDamage = 10f,
         noseDamage = 20f;
     bool attackable = true,
-        toSpawn = true;
+        toSpawn = true,
+        toDie;
     int rotationSens = 10,
         balloonCount = 15;
 
@@ -65,8 +66,6 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     void Awake()
     {
         audioCtrl = GetComponent<AudioController>();
-        pc = FindObjectOfType<PlayerCombat>();
-        target = pc.transform;
         waterSource = water.GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         health = maxHealth;
@@ -78,6 +77,13 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         {
             anim.SetTrigger("balloons");
             toSpawn = false;
+            return;
+        }
+        if (toDie)
+        {
+            state = States.Dying;
+            anim.SetTrigger("death");
+            toDie = false;
             return;
         }
         if (target != null && state != States.Dying && state != States.Shooting)
@@ -100,6 +106,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         if (cols.Length != 0)
         {
             target = cols[0].transform;
+            pc = target.GetComponent<PlayerCombat>();
             if (Physics.Raycast(centerPos, targetCenterPos - centerPos, out hit, detectRange, ~(1 << gameObject.layer)))
             {
                 if (hit.collider.tag == "Player")
@@ -215,28 +222,29 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
 
     void OnDestroy()
     {        
-        if (BossDeath.GetInvocationList().Length > 0)
+        if (BossDeath != null && BossDeath.GetInvocationList().Length > 0)
             BossDeath();
     }
 
     public void TakeDamage(float damage)
     {
+        if (health <= 0)
+            return;
+
         float prevHealth = health;
         health -= damage;
         audioCtrl.PlayClip("takeDamage");
         if (prevHealth > maxHealth / 2 && health <= maxHealth / 2)
             toSpawn = true;
         else if (prevHealth > maxHealth / 4 && health <= maxHealth / 4)
-            SpawnBalloons();
+            toSpawn = true;
         if (health <= 0)
-        {
-            state = States.Dying;
-            anim.SetTrigger("death");
-        }
+            toDie = true;
     }
 
     public void Die()
     {
+        FindObjectOfType<HudController>().ToCredits();
         Destroy(gameObject);
     }
 
