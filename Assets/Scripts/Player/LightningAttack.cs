@@ -33,6 +33,9 @@ public class LightningAttack : MonoBehaviour
     int maxBlasts = 20,
         activeBranches;
 
+    [HideInInspector]
+    public bool god;
+
 	void Awake()
     {
         mana = maxMana;
@@ -132,7 +135,8 @@ public class LightningAttack : MonoBehaviour
         while (blasts < maxBlasts && mana >= manaCost)
         {
             blasts++;
-            mana -= manaCost;
+            if (!god)
+                mana -= manaCost;
             AdjustManaFeedback();
             camPos = cam.transform.position;
             ltngPos = lightningPivot.position;

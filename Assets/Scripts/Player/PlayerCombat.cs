@@ -32,7 +32,8 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     bool ltngMode,
         ltngEnabled = true,
         holdZoomOut,
-        attackable = true;
+        attackable = true,
+        god;
     int comboNum;
 
     void Awake()
@@ -48,6 +49,13 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            god = true;
+            ltng.god = god;
+        }
+        if (god && Input.GetKeyDown(KeyCode.F2))
+            transform.position = new Vector3(0, 0, -35);
         if (!physics.stunned)
         {
             if (attackable && Input.GetButtonDown("Fire1"))
@@ -185,7 +193,8 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
                 ltng.AbortStrike();
             ToggleZoom();
         }
-        health -= damage;
+        if (!god)
+            health -= damage;
         FeedbacksControl();
         if (health <= 0)
         {
@@ -208,7 +217,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
 
     public void Stun(float time)
     {
-        if (health <= 0)
+        if (health <= 0 || god)
             return;
         
         physics.Stun(time);
