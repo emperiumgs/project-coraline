@@ -134,6 +134,8 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
         health -= damage;
         if (damage > 2.5f)
             audioCtrl.PlayClip("takeDamage");
+        else
+            print("<color=red>Goblin got shocked and now has " + "<color=green>" + health + "</color>" + " !</color>");
         anim.SetTrigger("takeDamage");
         CloseDamage();
         if (state == States.Fighting)

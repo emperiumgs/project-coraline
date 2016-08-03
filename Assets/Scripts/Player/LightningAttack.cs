@@ -129,9 +129,13 @@ public class LightningAttack : MonoBehaviour
         Vector3 target, dir, camPos, ltngPos;
         RaycastHit hit;
         float maxDist;
+        float time = Time.time;
+        float sTime = time;
         while (blasts < maxBlasts && mana >= manaCost)
         {
+            sTime = Time.time - sTime;
             blasts++;
+            print(blasts + ": " + sTime);
             mana -= manaCost;
             AdjustManaFeedback();
             camPos = cam.transform.position;
@@ -151,6 +155,7 @@ public class LightningAttack : MonoBehaviour
             // Deal Damage
             if (hit.collider != null)
             {
+                print("hit");
                 IDamageable col = hit.collider.GetComponentInParent<IDamageable>();
                 if (col != null)
                 {
@@ -195,9 +200,11 @@ public class LightningAttack : MonoBehaviour
                     branches[i].enabled = false;
             }
             activeBranches = 0;
-
+            sTime = Time.time;
             yield return new WaitForSeconds(blastInterval);
         }
+        time = Time.time - time;
+        print("<color=magenta>Took " + time + " seconds</color>");
         DisableStrike();
     }
 

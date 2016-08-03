@@ -106,18 +106,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         attackable = ltngMode;
         ltngMode = !ltngMode;
         anim.SetBool("lightning", ltngMode);
-    }
-
-    void ToggleAttack()
-    {
-        attackable = !attackable;
-    }
-
-    void ClearCombo()
-    {
-        comboNum = 0;
-        anim.SetInteger("comboNum", comboNum);
-    }
+    } 
 
     void FeedbacksControl()
     {
@@ -154,6 +143,11 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         }
     }
 
+    public void ToggleAttack()
+    {
+        attackable = !attackable;
+    }
+
     public void OpenDamage()
     {
         damageDeal = StartCoroutine(DamageDealing());
@@ -166,12 +160,17 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
             StopCoroutine(damageDeal);
     }
 
+    public void ClearCombo()
+    {
+        comboNum = 0;
+        anim.SetInteger("comboNum", comboNum);
+    }
+
     public void TakeDamage(float damage)
     {
         if (!enabled)
             return;
-        
-        ClearCombo();
+
         if (damage > 5)
             audioCtrl.PlayClip("takeDamage");
         damageFb.Play();
