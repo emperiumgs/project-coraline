@@ -8,9 +8,11 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
     public bool camOrient,
         stunned;
 
-    const int SPEED = 6,
-        JUMP_FORCE = 10;
-    const float MASS = 6f;
+    const int SPEED = 6;
+    [Range(10, 25)]
+    public int jumpForce = 15;
+    [Range(5, 10)]
+    public float mass = 6f;
 
     CharacterController control;
     CameraController camCtrl;
@@ -24,6 +26,7 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
         prevY,
         gravity = Physics.gravity.y;
     bool jump,
+        flymode,
         knocked;
 
     void Awake()
@@ -36,6 +39,13 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            flymode = !flymode;
+            if (move.y != 0)
+                move.y = 0;
+        }
+
         if (!stunned)
         {
             h = Input.GetAxis("Horizontal");
@@ -83,7 +93,15 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
             move *= SPEED * moveDir;
             // Converts to local direction
             move = transform.TransformDirection(move);
-            move.y = prevY;
+            if (!flymode)
+                move.y = prevY;
+            else
+            {
+                if (jump)
+                    move.y += SPEED;
+                else
+                    move.y = 0;
+            }
 
             if (control.isGrounded)
             {
@@ -92,12 +110,13 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
                 {
                     anim.SetTrigger("jumpTrigger");
                     jump = false;
-                    move.y = JUMP_FORCE;
+                    move.y = jumpForce;
                 }
             }
         }
         
-        move.y += gravity * MASS * Time.deltaTime;
+        if (!flymode)
+            move.y += gravity * mass * Time.deltaTime;
         control.Move(move * Time.deltaTime);
 
         if (knocked && control.isGrounded)
