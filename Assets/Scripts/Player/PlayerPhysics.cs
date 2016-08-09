@@ -9,7 +9,7 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
         stunned;
 
     const int SPEED = 6,
-        JUMP_FORCE = 10;
+        JUMP_FORCE = 15;
     const float MASS = 6f;
 
     CharacterController control;

@@ -129,13 +129,9 @@ public class LightningAttack : MonoBehaviour
         Vector3 target, dir, camPos, ltngPos;
         RaycastHit hit;
         float maxDist;
-        float time = Time.time;
-        float sTime = time;
         while (blasts < maxBlasts && mana >= manaCost)
         {
-            sTime = Time.time - sTime;
             blasts++;
-            print(blasts + ": " + sTime);
             mana -= manaCost;
             AdjustManaFeedback();
             camPos = cam.transform.position;
@@ -143,19 +139,18 @@ public class LightningAttack : MonoBehaviour
             // Camera Raycasting
             target = cam.ScreenToWorldPoint(camPoint);
             dir = (target - camPos).normalized;
-            maxDist = Vector3.Distance(camPos, target);
+            maxDist = Vector3.Distance(camPos, target) + 1;
             if (Physics.Raycast(camPos, dir, out hit, maxDist, mask))
                 target = hit.point;
             // Hand Raycasting
             dir = (target - ltngPos).normalized;
-            maxDist = Vector3.Distance(ltngPos, target);
+            maxDist = Vector3.Distance(ltngPos, target) + 1;
             if (Physics.Raycast(ltngPos, dir, out hit, maxDist, mask))
                 target = hit.point;
             dir = (target - ltngPos).normalized;
             // Deal Damage
             if (hit.collider != null)
             {
-                print("hit");
                 IDamageable col = hit.collider.GetComponentInParent<IDamageable>();
                 if (col != null)
                 {
@@ -200,11 +195,8 @@ public class LightningAttack : MonoBehaviour
                     branches[i].enabled = false;
             }
             activeBranches = 0;
-            sTime = Time.time;
             yield return new WaitForSeconds(blastInterval);
         }
-        time = Time.time - time;
-        print("<color=magenta>Took " + time + " seconds</color>");
         DisableStrike();
     }
 
