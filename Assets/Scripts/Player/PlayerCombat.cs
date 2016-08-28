@@ -50,7 +50,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
     {
         if (!physics.stunned)
         {
-            if (attackable && Input.GetButtonDown("Fire1"))
+            if (attackable && Input.GetButton("Fire1"))
             {
                 // Reorient to face cam
                 if (comboNum == 0)
@@ -105,6 +105,7 @@ public class PlayerCombat : MonoBehaviour, IDamageable, IMeleeAttackable, IStunn
         physics.camOrient = !ltngMode;
         attackable = ltngMode;
         ltngMode = !ltngMode;
+        cam.onLightning = ltngMode;
         anim.SetBool("lightning", ltngMode);
     } 
 

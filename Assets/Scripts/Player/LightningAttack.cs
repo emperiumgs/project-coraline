@@ -20,7 +20,8 @@ public class LightningAttack : MonoBehaviour
     const float RANDOM_THRESHOLD = 0.3f,
         CAST_TIME = 1f,
         LOW_MANA_FLASH_TIME = 0.1f;
-    
+
+    LayerMask ignoreLayer;
     Coroutine strike;
     Vector3 camPoint;
     Camera cam;
@@ -36,6 +37,7 @@ public class LightningAttack : MonoBehaviour
 	void Awake()
     {
         mana = maxMana;
+        ignoreLayer = LayerMask.NameToLayer("Ignore Lightning");
         AdjustManaFeedback();
         lights[1].transform.SetParent(null);
         activeBranches = 0;
@@ -149,7 +151,7 @@ public class LightningAttack : MonoBehaviour
                 target = hit.point;
             dir = (target - ltngPos).normalized;
             // Deal Damage
-            if (hit.collider != null)
+            if (hit.collider != null && hit.collider.gameObject.layer != ignoreLayer)
             {
                 IDamageable col = hit.collider.GetComponentInParent<IDamageable>();
                 if (col != null)

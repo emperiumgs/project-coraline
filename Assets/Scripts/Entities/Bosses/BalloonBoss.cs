@@ -36,13 +36,15 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         rangedRange = 20f,
         meleeRange = 10f,
         explosionRange = 5f,
+        explosionPush = 5f,
+        explosionKnock = 16f,
         handRange = 2f,
         noseRange = 3f,
         waterDuration = 3f,
         minAtkCd = 2f,
         maxAtkCd = 3f,
-        minBalloonRange = 10f,
-        maxBalloonRange = 25f,
+        minBalloonRange = 8f,
+        maxBalloonRange = 20f,
         chaseSens = 3.75f,
         maxHealth = 200,
         health,
@@ -173,7 +175,7 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         {
             audioCtrl.PlayClip("noseExplode");
             pc.TakeDamage(noseDamage);
-            pc.Knockup(target.position - transform.position, 15);
+            pc.Knockup((target.position - transform.position).normalized * explosionPush, explosionKnock);
         }
     }
 
@@ -198,7 +200,11 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
                 prefab = balloons[1];
             else if (r < 8)
                 prefab = balloons[2];
-            pos = Random.insideUnitSphere * Random.Range(minBalloonRange, maxBalloonRange) + transform.position;
+            pos = Random.insideUnitSphere * maxBalloonRange;
+            pos += transform.position;
+            pos.y = 0;
+            if (Vector3.Distance(pos, transform.position) < minBalloonRange)
+                pos = (pos - transform.position).normalized * minBalloonRange + transform.position;
             pos.y = 2;
             b = (Instantiate(prefab, centerPos, Quaternion.identity) as GameObject).GetComponent<Balloon>();
             b.Spawn(pos);
@@ -221,12 +227,6 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
         water.transform.localEulerAngles = new Vector3(water.transform.localEulerAngles.x, 0);
     }
 
-    void OnDestroy()
-    {        
-        if (BossDeath != null && BossDeath.GetInvocationList().Length > 0)
-            BossDeath();
-    }
-
     public void TakeDamage(float damage)
     {
         if (health <= 0)
@@ -246,6 +246,8 @@ public class BalloonBoss : MonoBehaviour, IDamageable, IMeleeAttackable
     public void Die()
     {
         FindObjectOfType<HudController>().ToCredits();
+        if (BossDeath != null && BossDeath.GetInvocationList().Length > 0)
+            BossDeath();
         Destroy(gameObject);
     }
 

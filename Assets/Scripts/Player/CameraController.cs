@@ -12,27 +12,32 @@ public class CameraController : MonoBehaviour
     const float CAST_RADIUS = 0.2f,
         ZOOM_TIME = 0.3f,
         SHAKE_INTENSITY = 1f,
-        BACK_COOLDOWN = 0.3f;
+        BACK_COOLDOWN = 0.3f,
+        MOUSE_COOLDOWN = 2.5f;
 
     public Vector3 targetOffset;
     public LayerMask mask;
+    [HideInInspector]
+    public bool onLightning;
 
     Vector3 origPos,
         aimPos;
     Transform target,
         pivot;
-    Vector3 offsetVector, 
+    Vector3 offsetVector,
         dir;
     RaycastHit hit;
     float origDist,
-        x, 
-        y, 
+        x,
+        y,
         vRot;
     bool locked,
+        mouseOriented,
         getBack = true;
 
     Coroutine zooming,
-        backCooldown;
+        backCooldown,
+        mouseCooldown;
 
     void Awake()
     {
@@ -67,17 +72,29 @@ public class CameraController : MonoBehaviour
         // Rotate Camera
         if (locked)
             return;
-
+        
         x = Input.GetAxis("Mouse X");
         y = Input.GetAxis("Mouse Y");
 
-        vRot = pivot.localEulerAngles.x + y * -ANGULAR_SPEED;
-        if (vRot > PI_RAD)
-            vRot -= PI_RAD * 2;
-        vRot = Mathf.Clamp(vRot, MIN_ROTATION, MAX_ROTATION);
-        pivot.localEulerAngles = new Vector3(vRot, pivot.localEulerAngles.y + x * ANGULAR_SPEED);
-        
-        transform.localEulerAngles = new Vector3(X_ROTATION, transform.localEulerAngles.y);
+        if (x != 0 || y != 0)
+            mouseOriented = true;
+        else if (mouseCooldown == null)
+            mouseCooldown = StartCoroutine(MouseCooldown());
+
+        if (mouseOriented)
+        {
+            vRot = pivot.localEulerAngles.x + y * -ANGULAR_SPEED;
+            if (vRot > PI_RAD)
+                vRot -= PI_RAD * 2;
+            vRot = Mathf.Clamp(vRot, MIN_ROTATION, MAX_ROTATION);
+            pivot.localEulerAngles = new Vector3(vRot, pivot.localEulerAngles.y + x * ANGULAR_SPEED);
+
+            transform.localEulerAngles = new Vector3(X_ROTATION, transform.localEulerAngles.y);
+        }
+        else if (!onLightning)
+        {
+            pivot.rotation = Quaternion.Slerp(pivot.rotation, target.rotation, Time.deltaTime * OFFSET_SPEED / 3);
+        }
     }
 
     public void Zoom(bool zoomIn)
@@ -144,5 +161,12 @@ public class CameraController : MonoBehaviour
         getBack = false;
         yield return new WaitForSeconds(BACK_COOLDOWN);
         getBack = true;
+    }
+
+    IEnumerator MouseCooldown()
+    {
+        yield return new WaitForSeconds(MOUSE_COOLDOWN);
+        mouseOriented = false;
+        mouseCooldown = null;
     }
 }

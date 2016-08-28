@@ -24,7 +24,14 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
         prevY,
         gravity = Physics.gravity.y;
     bool jump,
+        blockJump,
         knocked;
+    int groundAngle;
+
+    Vector3 centerPos
+    {
+        get { return transform.position + Vector3.up; }
+    }
 
     void Awake()
     {
@@ -32,6 +39,18 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
         control = GetComponent<CharacterController>();
         cam = Camera.main;
         camCtrl = cam.GetComponent<CameraController>();
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (control.isGrounded)
+        {
+            groundAngle = (int)Vector3.Angle(transform.up, hit.normal);
+            if (groundAngle >= 44 && groundAngle < 90)
+                blockJump = true;
+            else
+                blockJump = false;
+        }
     }
 
     void Update()
@@ -69,7 +88,7 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
                 move = Vector3.forward;
             }
 
-            // Turns all values to positive            
+            // Turns all values to positive
             if (h < 0) h = Mathf.Abs(h);
             if (v < 0) v = Mathf.Abs(v);
 
@@ -78,6 +97,9 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
                 moveDir = v > h ? v : h;
             else
                 moveDir = v + h;
+
+            if (blockJump && !control.isGrounded)
+                moveDir = 0;
 
             anim.SetFloat("movSpeed", moveDir);
             move *= SPEED * moveDir;
@@ -93,6 +115,8 @@ public class PlayerPhysics : MonoBehaviour, IKnockable, IStunnable
                     anim.SetTrigger("jumpTrigger");
                     jump = false;
                     move.y = JUMP_FORCE;
+                    if (blockJump)
+                        move.x = move.z = 0;
                 }
             }
         }
