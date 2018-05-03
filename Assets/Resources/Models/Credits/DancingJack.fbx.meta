@@ -1,0 +1,413 @@
+fileFormatVersion: 2
+guid: 7195c069ac83df6488bcae13f7cf39d5
+timeCreated: 1465163933
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Jack:Head
+    100002: Jack:Hip_Ctrl
+    100004: Jack:Jack_Mesh
+    100006: Jack:joint12
+    100008: Jack:joint13
+    100010: Jack:joint23
+    100012: Jack:joint25
+    100014: Jack:joint26
+    100016: Jack:joint27
+    100018: Jack:joint28
+    100020: Jack:joint28 1
+    100022: Jack:joint29
+    100024: Jack:joint29 1
+    100026: Jack:joint4
+    100028: Jack:joint4 1
+    100030: Jack:L_Elbow
+    100032: Jack:L_Hip
+    100034: Jack:L_Knee
+    100036: Jack:L_Middle
+    100038: Jack:L_Middle2
+    100040: Jack:L_Middle3
+    100042: Jack:L_Middle_Tip
+    100044: Jack:L_Palm
+    100046: Jack:L_Pinky
+    100048: Jack:L_Pinky2
+    100050: Jack:L_Pinky3
+    100052: Jack:L_Pinky_Tip
+    100054: Jack:L_Point
+    100056: Jack:L_Point2
+    100058: Jack:L_Point3
+    100060: Jack:L_Point_Tip
+    100062: Jack:L_Shoulder
+    100064: Jack:L_Thumb
+    100066: Jack:L_Thumb2
+    100068: Jack:L_Thumb_Tip
+    100070: Jack:L_Wrist
+    100072: Jack:Left_Eye
+    100074: Jack:Mouth
+    100076: Jack:Neck
+    100078: Jack:polySurface34
+    100080: Jack:polySurface35
+    100082: Jack:polySurface37
+    100084: Jack:polySurface54
+    100086: Jack:polySurface55
+    100088: Jack:polySurface58
+    100090: Jack:polySurface60
+    100092: Jack:R_Elbow
+    100094: Jack:R_Hip
+    100096: Jack:R_Knee
+    100098: Jack:R_Middle
+    100100: Jack:R_Middle2
+    100102: Jack:R_Middle3
+    100104: Jack:R_Middle_Tip
+    100106: Jack:R_Palm
+    100108: Jack:R_Pinky
+    100110: Jack:R_Pinky2
+    100112: Jack:R_Pinky3
+    100114: Jack:R_Pinky_Tip
+    100116: Jack:R_Point
+    100118: Jack:R_Point2
+    100120: Jack:R_Point3
+    100122: Jack:R_Point_Tip
+    100124: Jack:R_Shoulder
+    100126: Jack:R_Thumb
+    100128: Jack:R_Thumb2
+    100130: Jack:R_Thumb_Tip
+    100132: Jack:R_Wrist
+    100134: Jack:Right_Eye
+    100136: Jack:Root
+    100138: Jack:Root_Ctlr
+    100140: Jack:Spine
+    100142: Jack:Spine2
+    100144: Jack:Spine3
+    100146: //RootNode
+    400000: Jack:Head
+    400002: Jack:Hip_Ctrl
+    400004: Jack:Jack_Mesh
+    400006: Jack:joint12
+    400008: Jack:joint13
+    400010: Jack:joint23
+    400012: Jack:joint25
+    400014: Jack:joint26
+    400016: Jack:joint27
+    400018: Jack:joint28
+    400020: Jack:joint28 1
+    400022: Jack:joint29
+    400024: Jack:joint29 1
+    400026: Jack:joint4
+    400028: Jack:joint4 1
+    400030: Jack:L_Elbow
+    400032: Jack:L_Hip
+    400034: Jack:L_Knee
+    400036: Jack:L_Middle
+    400038: Jack:L_Middle2
+    400040: Jack:L_Middle3
+    400042: Jack:L_Middle_Tip
+    400044: Jack:L_Palm
+    400046: Jack:L_Pinky
+    400048: Jack:L_Pinky2
+    400050: Jack:L_Pinky3
+    400052: Jack:L_Pinky_Tip
+    400054: Jack:L_Point
+    400056: Jack:L_Point2
+    400058: Jack:L_Point3
+    400060: Jack:L_Point_Tip
+    400062: Jack:L_Shoulder
+    400064: Jack:L_Thumb
+    400066: Jack:L_Thumb2
+    400068: Jack:L_Thumb_Tip
+    400070: Jack:L_Wrist
+    400072: Jack:Left_Eye
+    400074: Jack:Mouth
+    400076: Jack:Neck
+    400078: Jack:polySurface34
+    400080: Jack:polySurface35
+    400082: Jack:polySurface37
+    400084: Jack:polySurface54
+    400086: Jack:polySurface55
+    400088: Jack:polySurface58
+    400090: Jack:polySurface60
+    400092: Jack:R_Elbow
+    400094: Jack:R_Hip
+    400096: Jack:R_Knee
+    400098: Jack:R_Middle
+    400100: Jack:R_Middle2
+    400102: Jack:R_Middle3
+    400104: Jack:R_Middle_Tip
+    400106: Jack:R_Palm
+    400108: Jack:R_Pinky
+    400110: Jack:R_Pinky2
+    400112: Jack:R_Pinky3
+    400114: Jack:R_Pinky_Tip
+    400116: Jack:R_Point
+    400118: Jack:R_Point2
+    400120: Jack:R_Point3
+    400122: Jack:R_Point_Tip
+    400124: Jack:R_Shoulder
+    400126: Jack:R_Thumb
+    400128: Jack:R_Thumb2
+    400130: Jack:R_Thumb_Tip
+    400132: Jack:R_Wrist
+    400134: Jack:Right_Eye
+    400136: Jack:Root
+    400138: Jack:Root_Ctlr
+    400140: Jack:Spine
+    400142: Jack:Spine2
+    400144: Jack:Spine3
+    400146: //RootNode
+    4300000: Jack:polySurface54
+    4300002: Jack:polySurface60
+    4300004: Jack:polySurface58
+    4300006: Jack:polySurface55
+    4300008: Jack:polySurface37
+    4300010: Jack:polySurface34
+    4300012: Jack:polySurface35
+    7400000: DancingJack@Dance
+    9500000: //RootNode
+    13700000: Jack:polySurface34
+    13700002: Jack:polySurface35
+    13700004: Jack:polySurface37
+    13700006: Jack:polySurface54
+    13700008: Jack:polySurface55
+    13700010: Jack:polySurface58
+    13700012: Jack:polySurface60
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: DancingJack@Dance
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jack:Jack_Mesh
+        weight: 1
+      - path: Jack:Jack_Mesh/Jack:polySurface34
+        weight: 1
+      - path: Jack:Jack_Mesh/Jack:polySurface35
+        weight: 1
+      - path: Jack:Jack_Mesh/Jack:polySurface37
+        weight: 1
+      - path: Jack:Jack_Mesh/Jack:polySurface54
+        weight: 1
+      - path: Jack:Jack_Mesh/Jack:polySurface55
+        weight: 1
+      - path: Jack:Jack_Mesh/Jack:polySurface58
+        weight: 1
+      - path: Jack:Jack_Mesh/Jack:polySurface60
+        weight: 1
+      - path: Jack:Root_Ctlr
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Hip_Ctrl
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:L_Hip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:L_Hip/Jack:L_Knee
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:L_Hip/Jack:L_Knee/Jack:joint4
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:L_Hip/Jack:L_Knee/Jack:joint4/Jack:joint28
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:L_Hip/Jack:L_Knee/Jack:joint4/Jack:joint28/Jack:joint29
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:R_Hip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:R_Hip/Jack:R_Knee
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:R_Hip/Jack:R_Knee/Jack:joint4 1
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:R_Hip/Jack:R_Knee/Jack:joint4 1/Jack:joint28
+          1
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:R_Hip/Jack:R_Knee/Jack:joint4 1/Jack:joint28
+          1/Jack:joint29 1
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Middle
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Middle/Jack:L_Middle2
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Middle/Jack:L_Middle2/Jack:L_Middle3
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Middle/Jack:L_Middle2/Jack:L_Middle3/Jack:L_Middle_Tip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Pinky
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Pinky/Jack:L_Pinky2
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Pinky/Jack:L_Pinky2/Jack:L_Pinky3
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Pinky/Jack:L_Pinky2/Jack:L_Pinky3/Jack:L_Pinky_Tip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Point
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Point/Jack:L_Point2
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Point/Jack:L_Point2/Jack:L_Point3
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Palm/Jack:L_Point/Jack:L_Point2/Jack:L_Point3/Jack:L_Point_Tip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Thumb
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Thumb/Jack:L_Thumb2
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint23/Jack:L_Shoulder/Jack:L_Elbow/Jack:L_Wrist/Jack:L_Thumb/Jack:L_Thumb2/Jack:L_Thumb_Tip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Middle
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Middle/Jack:R_Middle2
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Middle/Jack:R_Middle2/Jack:R_Middle3
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Middle/Jack:R_Middle2/Jack:R_Middle3/Jack:R_Middle_Tip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Pinky
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Pinky/Jack:R_Pinky2
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Pinky/Jack:R_Pinky2/Jack:R_Pinky3
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Pinky/Jack:R_Pinky2/Jack:R_Pinky3/Jack:R_Pinky_Tip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Point
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Point/Jack:R_Point2
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Point/Jack:R_Point2/Jack:R_Point3
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Palm/Jack:R_Point/Jack:R_Point2/Jack:R_Point3/Jack:R_Point_Tip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Thumb
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Thumb/Jack:R_Thumb2
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:joint27/Jack:R_Shoulder/Jack:R_Elbow/Jack:R_Wrist/Jack:R_Thumb/Jack:R_Thumb2/Jack:R_Thumb_Tip
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:Neck
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:Neck/Jack:Head
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:Neck/Jack:Head/Jack:joint12
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:Neck/Jack:Head/Jack:joint12/Jack:joint13
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:Neck/Jack:Head/Jack:joint12/Jack:joint13/Jack:joint25
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:Neck/Jack:Head/Jack:joint12/Jack:joint13/Jack:joint25/Jack:joint26
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:Neck/Jack:Head/Jack:Left_Eye
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:Neck/Jack:Head/Jack:Mouth
+        weight: 1
+      - path: Jack:Root_Ctlr/Jack:Root/Jack:Spine/Jack:Spine2/Jack:Spine3/Jack:Neck/Jack:Head/Jack:Right_Eye
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Jack:Root_Ctlr
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

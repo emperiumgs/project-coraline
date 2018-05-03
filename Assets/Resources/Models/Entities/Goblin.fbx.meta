@@ -1,0 +1,1322 @@
+fileFormatVersion: 2
+guid: 8b1c99f475a66524ca3ea9d7b0044745
+timeCreated: 1464649075
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: GoblinMelee:goblin:Weapon_Goblin
+    100002: GoblinMelee:Head
+    100004: GoblinMelee:Hip_Ctrl
+    100006: GoblinMelee:joint15
+    100008: GoblinMelee:joint15 1
+    100010: GoblinMelee:joint35
+    100012: GoblinMelee:joint36
+    100014: GoblinMelee:joint37
+    100016: GoblinMelee:L_Ankle
+    100018: GoblinMelee:L_Ear1
+    100020: GoblinMelee:L_Ear2
+    100022: GoblinMelee:L_Ear3
+    100024: GoblinMelee:L_Ear_Tip
+    100026: GoblinMelee:L_Elbow
+    100028: GoblinMelee:L_Eye
+    100030: GoblinMelee:L_Hip
+    100032: GoblinMelee:L_Knee
+    100034: GoblinMelee:L_Middle1
+    100036: GoblinMelee:L_Middle2
+    100038: GoblinMelee:L_Middle_Tip
+    100040: GoblinMelee:L_Pinky1
+    100042: GoblinMelee:L_Pinky2
+    100044: GoblinMelee:L_Pinky_Tip
+    100046: GoblinMelee:L_Point1
+    100048: GoblinMelee:L_Point2
+    100050: GoblinMelee:L_Point_Tip
+    100052: GoblinMelee:L_Sho
+    100054: GoblinMelee:L_Shoulder
+    100056: GoblinMelee:L_Thumb1
+    100058: GoblinMelee:L_Thumb2
+    100060: GoblinMelee:L_Thumb_Tip
+    100062: GoblinMelee:L_Tip
+    100064: GoblinMelee:L_Toe
+    100066: GoblinMelee:L_Wrist
+    100068: GoblinMelee:Neck
+    100070: GoblinMelee:polySurface58
+    100072: GoblinMelee:polySurface63
+    100074: GoblinMelee:R_Ankle
+    100076: GoblinMelee:R_Ear1
+    100078: GoblinMelee:R_Ear2
+    100080: GoblinMelee:R_Ear3
+    100082: GoblinMelee:R_Ear_Tip
+    100084: GoblinMelee:R_Elbow
+    100086: GoblinMelee:R_Eye
+    100088: GoblinMelee:R_Hip
+    100090: GoblinMelee:R_Knee
+    100092: GoblinMelee:R_Middle1
+    100094: GoblinMelee:R_Middle2
+    100096: GoblinMelee:R_Middle_Tip
+    100098: GoblinMelee:R_Pinky1
+    100100: GoblinMelee:R_Pinky2
+    100102: GoblinMelee:R_Pinky_Tip
+    100104: GoblinMelee:R_Point1
+    100106: GoblinMelee:R_Point2
+    100108: GoblinMelee:R_Point_Tip
+    100110: GoblinMelee:R_Sho
+    100112: GoblinMelee:R_Shoulder
+    100114: GoblinMelee:R_Thumb1
+    100116: GoblinMelee:R_Thumb2
+    100118: GoblinMelee:R_Thumb_Tip
+    100120: GoblinMelee:R_Tip
+    100122: GoblinMelee:R_Toe
+    100124: GoblinMelee:R_Wrist
+    100126: GoblinMelee:Root
+    100128: GoblinMelee:Root_Ctrl
+    100130: GoblinMelee:Spine1
+    100132: GoblinMelee:Spine2
+    100134: GoblinMelee:Top
+    100136: //RootNode
+    400000: GoblinMelee:goblin:Weapon_Goblin
+    400002: GoblinMelee:Head
+    400004: GoblinMelee:Hip_Ctrl
+    400006: GoblinMelee:joint15
+    400008: GoblinMelee:joint15 1
+    400010: GoblinMelee:joint35
+    400012: GoblinMelee:joint36
+    400014: GoblinMelee:joint37
+    400016: GoblinMelee:L_Ankle
+    400018: GoblinMelee:L_Ear1
+    400020: GoblinMelee:L_Ear2
+    400022: GoblinMelee:L_Ear3
+    400024: GoblinMelee:L_Ear_Tip
+    400026: GoblinMelee:L_Elbow
+    400028: GoblinMelee:L_Eye
+    400030: GoblinMelee:L_Hip
+    400032: GoblinMelee:L_Knee
+    400034: GoblinMelee:L_Middle1
+    400036: GoblinMelee:L_Middle2
+    400038: GoblinMelee:L_Middle_Tip
+    400040: GoblinMelee:L_Pinky1
+    400042: GoblinMelee:L_Pinky2
+    400044: GoblinMelee:L_Pinky_Tip
+    400046: GoblinMelee:L_Point1
+    400048: GoblinMelee:L_Point2
+    400050: GoblinMelee:L_Point_Tip
+    400052: GoblinMelee:L_Sho
+    400054: GoblinMelee:L_Shoulder
+    400056: GoblinMelee:L_Thumb1
+    400058: GoblinMelee:L_Thumb2
+    400060: GoblinMelee:L_Thumb_Tip
+    400062: GoblinMelee:L_Tip
+    400064: GoblinMelee:L_Toe
+    400066: GoblinMelee:L_Wrist
+    400068: GoblinMelee:Neck
+    400070: GoblinMelee:polySurface58
+    400072: GoblinMelee:polySurface63
+    400074: GoblinMelee:R_Ankle
+    400076: GoblinMelee:R_Ear1
+    400078: GoblinMelee:R_Ear2
+    400080: GoblinMelee:R_Ear3
+    400082: GoblinMelee:R_Ear_Tip
+    400084: GoblinMelee:R_Elbow
+    400086: GoblinMelee:R_Eye
+    400088: GoblinMelee:R_Hip
+    400090: GoblinMelee:R_Knee
+    400092: GoblinMelee:R_Middle1
+    400094: GoblinMelee:R_Middle2
+    400096: GoblinMelee:R_Middle_Tip
+    400098: GoblinMelee:R_Pinky1
+    400100: GoblinMelee:R_Pinky2
+    400102: GoblinMelee:R_Pinky_Tip
+    400104: GoblinMelee:R_Point1
+    400106: GoblinMelee:R_Point2
+    400108: GoblinMelee:R_Point_Tip
+    400110: GoblinMelee:R_Sho
+    400112: GoblinMelee:R_Shoulder
+    400114: GoblinMelee:R_Thumb1
+    400116: GoblinMelee:R_Thumb2
+    400118: GoblinMelee:R_Thumb_Tip
+    400120: GoblinMelee:R_Tip
+    400122: GoblinMelee:R_Toe
+    400124: GoblinMelee:R_Wrist
+    400126: GoblinMelee:Root
+    400128: GoblinMelee:Root_Ctrl
+    400130: GoblinMelee:Spine1
+    400132: GoblinMelee:Spine2
+    400134: GoblinMelee:Top
+    400136: //RootNode
+    2300000: GoblinMelee:goblin:Weapon_Goblin
+    3300000: GoblinMelee:goblin:Weapon_Goblin
+    4300000: GoblinMelee:goblin:Weapon_Goblin
+    4300002: GoblinMelee:polySurface58
+    4300004: GoblinMelee:polySurface63
+    7400000: Goblin@FullTimeline
+    7400002: Goblin@Idle
+    7400004: Goblin@Walk
+    7400006: Goblin@Attack
+    7400008: Goblin@TakeDamage
+    7400010: Goblin@Death
+    7400012: Goblin@TakeDamage
+    9500000: //RootNode
+    13700000: GoblinMelee:polySurface58
+    13700002: GoblinMelee:polySurface63
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Goblin@FullTimeline
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMelee:goblin:Weapon_Goblin
+        weight: 1
+      - path: GoblinMelee:polySurface58
+        weight: 1
+      - path: GoblinMelee:polySurface63
+        weight: 1
+      - path: GoblinMelee:Root
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe/GoblinMelee:L_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe/GoblinMelee:R_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35/GoblinMelee:joint36
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:joint37
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3/GoblinMelee:L_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3/GoblinMelee:R_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:Top
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2/GoblinMelee:L_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2/GoblinMelee:L_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2/GoblinMelee:L_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2/GoblinMelee:L_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2/GoblinMelee:R_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2/GoblinMelee:R_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2/GoblinMelee:R_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2/GoblinMelee:R_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl/GoblinMelee:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Goblin@Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMelee:goblin:Weapon_Goblin
+        weight: 1
+      - path: GoblinMelee:polySurface58
+        weight: 1
+      - path: GoblinMelee:polySurface63
+        weight: 1
+      - path: GoblinMelee:Root
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe/GoblinMelee:L_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe/GoblinMelee:R_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35/GoblinMelee:joint36
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:joint37
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3/GoblinMelee:L_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3/GoblinMelee:R_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:Top
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2/GoblinMelee:L_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2/GoblinMelee:L_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2/GoblinMelee:L_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2/GoblinMelee:L_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2/GoblinMelee:R_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2/GoblinMelee:R_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2/GoblinMelee:R_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2/GoblinMelee:R_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl/GoblinMelee:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Goblin@Walk
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.60759497
+        functionName: PlayStepSound
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: PlayStepSound
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMelee:goblin:Weapon_Goblin
+        weight: 1
+      - path: GoblinMelee:polySurface58
+        weight: 1
+      - path: GoblinMelee:polySurface63
+        weight: 1
+      - path: GoblinMelee:Root
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe/GoblinMelee:L_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe/GoblinMelee:R_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35/GoblinMelee:joint36
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:joint37
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3/GoblinMelee:L_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3/GoblinMelee:R_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:Top
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2/GoblinMelee:L_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2/GoblinMelee:L_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2/GoblinMelee:L_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2/GoblinMelee:L_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2/GoblinMelee:R_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2/GoblinMelee:R_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2/GoblinMelee:R_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2/GoblinMelee:R_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl/GoblinMelee:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Goblin@Attack
+      takeName: Take 001
+      firstFrame: 90
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.4388186
+        functionName: OpenDamage
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.506329
+        functionName: CloseDamage
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: EndAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMelee:goblin:Weapon_Goblin
+        weight: 1
+      - path: GoblinMelee:polySurface58
+        weight: 1
+      - path: GoblinMelee:polySurface63
+        weight: 1
+      - path: GoblinMelee:Root
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe/GoblinMelee:L_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe/GoblinMelee:R_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35/GoblinMelee:joint36
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:joint37
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3/GoblinMelee:L_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3/GoblinMelee:R_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:Top
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2/GoblinMelee:L_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2/GoblinMelee:L_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2/GoblinMelee:L_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2/GoblinMelee:L_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2/GoblinMelee:R_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2/GoblinMelee:R_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2/GoblinMelee:R_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2/GoblinMelee:R_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl/GoblinMelee:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Goblin@TakeDamage
+      takeName: Take 001
+      firstFrame: 135
+      lastFrame: 155
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMelee:goblin:Weapon_Goblin
+        weight: 1
+      - path: GoblinMelee:polySurface58
+        weight: 1
+      - path: GoblinMelee:polySurface63
+        weight: 1
+      - path: GoblinMelee:Root
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe/GoblinMelee:L_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe/GoblinMelee:R_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35/GoblinMelee:joint36
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:joint37
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3/GoblinMelee:L_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3/GoblinMelee:R_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:Top
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2/GoblinMelee:L_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2/GoblinMelee:L_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2/GoblinMelee:L_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2/GoblinMelee:L_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2/GoblinMelee:R_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2/GoblinMelee:R_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2/GoblinMelee:R_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2/GoblinMelee:R_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl/GoblinMelee:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Goblin@Death
+      takeName: Take 001
+      firstFrame: 160
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: Die
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMelee:goblin:Weapon_Goblin
+        weight: 1
+      - path: GoblinMelee:polySurface58
+        weight: 1
+      - path: GoblinMelee:polySurface63
+        weight: 1
+      - path: GoblinMelee:Root
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:L_Hip/GoblinMelee:L_Knee/GoblinMelee:L_Ankle/GoblinMelee:L_Toe/GoblinMelee:L_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:R_Hip/GoblinMelee:R_Knee/GoblinMelee:R_Ankle/GoblinMelee:R_Toe/GoblinMelee:R_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:joint35/GoblinMelee:joint36
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:joint37
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Ear1/GoblinMelee:L_Ear2/GoblinMelee:L_Ear3/GoblinMelee:L_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:L_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Ear1/GoblinMelee:R_Ear2/GoblinMelee:R_Ear3/GoblinMelee:R_Ear_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:R_Eye
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:Head/GoblinMelee:Top
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Middle1/GoblinMelee:L_Middle2/GoblinMelee:L_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Pinky1/GoblinMelee:L_Pinky2/GoblinMelee:L_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:joint15/GoblinMelee:L_Point1/GoblinMelee:L_Point2/GoblinMelee:L_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:L_Sho/GoblinMelee:L_Shoulder/GoblinMelee:L_Elbow/GoblinMelee:L_Wrist/GoblinMelee:L_Thumb1/GoblinMelee:L_Thumb2/GoblinMelee:L_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Middle1/GoblinMelee:R_Middle2/GoblinMelee:R_Middle_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Pinky1/GoblinMelee:R_Pinky2/GoblinMelee:R_Pinky_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:joint15
+          1/GoblinMelee:R_Point1/GoblinMelee:R_Point2/GoblinMelee:R_Point_Tip
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2
+        weight: 1
+      - path: GoblinMelee:Root/GoblinMelee:Spine1/GoblinMelee:Spine2/GoblinMelee:Neck/GoblinMelee:R_Sho/GoblinMelee:R_Shoulder/GoblinMelee:R_Elbow/GoblinMelee:R_Wrist/GoblinMelee:R_Thumb1/GoblinMelee:R_Thumb2/GoblinMelee:R_Thumb_Tip
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl
+        weight: 1
+      - path: GoblinMelee:Root_Ctrl/GoblinMelee:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: GoblinMelee:Root_Ctrl
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

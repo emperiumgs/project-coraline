@@ -8,7 +8,7 @@ public class GoblinBomb : MonoBehaviour, IDamageable
     public LayerMask mask;
 
     ParticleSystem blast;
-    NavMeshAgent agent;
+    UnityEngine.AI.NavMeshAgent agent;
     Animator anim;
     float explosionTime = 1.5f;
     float explosionDamage = 15f;
@@ -23,7 +23,7 @@ public class GoblinBomb : MonoBehaviour, IDamageable
 
     void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         blast = GetComponentInChildren<ParticleSystem>();
         anim = GetComponent<Animator>();
     }
@@ -43,7 +43,7 @@ public class GoblinBomb : MonoBehaviour, IDamageable
     {
         armed = true;
         agent.Stop();
-        anim.Stop();
+        anim.enabled = false;
         StartCoroutine(ExplosionTimer());
     }
 

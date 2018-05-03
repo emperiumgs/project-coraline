@@ -20,7 +20,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     States state = States.Idle;
     
     ParticleSystem blast;
-    NavMeshAgent agent;
+    UnityEngine.AI.NavMeshAgent agent;
     AudioSource source;
     Transform target;
     Animator anim;
@@ -51,7 +51,7 @@ public class GoblinRocket : MonoBehaviour, IDamageable
     {
         source = GetComponent<AudioSource>();
         target = FindObjectOfType<PlayerPhysics>().transform;
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         anim = GetComponent<Animator>();
         blast = GetComponentInChildren<ParticleSystem>();
         health = maxHealth;

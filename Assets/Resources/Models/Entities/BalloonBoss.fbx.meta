@@ -1,0 +1,1584 @@
+fileFormatVersion: 2
+guid: 9e38d491990c3db4981f7ac5edfc1c76
+timeCreated: 1464741690
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+    100002: Boss1:Boss2
+    100004: Boss1:Flower
+    100006: Boss1:Head
+    100008: Boss1:joint12
+    100010: Boss1:joint13
+    100012: Boss1:joint14
+    100014: Boss1:joint14 1
+    100016: Boss1:joint15
+    100018: Boss1:joint15 1
+    100020: Boss1:joint16
+    100022: Boss1:joint16 1
+    100024: Boss1:joint17
+    100026: Boss1:joint17 1
+    100028: Boss1:joint18
+    100030: Boss1:joint18 1
+    100032: Boss1:joint19
+    100034: Boss1:joint19 1
+    100036: Boss1:joint20
+    100038: Boss1:joint20 1
+    100040: Boss1:joint21
+    100042: Boss1:joint21 1
+    100044: Boss1:joint22
+    100046: Boss1:joint22 1
+    100048: Boss1:joint60
+    100050: Boss1:joint8
+    100052: Boss1:L_Elbow1
+    100054: Boss1:L_Elbow2
+    100056: Boss1:L_Eye
+    100058: Boss1:L_Eyebrow
+    100060: Boss1:L_Hair
+    100062: Boss1:L_Shoulder
+    100064: Boss1:L_Wrist
+    100066: Boss1:Mouth
+    100068: Boss1:Nose
+    100070: Boss1:nurbsCircle20
+    100072: Boss1:R_Eye
+    100074: Boss1:R_Eyebrow
+    100076: Boss1:R_Hair
+    100078: Boss1:Root
+    100080: Boss1:Root_Ctrl
+    100082: //RootNode
+    400000: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+    400002: Boss1:Boss2
+    400004: Boss1:Flower
+    400006: Boss1:Head
+    400008: Boss1:joint12
+    400010: Boss1:joint13
+    400012: Boss1:joint14
+    400014: Boss1:joint14 1
+    400016: Boss1:joint15
+    400018: Boss1:joint15 1
+    400020: Boss1:joint16
+    400022: Boss1:joint16 1
+    400024: Boss1:joint17
+    400026: Boss1:joint17 1
+    400028: Boss1:joint18
+    400030: Boss1:joint18 1
+    400032: Boss1:joint19
+    400034: Boss1:joint19 1
+    400036: Boss1:joint20
+    400038: Boss1:joint20 1
+    400040: Boss1:joint21
+    400042: Boss1:joint21 1
+    400044: Boss1:joint22
+    400046: Boss1:joint22 1
+    400048: Boss1:joint60
+    400050: Boss1:joint8
+    400052: Boss1:L_Elbow1
+    400054: Boss1:L_Elbow2
+    400056: Boss1:L_Eye
+    400058: Boss1:L_Eyebrow
+    400060: Boss1:L_Hair
+    400062: Boss1:L_Shoulder
+    400064: Boss1:L_Wrist
+    400066: Boss1:Mouth
+    400068: Boss1:Nose
+    400070: Boss1:nurbsCircle20
+    400072: Boss1:R_Eye
+    400074: Boss1:R_Eyebrow
+    400076: Boss1:R_Hair
+    400078: Boss1:Root
+    400080: Boss1:Root_Ctrl
+    400082: //RootNode
+    4300000: Boss1:Boss2
+    7400000: BalloonBoss@FullTimeline
+    7400002: BalloonBoss@Idle
+    7400004: BalloonBoss@FlowerStart
+    7400006: BalloonBoss@FlowerSpin
+    7400008: BalloonBoss@FlowerStop
+    7400010: BalloonBoss@SummonBalloons
+    7400012: BalloonBoss@NoseExplode
+    7400014: BalloonBoss@RightSlap
+    7400016: BalloonBoss@LeftSlap
+    7400018: BalloonBoss@Death
+    7400020: BalloonBoss@Greeting
+    9500000: //RootNode
+    13700000: Boss1:Boss2
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: BalloonBoss@FullTimeline
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 765
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@FlowerStart
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: WaterStart
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@FlowerSpin
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@FlowerStop
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@SummonBalloons
+      takeName: Take 001
+      firstFrame: 210
+      lastFrame: 306
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.57805896
+        functionName: SpawnBalloons
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@NoseExplode
+      takeName: Take 001
+      firstFrame: 310
+      lastFrame: 358
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: PlayClip
+        data: noseInflate
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.4894514
+        functionName: Explode
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: EndAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@RightSlap
+      takeName: Take 001
+      firstFrame: 360
+      lastFrame: 445
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.35443032
+        functionName: MeleeAttack
+        data: r
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8312236
+        functionName: CloseDamage
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: EndAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@LeftSlap
+      takeName: Take 001
+      firstFrame: 460
+      lastFrame: 555
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.42194095
+        functionName: MeleeAttack
+        data: l
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.73839676
+        functionName: CloseDamage
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: EndAttack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@Death
+      takeName: Take 001
+      firstFrame: 560
+      lastFrame: 665
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: Die
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: BalloonBoss@Greeting
+      takeName: Take 001
+      firstFrame: 690
+      lastFrame: 765
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Boss1:_UNKNOWN_REF_NODE_fosterParent1
+        weight: 1
+      - path: Boss1:Boss2
+        weight: 1
+      - path: Boss1:Root
+        weight: 1
+      - path: Boss1:Root/Boss1:Head
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Flower
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint15 1/Boss1:joint16 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint17 1/Boss1:joint18 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint14
+          1/Boss1:joint19 1/Boss1:joint20 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:joint60/Boss1:joint8/Boss1:joint12/Boss1:joint13/Boss1:joint21
+          1/Boss1:joint22 1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Hair
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint15/Boss1:joint16
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint17/Boss1:joint18
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint14/Boss1:joint19/Boss1:joint20
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:L_Shoulder/Boss1:L_Elbow1/Boss1:L_Elbow2/Boss1:L_Wrist/Boss1:joint21/Boss1:joint22
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Mouth
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:Nose
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eye
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Eyebrow
+        weight: 1
+      - path: Boss1:Root/Boss1:Head/Boss1:R_Hair
+        weight: 1
+      - path: Boss1:Root_Ctrl
+        weight: 1
+      - path: Boss1:Root_Ctrl/Boss1:nurbsCircle20
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Boss1:Root_Ctrl
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

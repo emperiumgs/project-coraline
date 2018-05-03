@@ -7,6 +7,7 @@ Library/
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
+.vs/
 ExportedObj/
 obj/
 *.svd
@@ -29,9 +30,3 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# =================== #
-# Unessential Folders #
-# =================== #
-Assets/Resources/
-Assets/Resources.meta

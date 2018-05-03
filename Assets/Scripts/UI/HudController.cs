@@ -21,8 +21,8 @@ public class HudController : MonoBehaviour
     public void Awake()
     {
         ltng = FindObjectOfType<LightningAttack>();
-        crosshair = transform.FindChild("Crosshair").GetComponent<Image>();
-        fader = transform.FindChild("Fader").GetComponent<Image>();
+        crosshair = transform.Find("Crosshair").GetComponent<Image>();
+        fader = transform.Find("Fader").GetComponent<Image>();
         if (!first)
         {
             StartCoroutine(FadeIn(2));

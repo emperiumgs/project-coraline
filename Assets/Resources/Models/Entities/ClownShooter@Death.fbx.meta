@@ -1,0 +1,371 @@
+fileFormatVersion: 2
+guid: c0d5691e86ff16b43bdc57850c4c6f9c
+timeCreated: 1464976754
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Clown:Flower
+    100002: Clown:Hat
+    100004: Clown:Head
+    100006: Clown:joint20
+    100008: Clown:joint20 1
+    100010: Clown:joint22
+    100012: Clown:joint22 1
+    100014: Clown:joint23
+    100016: Clown:joint23 1
+    100018: Clown:joint24
+    100020: Clown:joint24 1
+    100022: Clown:joint25
+    100024: Clown:joint25 1
+    100026: Clown:joint26
+    100028: Clown:joint26 1
+    100030: Clown:joint27
+    100032: Clown:joint27 1
+    100034: Clown:joint28
+    100036: Clown:joint28 1
+    100038: Clown:joint29
+    100040: Clown:joint29 1
+    100042: Clown:joint30
+    100044: Clown:joint30 1
+    100046: Clown:joint31
+    100048: Clown:joint31 1
+    100050: Clown:joint32
+    100052: Clown:joint32 1
+    100054: Clown:joint33
+    100056: Clown:joint33 1
+    100058: Clown:joint35
+    100060: Clown:L_Ankle
+    100062: Clown:L_Elbow
+    100064: Clown:L_Hhip
+    100066: Clown:L_Knee
+    100068: Clown:L_Sho
+    100070: Clown:L_Shoulder
+    100072: Clown:L_Tip
+    100074: Clown:L_Toe
+    100076: Clown:L_Toe2
+    100078: Clown:L_Wrist
+    100080: Clown:pCylinder36
+    100082: Clown:Pelvis_Ctrl
+    100084: Clown:polySurface44
+    100086: Clown:R_Ankle
+    100088: Clown:R_Elbow
+    100090: Clown:R_Hhip
+    100092: Clown:R_Knee
+    100094: Clown:R_Sho
+    100096: Clown:R_Shoulder
+    100098: Clown:R_Tip
+    100100: Clown:R_Toe
+    100102: Clown:R_Toe2
+    100104: Clown:R_Wrist
+    100106: Clown:Ribbon
+    100108: Clown:Root
+    100110: Clown:Rott_Ctrl
+    100112: Clown:Spine1
+    100114: Clown:Spine2
+    100116: Clown:Spine3
+    100118: Clown:Tip
+    100120: //RootNode
+    400000: Clown:Flower
+    400002: Clown:Hat
+    400004: Clown:Head
+    400006: Clown:joint20
+    400008: Clown:joint20 1
+    400010: Clown:joint22
+    400012: Clown:joint22 1
+    400014: Clown:joint23
+    400016: Clown:joint23 1
+    400018: Clown:joint24
+    400020: Clown:joint24 1
+    400022: Clown:joint25
+    400024: Clown:joint25 1
+    400026: Clown:joint26
+    400028: Clown:joint26 1
+    400030: Clown:joint27
+    400032: Clown:joint27 1
+    400034: Clown:joint28
+    400036: Clown:joint28 1
+    400038: Clown:joint29
+    400040: Clown:joint29 1
+    400042: Clown:joint30
+    400044: Clown:joint30 1
+    400046: Clown:joint31
+    400048: Clown:joint31 1
+    400050: Clown:joint32
+    400052: Clown:joint32 1
+    400054: Clown:joint33
+    400056: Clown:joint33 1
+    400058: Clown:joint35
+    400060: Clown:L_Ankle
+    400062: Clown:L_Elbow
+    400064: Clown:L_Hhip
+    400066: Clown:L_Knee
+    400068: Clown:L_Sho
+    400070: Clown:L_Shoulder
+    400072: Clown:L_Tip
+    400074: Clown:L_Toe
+    400076: Clown:L_Toe2
+    400078: Clown:L_Wrist
+    400080: Clown:pCylinder36
+    400082: Clown:Pelvis_Ctrl
+    400084: Clown:polySurface44
+    400086: Clown:R_Ankle
+    400088: Clown:R_Elbow
+    400090: Clown:R_Hhip
+    400092: Clown:R_Knee
+    400094: Clown:R_Sho
+    400096: Clown:R_Shoulder
+    400098: Clown:R_Tip
+    400100: Clown:R_Toe
+    400102: Clown:R_Toe2
+    400104: Clown:R_Wrist
+    400106: Clown:Ribbon
+    400108: Clown:Root
+    400110: Clown:Rott_Ctrl
+    400112: Clown:Spine1
+    400114: Clown:Spine2
+    400116: Clown:Spine3
+    400118: Clown:Tip
+    400120: //RootNode
+    2300000: Clown:pCylinder36
+    3300000: Clown:pCylinder36
+    4300000: Clown:polySurface44
+    4300002: Clown:pCylinder36
+    7400000: ClownShooter@Death
+    9500000: //RootNode
+    13700000: Clown:polySurface44
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ClownShooter@Death
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 220
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: Die
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Clown:pCylinder36
+        weight: 1
+      - path: Clown:polySurface44
+        weight: 1
+      - path: Clown:Root
+        weight: 1
+      - path: Clown:Root/Clown:L_Hhip
+        weight: 1
+      - path: Clown:Root/Clown:L_Hhip/Clown:L_Knee
+        weight: 1
+      - path: Clown:Root/Clown:L_Hhip/Clown:L_Knee/Clown:L_Ankle
+        weight: 1
+      - path: Clown:Root/Clown:L_Hhip/Clown:L_Knee/Clown:L_Ankle/Clown:L_Toe
+        weight: 1
+      - path: Clown:Root/Clown:L_Hhip/Clown:L_Knee/Clown:L_Ankle/Clown:L_Toe/Clown:L_Toe2
+        weight: 1
+      - path: Clown:Root/Clown:L_Hhip/Clown:L_Knee/Clown:L_Ankle/Clown:L_Toe/Clown:L_Toe2/Clown:L_Tip
+        weight: 1
+      - path: Clown:Root/Clown:R_Hhip
+        weight: 1
+      - path: Clown:Root/Clown:R_Hhip/Clown:R_Knee
+        weight: 1
+      - path: Clown:Root/Clown:R_Hhip/Clown:R_Knee/Clown:R_Ankle
+        weight: 1
+      - path: Clown:Root/Clown:R_Hhip/Clown:R_Knee/Clown:R_Ankle/Clown:R_Toe
+        weight: 1
+      - path: Clown:Root/Clown:R_Hhip/Clown:R_Knee/Clown:R_Ankle/Clown:R_Toe/Clown:R_Toe2
+        weight: 1
+      - path: Clown:Root/Clown:R_Hhip/Clown:R_Knee/Clown:R_Ankle/Clown:R_Toe/Clown:R_Toe2/Clown:R_Tip
+        weight: 1
+      - path: Clown:Root/Clown:Spine1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:Head
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:Head/Clown:Hat
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:Head/Clown:Hat/Clown:Flower
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:Head/Clown:Hat/Clown:Flower/Clown:joint35
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:Head/Clown:Hat/Clown:Tip
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:Head/Clown:Ribbon
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20/Clown:joint22
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20/Clown:joint22/Clown:joint23
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20/Clown:joint22/Clown:joint23/Clown:joint24
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20/Clown:joint25
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20/Clown:joint25/Clown:joint26
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20/Clown:joint25/Clown:joint26/Clown:joint27
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20/Clown:joint28
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20/Clown:joint28/Clown:joint29
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint20/Clown:joint28/Clown:joint29/Clown:joint30
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint31
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint31/Clown:joint32
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:L_Sho/Clown:L_Shoulder/Clown:L_Elbow/Clown:L_Wrist/Clown:joint31/Clown:joint32/Clown:joint33
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1/Clown:joint22 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1/Clown:joint22 1/Clown:joint23 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1/Clown:joint22 1/Clown:joint23 1/Clown:joint24 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1/Clown:joint25 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1/Clown:joint25 1/Clown:joint26 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1/Clown:joint25 1/Clown:joint26 1/Clown:joint27 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1/Clown:joint28 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1/Clown:joint28 1/Clown:joint29 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint20
+          1/Clown:joint28 1/Clown:joint29 1/Clown:joint30 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint31
+          1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint31
+          1/Clown:joint32 1
+        weight: 1
+      - path: Clown:Root/Clown:Spine1/Clown:Spine2/Clown:Spine3/Clown:R_Sho/Clown:R_Shoulder/Clown:R_Elbow/Clown:R_Wrist/Clown:joint31
+          1/Clown:joint32 1/Clown:joint33 1
+        weight: 1
+      - path: Clown:Rott_Ctrl
+        weight: 1
+      - path: Clown:Rott_Ctrl/Clown:Pelvis_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Clown:Rott_Ctrl
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 8fdf0cc6a8a7d8f43996fa2d322a5901,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

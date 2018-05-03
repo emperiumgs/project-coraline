@@ -1,0 +1,1390 @@
+fileFormatVersion: 2
+guid: 17fbb72e51b8b1f4585e81b101a71f44
+timeCreated: 1464490955
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bomb:Bomb_Ctrl
+    100002: Bomb:joint1
+    100004: Bomb:joint2
+    100006: Bomb:joint3
+    100008: Bomb:joint4
+    100010: Bomb:polySurface55
+    100012: GoblinRanged:Head
+    100014: GoblinRanged:Hip_Ctrl
+    100016: GoblinRanged:joint15
+    100018: GoblinRanged:joint15 1
+    100020: GoblinRanged:joint35
+    100022: GoblinRanged:joint36
+    100024: GoblinRanged:joint37
+    100026: GoblinRanged:L_Ankle
+    100028: GoblinRanged:L_Ear1
+    100030: GoblinRanged:L_Ear2
+    100032: GoblinRanged:L_Ear3
+    100034: GoblinRanged:L_Ear_Tip
+    100036: GoblinRanged:L_Elbow
+    100038: GoblinRanged:L_Eye
+    100040: GoblinRanged:L_Hip
+    100042: GoblinRanged:L_Knee
+    100044: GoblinRanged:L_Middle1
+    100046: GoblinRanged:L_Middle2
+    100048: GoblinRanged:L_Middle_Tip
+    100050: GoblinRanged:L_Pinky1
+    100052: GoblinRanged:L_Pinky2
+    100054: GoblinRanged:L_Pinky_Tip
+    100056: GoblinRanged:L_Point1
+    100058: GoblinRanged:L_Point2
+    100060: GoblinRanged:L_Point_Tip
+    100062: GoblinRanged:L_Sho
+    100064: GoblinRanged:L_Shoulder
+    100066: GoblinRanged:L_Thumb1
+    100068: GoblinRanged:L_Thumb2
+    100070: GoblinRanged:L_Thumb_Tip
+    100072: GoblinRanged:L_Tip
+    100074: GoblinRanged:L_Toe
+    100076: GoblinRanged:L_Wrist
+    100078: GoblinRanged:Neck
+    100080: GoblinRanged:polySurface63
+    100082: GoblinRanged:R_Ankle
+    100084: GoblinRanged:R_Ear1
+    100086: GoblinRanged:R_Ear2
+    100088: GoblinRanged:R_Ear3
+    100090: GoblinRanged:R_Ear_Tip
+    100092: GoblinRanged:R_Elbow
+    100094: GoblinRanged:R_Eye
+    100096: GoblinRanged:R_Hip
+    100098: GoblinRanged:R_Knee
+    100100: GoblinRanged:R_Middle1
+    100102: GoblinRanged:R_Middle2
+    100104: GoblinRanged:R_Middle_Tip
+    100106: GoblinRanged:R_Pinky1
+    100108: GoblinRanged:R_Pinky2
+    100110: GoblinRanged:R_Pinky_Tip
+    100112: GoblinRanged:R_Point1
+    100114: GoblinRanged:R_Point2
+    100116: GoblinRanged:R_Point_Tip
+    100118: GoblinRanged:R_Sho
+    100120: GoblinRanged:R_Shoulder
+    100122: GoblinRanged:R_Thumb1
+    100124: GoblinRanged:R_Thumb2
+    100126: GoblinRanged:R_Thumb_Tip
+    100128: GoblinRanged:R_Tip
+    100130: GoblinRanged:R_Toe
+    100132: GoblinRanged:R_Wrist
+    100134: GoblinRanged:Rocket
+    100136: GoblinRanged:Root
+    100138: GoblinRanged:Root_Ctrl
+    100140: GoblinRanged:Spine1
+    100142: GoblinRanged:Spine2
+    100144: GoblinRanged:Top
+    100146: //RootNode
+    400000: Bomb:Bomb_Ctrl
+    400002: Bomb:joint1
+    400004: Bomb:joint2
+    400006: Bomb:joint3
+    400008: Bomb:joint4
+    400010: Bomb:polySurface55
+    400012: GoblinRanged:Head
+    400014: GoblinRanged:Hip_Ctrl
+    400016: GoblinRanged:joint15
+    400018: GoblinRanged:joint15 1
+    400020: GoblinRanged:joint35
+    400022: GoblinRanged:joint36
+    400024: GoblinRanged:joint37
+    400026: GoblinRanged:L_Ankle
+    400028: GoblinRanged:L_Ear1
+    400030: GoblinRanged:L_Ear2
+    400032: GoblinRanged:L_Ear3
+    400034: GoblinRanged:L_Ear_Tip
+    400036: GoblinRanged:L_Elbow
+    400038: GoblinRanged:L_Eye
+    400040: GoblinRanged:L_Hip
+    400042: GoblinRanged:L_Knee
+    400044: GoblinRanged:L_Middle1
+    400046: GoblinRanged:L_Middle2
+    400048: GoblinRanged:L_Middle_Tip
+    400050: GoblinRanged:L_Pinky1
+    400052: GoblinRanged:L_Pinky2
+    400054: GoblinRanged:L_Pinky_Tip
+    400056: GoblinRanged:L_Point1
+    400058: GoblinRanged:L_Point2
+    400060: GoblinRanged:L_Point_Tip
+    400062: GoblinRanged:L_Sho
+    400064: GoblinRanged:L_Shoulder
+    400066: GoblinRanged:L_Thumb1
+    400068: GoblinRanged:L_Thumb2
+    400070: GoblinRanged:L_Thumb_Tip
+    400072: GoblinRanged:L_Tip
+    400074: GoblinRanged:L_Toe
+    400076: GoblinRanged:L_Wrist
+    400078: GoblinRanged:Neck
+    400080: GoblinRanged:polySurface63
+    400082: GoblinRanged:R_Ankle
+    400084: GoblinRanged:R_Ear1
+    400086: GoblinRanged:R_Ear2
+    400088: GoblinRanged:R_Ear3
+    400090: GoblinRanged:R_Ear_Tip
+    400092: GoblinRanged:R_Elbow
+    400094: GoblinRanged:R_Eye
+    400096: GoblinRanged:R_Hip
+    400098: GoblinRanged:R_Knee
+    400100: GoblinRanged:R_Middle1
+    400102: GoblinRanged:R_Middle2
+    400104: GoblinRanged:R_Middle_Tip
+    400106: GoblinRanged:R_Pinky1
+    400108: GoblinRanged:R_Pinky2
+    400110: GoblinRanged:R_Pinky_Tip
+    400112: GoblinRanged:R_Point1
+    400114: GoblinRanged:R_Point2
+    400116: GoblinRanged:R_Point_Tip
+    400118: GoblinRanged:R_Sho
+    400120: GoblinRanged:R_Shoulder
+    400122: GoblinRanged:R_Thumb1
+    400124: GoblinRanged:R_Thumb2
+    400126: GoblinRanged:R_Thumb_Tip
+    400128: GoblinRanged:R_Tip
+    400130: GoblinRanged:R_Toe
+    400132: GoblinRanged:R_Wrist
+    400134: GoblinRanged:Rocket
+    400136: GoblinRanged:Root
+    400138: GoblinRanged:Root_Ctrl
+    400140: GoblinRanged:Spine1
+    400142: GoblinRanged:Spine2
+    400144: GoblinRanged:Top
+    400146: //RootNode
+    4300000: GoblinRanged:Rocket
+    4300002: GoblinRanged:polySurface63
+    4300004: Bomb:polySurface55
+    7400000: GoblinRocket@FullTimeline
+    7400002: GoblinRocket@Idle
+    7400004: GoblinRocket@Attack
+    7400006: GoblinRocket@LightRocket
+    7400008: GoblinRocket@Fly
+    7400010: GoblinRocket@Death
+    9500000: //RootNode
+    13700000: Bomb:polySurface55
+    13700002: GoblinRanged:polySurface63
+    13700004: GoblinRanged:Rocket
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GoblinRocket@FullTimeline
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 302
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bomb:Bomb_Ctrl
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint2
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint3
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint4
+        weight: 1
+      - path: Bomb:polySurface55
+        weight: 1
+      - path: GoblinRanged:polySurface63
+        weight: 1
+      - path: GoblinRanged:Rocket
+        weight: 1
+      - path: GoblinRanged:Root
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe/GoblinRanged:L_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe/GoblinRanged:R_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35/GoblinRanged:joint36
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:joint37
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3/GoblinRanged:L_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3/GoblinRanged:R_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:Top
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2/GoblinRanged:L_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2/GoblinRanged:L_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2/GoblinRanged:L_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2/GoblinRanged:L_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2/GoblinRanged:R_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2/GoblinRanged:R_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2/GoblinRanged:R_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2/GoblinRanged:R_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl/GoblinRanged:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinRocket@Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bomb:Bomb_Ctrl
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint2
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint3
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint4
+        weight: 1
+      - path: Bomb:polySurface55
+        weight: 1
+      - path: GoblinRanged:polySurface63
+        weight: 1
+      - path: GoblinRanged:Rocket
+        weight: 1
+      - path: GoblinRanged:Root
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe/GoblinRanged:L_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe/GoblinRanged:R_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35/GoblinRanged:joint36
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:joint37
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3/GoblinRanged:L_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3/GoblinRanged:R_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:Top
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2/GoblinRanged:L_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2/GoblinRanged:L_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2/GoblinRanged:L_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2/GoblinRanged:L_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2/GoblinRanged:R_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2/GoblinRanged:R_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2/GoblinRanged:R_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2/GoblinRanged:R_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl/GoblinRanged:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinRocket@Attack
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.46382973
+        functionName: PlaceBomb
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 1
+        functionName: EndBombing
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bomb:Bomb_Ctrl
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint2
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint3
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint4
+        weight: 1
+      - path: Bomb:polySurface55
+        weight: 1
+      - path: GoblinRanged:polySurface63
+        weight: 1
+      - path: GoblinRanged:Rocket
+        weight: 1
+      - path: GoblinRanged:Root
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe/GoblinRanged:L_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe/GoblinRanged:R_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35/GoblinRanged:joint36
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:joint37
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3/GoblinRanged:L_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3/GoblinRanged:R_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:Top
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2/GoblinRanged:L_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2/GoblinRanged:L_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2/GoblinRanged:L_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2/GoblinRanged:L_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2/GoblinRanged:R_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2/GoblinRanged:R_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2/GoblinRanged:R_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2/GoblinRanged:R_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl/GoblinRanged:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinRocket@LightRocket
+      takeName: Take 001
+      firstFrame: 85
+      lastFrame: 115
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: LightRocket
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: PlayClip
+        data: lightRocket
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bomb:Bomb_Ctrl
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint2
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint3
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint4
+        weight: 1
+      - path: Bomb:polySurface55
+        weight: 1
+      - path: GoblinRanged:polySurface63
+        weight: 1
+      - path: GoblinRanged:Rocket
+        weight: 1
+      - path: GoblinRanged:Root
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe/GoblinRanged:L_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe/GoblinRanged:R_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35/GoblinRanged:joint36
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:joint37
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3/GoblinRanged:L_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3/GoblinRanged:R_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:Top
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2/GoblinRanged:L_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2/GoblinRanged:L_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2/GoblinRanged:L_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2/GoblinRanged:L_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2/GoblinRanged:R_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2/GoblinRanged:R_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2/GoblinRanged:R_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2/GoblinRanged:R_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl/GoblinRanged:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinRocket@Fly
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 161
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bomb:Bomb_Ctrl
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint2
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint3
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint4
+        weight: 1
+      - path: Bomb:polySurface55
+        weight: 1
+      - path: GoblinRanged:polySurface63
+        weight: 1
+      - path: GoblinRanged:Rocket
+        weight: 1
+      - path: GoblinRanged:Root
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe/GoblinRanged:L_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe/GoblinRanged:R_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35/GoblinRanged:joint36
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:joint37
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3/GoblinRanged:L_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3/GoblinRanged:R_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:Top
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2/GoblinRanged:L_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2/GoblinRanged:L_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2/GoblinRanged:L_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2/GoblinRanged:L_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2/GoblinRanged:R_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2/GoblinRanged:R_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2/GoblinRanged:R_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2/GoblinRanged:R_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl/GoblinRanged:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinRocket@Death
+      takeName: Take 001
+      firstFrame: 165
+      lastFrame: 302
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: Disappear
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: PlayClip
+        data: death
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bomb:Bomb_Ctrl
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint2
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint3
+        weight: 1
+      - path: Bomb:Bomb_Ctrl/Bomb:joint1/Bomb:joint4
+        weight: 1
+      - path: Bomb:polySurface55
+        weight: 1
+      - path: GoblinRanged:polySurface63
+        weight: 1
+      - path: GoblinRanged:Rocket
+        weight: 1
+      - path: GoblinRanged:Root
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:L_Hip/GoblinRanged:L_Knee/GoblinRanged:L_Ankle/GoblinRanged:L_Toe/GoblinRanged:L_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:R_Hip/GoblinRanged:R_Knee/GoblinRanged:R_Ankle/GoblinRanged:R_Toe/GoblinRanged:R_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:joint35/GoblinRanged:joint36
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:joint37
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Ear1/GoblinRanged:L_Ear2/GoblinRanged:L_Ear3/GoblinRanged:L_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:L_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Ear1/GoblinRanged:R_Ear2/GoblinRanged:R_Ear3/GoblinRanged:R_Ear_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:R_Eye
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:Head/GoblinRanged:Top
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Middle1/GoblinRanged:L_Middle2/GoblinRanged:L_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Pinky1/GoblinRanged:L_Pinky2/GoblinRanged:L_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:joint15/GoblinRanged:L_Point1/GoblinRanged:L_Point2/GoblinRanged:L_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:L_Sho/GoblinRanged:L_Shoulder/GoblinRanged:L_Elbow/GoblinRanged:L_Wrist/GoblinRanged:L_Thumb1/GoblinRanged:L_Thumb2/GoblinRanged:L_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Middle1/GoblinRanged:R_Middle2/GoblinRanged:R_Middle_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Pinky1/GoblinRanged:R_Pinky2/GoblinRanged:R_Pinky_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:joint15
+          1/GoblinRanged:R_Point1/GoblinRanged:R_Point2/GoblinRanged:R_Point_Tip
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2
+        weight: 1
+      - path: GoblinRanged:Root/GoblinRanged:Spine1/GoblinRanged:Spine2/GoblinRanged:Neck/GoblinRanged:R_Sho/GoblinRanged:R_Shoulder/GoblinRanged:R_Elbow/GoblinRanged:R_Wrist/GoblinRanged:R_Thumb1/GoblinRanged:R_Thumb2/GoblinRanged:R_Thumb_Tip
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl
+        weight: 1
+      - path: GoblinRanged:Root_Ctrl/GoblinRanged:Hip_Ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: GoblinRanged:Root_Ctrl
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

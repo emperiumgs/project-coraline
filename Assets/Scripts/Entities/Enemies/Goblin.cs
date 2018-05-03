@@ -16,7 +16,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
     States state = States.Idle;
 
     AudioController audioCtrl;
-    NavMeshAgent agent;
+    UnityEngine.AI.NavMeshAgent agent;
     PlayerCombat pc;
     Coroutine damageDeal;
     Transform target;
@@ -49,7 +49,7 @@ public class Goblin : MonoBehaviour, IDamageable, IMeleeAttackable
     void Awake()
     {
         audioCtrl = GetComponent<AudioController>();
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         anim = GetComponent<Animator>();
         health = maxHealth;
         weaponOffset = new Vector3(0, 0, 0.75f);

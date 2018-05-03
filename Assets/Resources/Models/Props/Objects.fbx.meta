@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 899a15a478d771f45873a6a8e37a472d
+timeCreated: 1463195236
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Balcony
+    100002: Barrel
+    100004: Box
+    100006: Canon
+    100008: Gear
+    100010: Hammer
+    100012: Hammer2
+    100014: HollowBox
+    100016: Lamp1
+    100018: LionCage
+    100020: LionCageDamaged
+    100022: LionStand
+    100024: //RootNode
+    100026: Screw
+    100028: ScrewDriver
+    100030: Sign
+    100032: StonePilar
+    100034: WallLamp
+    100036: WoodPilar
+    100038: Workbench
+    100040: WorkStair
+    100042: WorkStairDamaged
+    100044: Wrench
+    100046: Wrench2
+    400000: Balcony
+    400002: Barrel
+    400004: Box
+    400006: Canon
+    400008: Gear
+    400010: Hammer
+    400012: Hammer2
+    400014: HollowBox
+    400016: Lamp1
+    400018: LionCage
+    400020: LionCageDamaged
+    400022: LionStand
+    400024: //RootNode
+    400026: Screw
+    400028: ScrewDriver
+    400030: Sign
+    400032: StonePilar
+    400034: WallLamp
+    400036: WoodPilar
+    400038: Workbench
+    400040: WorkStair
+    400042: WorkStairDamaged
+    400044: Wrench
+    400046: Wrench2
+    2300000: Balcony
+    2300002: Barrel
+    2300004: Box
+    2300006: Canon
+    2300008: Gear
+    2300010: Hammer
+    2300012: Hammer2
+    2300014: HollowBox
+    2300016: Lamp1
+    2300018: LionCage
+    2300020: LionCageDamaged
+    2300022: LionStand
+    2300024: Screw
+    2300026: ScrewDriver
+    2300028: Sign
+    2300030: StonePilar
+    2300032: WallLamp
+    2300034: WoodPilar
+    2300036: Workbench
+    2300038: WorkStair
+    2300040: WorkStairDamaged
+    2300042: Wrench
+    2300044: Wrench2
+    3300000: Balcony
+    3300002: Barrel
+    3300004: Box
+    3300006: Canon
+    3300008: Gear
+    3300010: Hammer
+    3300012: Hammer2
+    3300014: HollowBox
+    3300016: Lamp1
+    3300018: LionCage
+    3300020: LionCageDamaged
+    3300022: LionStand
+    3300024: Screw
+    3300026: ScrewDriver
+    3300028: Sign
+    3300030: StonePilar
+    3300032: WallLamp
+    3300034: WoodPilar
+    3300036: Workbench
+    3300038: WorkStair
+    3300040: WorkStairDamaged
+    3300042: Wrench
+    3300044: Wrench2
+    4300000: Balcony
+    4300002: WoodPilar
+    4300004: Box
+    4300006: Lamp1
+    4300008: StonePilar
+    4300010: Hammer
+    4300012: Wrench
+    4300014: ScrewDriver
+    4300016: Gear
+    4300018: Screw
+    4300020: Wrench2
+    4300022: Hammer2
+    4300024: Workbench
+    4300026: Barrel
+    4300028: WallLamp
+    4300030: Sign
+    4300032: LionCageDamaged
+    4300034: LionCage
+    4300036: WorkStairDamaged
+    4300038: WorkStair
+    4300040: LionStand
+    4300042: HollowBox
+    4300044: Canon
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
