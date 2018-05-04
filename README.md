@@ -2,7 +2,7 @@
 Project Coraline is an adventure/platformer game that takes place on the same universe as the Coraline novel by Neil Gaiman. You play as Jack, a robot that can control electricity to cast lightning and do other tricks, and fight the evil creatures of the Circus of Illusion. Features 3 different types of enemies, and an arena boss. This game was produced from March 2016 to June 2016 at Universidade Anhembi Morumbi as a class project.
 
 ### [Overview Video](https://youtu.be/lYEe7-QPHPk)
-### [Download]()
+### [Download](https://github.com/emperiumgs/project-coraline/releases/download/v1.0/ProjectCoraline.zip)
 
 ## Game Features
 
