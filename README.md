@@ -30,7 +30,7 @@ Aside from those gameplay features, the game also explores:
 ## Team
 
 - Game Designer: Anderson Verissimo
-- Game Developer: Joao Borks
+- Game Developer: [Joao Borks](https://github.com/JoaoBorks)
 - 3D Artist: Ronaldo Junior
 - Sound Designer: Luiza Aguiar
 - 2D Artist: Christine Ferraz
