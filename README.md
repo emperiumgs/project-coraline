@@ -32,5 +32,5 @@ Aside from those gameplay features, the game also explores:
 - Game Designer: Anderson Verissimo
 - Game Developer: [Joao Borks](https://github.com/JoaoBorks)
 - 3D Artist: Ronaldo Junior
-- Sound Designer: Luiza Aguiar
+- Sound Designer: [Luiza Aguiar](https://github.com/aguiar-luiza)
 - 2D Artist: Christine Ferraz
